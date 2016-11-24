@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'MuseoSansCyrl500Italic';
+    src: url('fonts/MuseoSansCyrl500Italic.eot');
+    src: url('fonts/MuseoSansCyrl500Italic.eot') format('embedded-opentype'),
+         url('fonts/MuseoSansCyrl500Italic.woff2') format('woff2'),
+         url('fonts/MuseoSansCyrl500Italic.woff') format('woff'),
+         url('fonts/MuseoSansCyrl500Italic.ttf') format('truetype'),
+         url('fonts/MuseoSansCyrl500Italic.svg#MuseoSansCyrl500Italic') format('svg');
+}

@@ -6870,7 +6870,7 @@ header .minicart .minicart-basket {
   border-radius: 100%;
 }
 header .minicart .minicart-basket:hover {
-  background: #00aeef;
+  background-color: #00aeef;
 }
 header .minicart .minicart-basket span {
   position: absolute;
@@ -6881,7 +6881,7 @@ header .minicart .minicart-basket span {
   font-family: "PF DinDisplay Pro Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
   border-radius: 12px;
-  padding: 0 5px;
+  padding: 1px 6px 0;
 }
 header .minicart .minicart-cost {
   display: inline-block;
@@ -7109,6 +7109,9 @@ header .user button:hover::before {
   font-size: initial;
   box-shadow: 0 0 40px -15px #000000;
   background: #ffffff;
+}
+.catalog-menu > li .submenu.v1 .content {
+  padding: 30px;
 }
 .catalog-menu > li .submenu.v2 .col-sm-4 {
   padding: 30px;

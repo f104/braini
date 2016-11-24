@@ -191,7 +191,7 @@ header {
       background: #0073ae url('@{img-path}sprite.png') no-repeat -16px -30px;
       border-radius: 100%;
       &:hover {
-        background: #00aeef;
+        background-color: #00aeef;
       }
       span {
         position: absolute;
@@ -202,7 +202,7 @@ header {
         font-family: @accent-font-family;
         font-size: 12px;
         border-radius: 12px;
-        padding: 0 5px;
+        padding: 1px 6px 0;
       }
     }
     .minicart-cost {
@@ -308,6 +308,11 @@ header {
         font-size: initial;
         box-shadow: 0 0 40px -15px #000;
         background: @body-bg;
+      }
+      &.v1 {
+        .content {
+          padding: 30px;
+        }
       }
       &.v2 {
         .col-sm-4 {

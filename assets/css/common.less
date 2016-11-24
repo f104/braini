@@ -19,7 +19,7 @@ body {
     background: url('@{img-path}index.png') no-repeat fixed;
     background-size: auto;
     background-position-x: center;
-    background-position-y: -663px;
+    background-position-y: 33px;
     opacity: 0;
     top: 0;
     left: 0;
@@ -65,6 +65,13 @@ h3 {
 button {
   height: 42px;
   font-family: "MuseoSansCyrl700", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.btn-default {
+  &:hover, &:focus, &:active, &:active:focus {
+    color: #737373;
+    border-color: #dcdcdc;
+    outline: none;
+  }
 }
 
 .full-width-brace {
@@ -114,9 +121,15 @@ menu {
       }
     }
   }
+  &.list-inline {
+    margin-left: 0;
+  }
   &.list-inline > li {
-    padding-left: 11px;
-    padding-right: 11px;
+    padding-left: 12px;
+    padding-right: 12px;
+    &:first-child {
+      padding-left: 0;
+    }
   }
   &.list-inline.pull-right {
     margin-top: 40px;
@@ -153,6 +166,79 @@ menu {
 }
 
 /* hreader */
+header {
+  padding: @grid-gutter-width 0;
+  background: url('@{img-path}header-bg.jpg') no-repeat top center;
+  .logo {
+    img {
+      .img-responsive;
+    }
+  }
+  nav.col-sm-6 {
+    padding: 12px 0 0 35px;
+  }
+  .minicart {
+    display: inline-block;
+    margin-top: 13px;
+    .minicart-basket {
+      position: relative;
+      display: inline-block;
+      width: 42px;
+      height: 42px;
+      background: #0073ae url('@{img-path}sprite.png') no-repeat -16px -30px;
+      border-radius: 100%;
+      &:hover {
+        background: #00aeef;
+      }
+      span {
+        position: absolute;
+        right: -3px;
+        bottom: 0;
+        color: white;
+        background: #72bf44;
+        font-family: @accent-font-family;
+        font-size: 12px;
+        border-radius: 12px;
+        padding: 0 5px;
+      }
+    }
+    .minicart-cost {
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 12px;
+      .text-muted;
+      a {
+        display: block;
+        font-family: @accent-font-family;
+        font-size: 18px;
+      }
+    }
+  }
+  .user {
+    float: right;
+    margin: 13px 0 0 30px;
+    button {
+      .btn; .btn-default;
+      width: 103px;
+      padding-left: 35px;
+      font-size: 14px;
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        left: 15px;
+        width: 16px;
+        height: 20px;
+        background: url('@{img-path}sprite.png') no-repeat 0px -90px;
+      }
+      &:hover {
+        &::before {
+          background-position-y: -110px;
+        }
+      }
+    }
+  }
+}
 .header-menu {
   .list-inline;
 }
@@ -268,7 +354,7 @@ menu {
     height: 30px;
     border: transparent;
     background: transparent url('@{img-path}sprite.png') no-repeat;
-    background-position: 11px -62px;
+    background-position: 11px -60px;
     padding: 0;
   }
 }

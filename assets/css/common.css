@@ -3007,7 +3007,7 @@ select[multiple].input-lg {
 .btn:hover,
 .btn:focus,
 .btn.focus {
-  color: #333333;
+  color: #909090;
   text-decoration: none;
 }
 .btn:active,
@@ -3029,27 +3029,27 @@ fieldset[disabled] a.btn {
   pointer-events: none;
 }
 .btn-default {
-  color: #333333;
-  background-color: #ffffff;
-  border-color: #cccccc;
+  color: #909090;
+  background-color: transparent;
+  border-color: #e2e2e2;
 }
 .btn-default:focus,
 .btn-default.focus {
-  color: #333333;
-  background-color: #e6e6e6;
-  border-color: #8c8c8c;
+  color: #909090;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: #a2a2a2;
 }
 .btn-default:hover {
-  color: #333333;
-  background-color: #e6e6e6;
-  border-color: #adadad;
+  color: #909090;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: #c3c3c3;
 }
 .btn-default:active,
 .btn-default.active,
 .open > .dropdown-toggle.btn-default {
-  color: #333333;
-  background-color: #e6e6e6;
-  border-color: #adadad;
+  color: #909090;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: #c3c3c3;
 }
 .btn-default:active:hover,
 .btn-default.active:hover,
@@ -3060,9 +3060,9 @@ fieldset[disabled] a.btn {
 .btn-default:active.focus,
 .btn-default.active.focus,
 .open > .dropdown-toggle.btn-default.focus {
-  color: #333333;
-  background-color: #d4d4d4;
-  border-color: #8c8c8c;
+  color: #909090;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: #a2a2a2;
 }
 .btn-default:active,
 .btn-default.active,
@@ -3078,12 +3078,12 @@ fieldset[disabled] .btn-default:focus,
 .btn-default.disabled.focus,
 .btn-default[disabled].focus,
 fieldset[disabled] .btn-default.focus {
-  background-color: #ffffff;
-  border-color: #cccccc;
+  background-color: transparent;
+  border-color: #e2e2e2;
 }
 .btn-default .badge {
-  color: #ffffff;
-  background-color: #333333;
+  color: transparent;
+  background-color: #909090;
 }
 .btn-primary {
   color: #ffffff;
@@ -6687,7 +6687,7 @@ body::after {
   background: url('img/index.png') no-repeat fixed;
   background-size: auto;
   background-position-x: center;
-  background-position-y: -663px;
+  background-position-y: 33px;
   opacity: 0;
   top: 0;
   left: 0;
@@ -6728,6 +6728,14 @@ h3 {
 button {
   height: 42px;
   font-family: "MuseoSansCyrl700", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default:active:focus {
+  color: #737373;
+  border-color: #dcdcdc;
+  outline: none;
 }
 .full-width-brace {
   background: #00aeef;
@@ -6777,9 +6785,15 @@ menu li.see-all a:hover {
 menu li.see-all a:hover::before {
   background: url('img/sprite.png') no-repeat -15px -12px;
 }
+menu.list-inline {
+  margin-left: 0;
+}
 menu.list-inline > li {
-  padding-left: 11px;
-  padding-right: 11px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+menu.list-inline > li:first-child {
+  padding-left: 0;
 }
 menu.list-inline.pull-right {
   margin-top: 40px;
@@ -6828,6 +6842,191 @@ menu.list-inline.pull-right > li:last-child {
   margin-top: 10px;
 }
 /* hreader */
+header {
+  padding: 20px 0;
+  background: url('img/header-bg.jpg') no-repeat top center;
+}
+header .logo img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+header nav.col-sm-6 {
+  padding: 12px 0 0 35px;
+}
+header .minicart {
+  display: inline-block;
+  margin-top: 13px;
+}
+header .minicart .minicart-basket {
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  background: #0073ae url('img/sprite.png') no-repeat -16px -30px;
+  border-radius: 100%;
+}
+header .minicart .minicart-basket:hover {
+  background: #00aeef;
+}
+header .minicart .minicart-basket span {
+  position: absolute;
+  right: -3px;
+  bottom: 0;
+  color: white;
+  background: #72bf44;
+  font-family: "PF DinDisplay Pro Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  border-radius: 12px;
+  padding: 0 5px;
+}
+header .minicart .minicart-cost {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 12px;
+  color: #a3a9ab;
+}
+header .minicart .minicart-cost a {
+  display: block;
+  font-family: "PF DinDisplay Pro Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+}
+header .user {
+  float: right;
+  margin: 13px 0 0 30px;
+}
+header .user button {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #909090;
+  background-color: transparent;
+  border-color: #e2e2e2;
+  width: 103px;
+  padding-left: 35px;
+  font-size: 14px;
+  position: relative;
+}
+header .user button:focus,
+header .user button:active:focus,
+header .user button.active:focus,
+header .user button.focus,
+header .user button:active.focus,
+header .user button.active.focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+header .user button:hover,
+header .user button:focus,
+header .user button.focus {
+  color: #909090;
+  text-decoration: none;
+}
+header .user button:active,
+header .user button.active {
+  outline: 0;
+  background-image: none;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+header .user button.disabled,
+header .user button[disabled],
+fieldset[disabled] header .user button {
+  cursor: not-allowed;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  box-shadow: none;
+}
+aheader .user button.disabled,
+fieldset[disabled] aheader .user button {
+  pointer-events: none;
+}
+header .user button:focus,
+header .user button.focus {
+  color: #909090;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: #a2a2a2;
+}
+header .user button:hover {
+  color: #909090;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: #c3c3c3;
+}
+header .user button:active,
+header .user button.active,
+.open > .dropdown-toggleheader .user button {
+  color: #909090;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: #c3c3c3;
+}
+header .user button:active:hover,
+header .user button.active:hover,
+.open > .dropdown-toggleheader .user button:hover,
+header .user button:active:focus,
+header .user button.active:focus,
+.open > .dropdown-toggleheader .user button:focus,
+header .user button:active.focus,
+header .user button.active.focus,
+.open > .dropdown-toggleheader .user button.focus {
+  color: #909090;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: #a2a2a2;
+}
+header .user button:active,
+header .user button.active,
+.open > .dropdown-toggleheader .user button {
+  background-image: none;
+}
+header .user button.disabled:hover,
+header .user button[disabled]:hover,
+fieldset[disabled] header .user button:hover,
+header .user button.disabled:focus,
+header .user button[disabled]:focus,
+fieldset[disabled] header .user button:focus,
+header .user button.disabled.focus,
+header .user button[disabled].focus,
+fieldset[disabled] header .user button.focus {
+  background-color: transparent;
+  border-color: #e2e2e2;
+}
+header .user button .badge {
+  color: transparent;
+  background-color: #909090;
+}
+header .user button:hover,
+header .user button:focus,
+header .user button:active,
+header .user button:active:focus {
+  color: #737373;
+  border-color: #dcdcdc;
+  outline: none;
+}
+header .user button::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  width: 16px;
+  height: 20px;
+  background: url('img/sprite.png') no-repeat 0px -90px;
+}
+header .user button:hover::before {
+  background-position-y: -110px;
+}
 .header-menu {
   padding-left: 0;
   list-style: none;
@@ -7019,7 +7218,7 @@ menu.list-inline.pull-right > li:last-child {
   height: 30px;
   border: transparent;
   background: transparent url('img/sprite.png') no-repeat;
-  background-position: 11px -62px;
+  background-position: 11px -60px;
   padding: 0;
 }
 .subscribe-form {
@@ -7066,7 +7265,7 @@ menu.list-inline.pull-right > li:last-child {
 .subscribe-form button:hover,
 .subscribe-form button:focus,
 .subscribe-form button.focus {
-  color: #333333;
+  color: #909090;
   text-decoration: none;
 }
 .subscribe-form button:active,

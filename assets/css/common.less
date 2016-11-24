@@ -34,6 +34,9 @@ body {
 .container-fluid {
   max-width: @fixed-max-width;
 }
+* {
+    transition: all 0.2s ease-in-out 0s;
+}
 
 /* text with columns */
 .columns {
@@ -64,6 +67,12 @@ p {
 }
 h3 {
   margin-bottom: @font-size-h6;
+}
+.colored {
+  color: #0880bd;
+  &:hover {
+    color: #0c93d8;      
+  }
 }
 button {
   height: 42px;
@@ -96,10 +105,7 @@ menu {
   li {
     margin-bottom: @line-height-computed / 4;
     a {
-      color: #0880bd;
-      &:hover {
-        color: #0c93d8;      
-      }
+      .colored;
     }
     &.see-all {
       margin-top: @line-height-computed;
@@ -145,11 +151,12 @@ menu {
 /* developers list */
 .devs-list {
   .list-unstyled;
+  margin: 0 -10px -20px;
   display: flex;
   flex-wrap: wrap;
   li {
-    padding: 0 @grid-gutter-width @grid-gutter-width 0;
-    a {
+    padding: 0 @grid-gutter-width / 2 @grid-gutter-width @grid-gutter-width / 2;
+    > a {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -158,13 +165,13 @@ menu {
       padding: 0 15px;
       height: @grid-gutter-width * 3;    
     }
-    &:last-child {
+/*    &:last-child {
       padding-right: 0;
-    }
+    }*/
   }
   p {
     font-size: 12px;
-    margin-top: @grid-gutter-width / 2;
+    margin-top: 6px;
   }
 }
 
@@ -312,6 +319,12 @@ header {
       &.v1 {
         .content {
           padding: 30px;
+          .devs-list p {
+            font-size: 14px;
+            a {
+              .colored;
+            }
+          }
         }
       }
       &.v2 {
@@ -396,6 +409,7 @@ header {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    transition: none;
     h5 {
       font-family: "MuseoSansCyrl700", "Helvetica Neue", Helvetica, Arial, sans-serif; 
       flex: 1 0;
@@ -417,7 +431,7 @@ header {
       }
       p {
         color: #333;
-      }    
+      }
     }
   }
   &.col-sm-4 {
@@ -451,37 +465,62 @@ header {
     }
   }
 } 
+/** @TODO function */
 .b1 a {
   background: url('@{img-path}banners/1.png') right bottom no-repeat;
   background: url('@{img-path}banners/1.png') right bottom no-repeat, radial-gradient(circle at 75% 60%, #fff, #e7edf9);
+  &:hover {
+    background: url('@{img-path}banners/1.png') right bottom no-repeat, url('@{img-path}banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #fff, #e7edf9);
+  }
 }
 .b2 a {
   background: url('@{img-path}banners/2.png') right bottom no-repeat;
   background: url('@{img-path}banners/2.png') right bottom no-repeat, radial-gradient(circle at 75% 60%, #fff, #e7edf9);
+  &:hover {
+    background: url('@{img-path}banners/2.png') right bottom no-repeat, url('@{img-path}banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #fff, #e7edf9);
+  }
 }
 .b3 a {
   background: url('@{img-path}banners/3.png') right center no-repeat;
   background: url('@{img-path}banners/3.png') right center no-repeat, radial-gradient(circle at 75% 60%, #fff, #e7edf9);
+  &:hover {
+    background: url('@{img-path}banners/3.png') right center no-repeat, url('@{img-path}banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #fff, #e7edf9);
+  }
 }
 .b4 a {
   background: url('@{img-path}banners/4.png') right center no-repeat;
   background: url('@{img-path}banners/4.png') right center no-repeat, radial-gradient(circle at 75% 60%, #fff, #e7edf9);
+  &:hover {
+    background: url('@{img-path}banners/4.png') right center no-repeat, url('@{img-path}banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #fff, #e7edf9);
+  }
 }
 .b5 a {
   background: url('@{img-path}banners/5.png') right bottom no-repeat;
   background: url('@{img-path}banners/5.png') right bottom no-repeat, radial-gradient(circle at 75% 60%, #fff, #e7edf9);
+  &:hover {
+    background: url('@{img-path}banners/5.png') right bottom no-repeat, url('@{img-path}banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #fff, #e7edf9);
+  }
 }
 .b6 a {
   background: url('@{img-path}banners/6.png') right center no-repeat;
   background: url('@{img-path}banners/6.png') right center no-repeat, radial-gradient(circle at 75% 60%, #fff, #e7edf9);
+  &:hover {
+    background: url('@{img-path}banners/6.png') right center no-repeat, url('@{img-path}banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #fff, #e7edf9);
+  }
 }
 .b7 a {
   background: url('@{img-path}banners/7.png') right center no-repeat;
   background: url('@{img-path}banners/7.png') right center no-repeat, radial-gradient(circle at 75% 60%, #fff, #e7edf9);
+  &:hover {
+    background: url('@{img-path}banners/7.png') right center no-repeat, url('@{img-path}banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #fff, #e7edf9);
+  }
 }
 .b8 a {
-  background: url('@{img-path}banners/8-1.png') right center no-repeat, url('@{img-path}banners/8-2.png') top center no-repeat;
-  background: url('@{img-path}banners/8-1.png') right center no-repeat, url('@{img-path}banners/8-2.png') top center no-repeat, radial-gradient(circle at 75% 60%, #fff, #e7edf9);
+  background: url('@{img-path}banners/8.png') right center no-repeat;
+  background: url('@{img-path}banners/8.png') right center no-repeat, radial-gradient(circle at 75% 60%, #fff, #e7edf9);
+  &:hover {
+    background: url('@{img-path}banners/8.png') right center no-repeat, url('@{img-path}banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #fff, #e7edf9);
+  }
 }
 
 /* best */

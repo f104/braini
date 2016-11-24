@@ -6700,6 +6700,10 @@ body {
 .container-fluid {
   max-width: 1160px;
 }
+* {
+  -webkit-transition: all 0.2s ease-in-out 0s;
+          transition: all 0.2s ease-in-out 0s;
+}
 /* text with columns */
 .columns p,
 .columns li {
@@ -6727,6 +6731,12 @@ p {
 }
 h3 {
   margin-bottom: 16px;
+}
+.colored {
+  color: #0880bd;
+}
+.colored:hover {
+  color: #0c93d8;
 }
 button {
   height: 42px;
@@ -6808,6 +6818,7 @@ menu.list-inline.pull-right > li:last-child {
 .devs-list {
   padding-left: 0;
   list-style: none;
+  margin: 0 -10px -20px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6817,9 +6828,12 @@ menu.list-inline.pull-right > li:last-child {
           flex-wrap: wrap;
 }
 .devs-list li {
-  padding: 0 20px 20px 0;
+  padding: 0 10px 20px 10px
+  /*    &:last-child {
+      padding-right: 0;
+    }*/
 }
-.devs-list li a {
+.devs-list li > a {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6837,12 +6851,9 @@ menu.list-inline.pull-right > li:last-child {
   padding: 0 15px;
   height: 60px;
 }
-.devs-list li:last-child {
-  padding-right: 0;
-}
 .devs-list p {
   font-size: 12px;
-  margin-top: 10px;
+  margin-top: 6px;
 }
 /* hreader */
 header {
@@ -7113,6 +7124,15 @@ header .user button:hover::before {
 .catalog-menu > li .submenu.v1 .content {
   padding: 30px;
 }
+.catalog-menu > li .submenu.v1 .content .devs-list p {
+  font-size: 14px;
+}
+.catalog-menu > li .submenu.v1 .content .devs-list p a {
+  color: #0880bd;
+}
+.catalog-menu > li .submenu.v1 .content .devs-list p a:hover {
+  color: #0c93d8;
+}
 .catalog-menu > li .submenu.v2 .col-sm-4 {
   padding: 30px;
   border-right: 1px solid #e9ebe8;
@@ -7317,6 +7337,8 @@ fieldset[disabled] a.subscribe-form button {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
+  -webkit-transition: none;
+          transition: none;
 }
 .banner a h5 {
   font-family: "MuseoSansCyrl700", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -7364,45 +7386,78 @@ fieldset[disabled] a.subscribe-form button {
 .banner.col-sm-2 p {
   max-width: 60%;
 }
+/** @TODO function */
 .b1 a {
   background: url('img/banners/1.png') right bottom no-repeat;
   background: url('img/banners/1.png') right bottom no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
   background: url('img/banners/1.png') right bottom no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
+.b1 a:hover {
+  background: url('img/banners/1.png') right bottom no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/1.png') right bottom no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
 }
 .b2 a {
   background: url('img/banners/2.png') right bottom no-repeat;
   background: url('img/banners/2.png') right bottom no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
   background: url('img/banners/2.png') right bottom no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
 }
+.b2 a:hover {
+  background: url('img/banners/2.png') right bottom no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/2.png') right bottom no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
 .b3 a {
   background: url('img/banners/3.png') right center no-repeat;
   background: url('img/banners/3.png') right center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
   background: url('img/banners/3.png') right center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
+.b3 a:hover {
+  background: url('img/banners/3.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/3.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
 }
 .b4 a {
   background: url('img/banners/4.png') right center no-repeat;
   background: url('img/banners/4.png') right center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
   background: url('img/banners/4.png') right center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
 }
+.b4 a:hover {
+  background: url('img/banners/4.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/4.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
 .b5 a {
   background: url('img/banners/5.png') right bottom no-repeat;
   background: url('img/banners/5.png') right bottom no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
   background: url('img/banners/5.png') right bottom no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
+.b5 a:hover {
+  background: url('img/banners/5.png') right bottom no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/5.png') right bottom no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
 }
 .b6 a {
   background: url('img/banners/6.png') right center no-repeat;
   background: url('img/banners/6.png') right center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
   background: url('img/banners/6.png') right center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
 }
+.b6 a:hover {
+  background: url('img/banners/6.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/6.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
 .b7 a {
   background: url('img/banners/7.png') right center no-repeat;
   background: url('img/banners/7.png') right center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
   background: url('img/banners/7.png') right center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
 }
+.b7 a:hover {
+  background: url('img/banners/7.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/7.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
 .b8 a {
-  background: url('img/banners/8-1.png') right center no-repeat, url('img/banners/8-2.png') top center no-repeat;
-  background: url('img/banners/8-1.png') right center no-repeat, url('img/banners/8-2.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/8-1.png') right center no-repeat, url('img/banners/8-2.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+  background: url('img/banners/8.png') right center no-repeat;
+  background: url('img/banners/8.png') right center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/8.png') right center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
+.b8 a:hover {
+  background: url('img/banners/8.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/8.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
 }
 /* best */
 .best-item {

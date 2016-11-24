@@ -55,6 +55,9 @@ section {
   //padding-top: 32px; //@grid-gutter-width * 2;
   margin-bottom: @grid-gutter-width;
 }
+main {
+  padding-top: @grid-gutter-width;
+}
 p {
   line-height: 1.65;
   /*margin-bottom: 17px;*/
@@ -375,6 +378,105 @@ header {
       background-color: white;
     }
   }
+}
+
+/* banners */
+.banner {  
+  a {
+    display: block;
+    height: 190px;
+    padding: @grid-gutter-width;
+    background-color: #e7edf9;
+    margin-bottom: @grid-gutter-width;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    h5 {
+      font-family: "MuseoSansCyrl700", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+      flex: 1 0;
+      max-width: 50%;
+    }
+    p {
+      font-size: 12px;
+      line-height: 16px;
+      color: #959c9e;
+      margin-bottom: 0;
+      max-width: 50%;
+    }
+    &:hover {
+      h5 {
+        color: #0378b3;
+        &::before {
+          background: #0378b3;
+        }
+      }
+      p {
+        color: #333;
+      }    
+    }
+  }
+  &.col-sm-4 {
+    h5 {
+      /*position: relative;*/
+      &::before {
+        content: '';
+        position: absolute;
+        background: @link-color;
+        width: @grid-gutter-width * 2;
+        height: 2px;
+        top: @grid-gutter-width;
+      }
+    }
+    &:hover {
+      h5 {
+        &::before {
+          background: #0378b3;
+        }
+      }
+    }
+  }
+  &.col-sm-2 {
+    h5 {
+      font-size: 15px;
+      margin-top: 0;
+      max-width: 60%;
+    }
+    p {
+      max-width: 60%;
+    }
+  }
+} 
+.b1 a {
+  background: url('@{img-path}banners/1.png') right bottom no-repeat;
+  background: url('@{img-path}banners/1.png') right bottom no-repeat, radial-gradient(circle at 75% 60%, #fff, #e7edf9);
+}
+.b2 a {
+  background: url('@{img-path}banners/2.png') right bottom no-repeat;
+  background: url('@{img-path}banners/2.png') right bottom no-repeat, radial-gradient(circle at 75% 60%, #fff, #e7edf9);
+}
+.b3 a {
+  background: url('@{img-path}banners/3.png') right center no-repeat;
+  background: url('@{img-path}banners/3.png') right center no-repeat, radial-gradient(circle at 75% 60%, #fff, #e7edf9);
+}
+.b4 a {
+  background: url('@{img-path}banners/4.png') right center no-repeat;
+  background: url('@{img-path}banners/4.png') right center no-repeat, radial-gradient(circle at 75% 60%, #fff, #e7edf9);
+}
+.b5 a {
+  background: url('@{img-path}banners/5.png') right bottom no-repeat;
+  background: url('@{img-path}banners/5.png') right bottom no-repeat, radial-gradient(circle at 75% 60%, #fff, #e7edf9);
+}
+.b6 a {
+  background: url('@{img-path}banners/6.png') right center no-repeat;
+  background: url('@{img-path}banners/6.png') right center no-repeat, radial-gradient(circle at 75% 60%, #fff, #e7edf9);
+}
+.b7 a {
+  background: url('@{img-path}banners/7.png') right center no-repeat;
+  background: url('@{img-path}banners/7.png') right center no-repeat, radial-gradient(circle at 75% 60%, #fff, #e7edf9);
+}
+.b8 a {
+  background: url('@{img-path}banners/8-1.png') right center no-repeat, url('@{img-path}banners/8-2.png') top center no-repeat;
+  background: url('@{img-path}banners/8-1.png') right center no-repeat, url('@{img-path}banners/8-2.png') top center no-repeat, radial-gradient(circle at 75% 60%, #fff, #e7edf9);
 }
 
 /* best */

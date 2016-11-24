@@ -6718,6 +6718,9 @@ body::after {
 section {
   margin-bottom: 20px;
 }
+main {
+  padding-top: 20px;
+}
 p {
   line-height: 1.65
   /*margin-bottom: 17px;*/
@@ -7291,6 +7294,112 @@ fieldset[disabled] a.subscribe-form button {
 .subscribe-form button:focus {
   color: #00aeef;
   background-color: white;
+}
+/* banners */
+.banner a {
+  display: block;
+  height: 190px;
+  padding: 20px;
+  background-color: #e7edf9;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.banner a h5 {
+  font-family: "MuseoSansCyrl700", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0;
+      -ms-flex: 1 0;
+          flex: 1 0;
+  max-width: 50%;
+}
+.banner a p {
+  font-size: 12px;
+  line-height: 16px;
+  color: #959c9e;
+  margin-bottom: 0;
+  max-width: 50%;
+}
+.banner a:hover h5 {
+  color: #0378b3;
+}
+.banner a:hover h5::before {
+  background: #0378b3;
+}
+.banner a:hover p {
+  color: #333;
+}
+.banner.col-sm-4 h5 {
+  /*position: relative;*/
+}
+.banner.col-sm-4 h5::before {
+  content: '';
+  position: absolute;
+  background: #231f20;
+  width: 40px;
+  height: 2px;
+  top: 20px;
+}
+.banner.col-sm-4:hover h5::before {
+  background: #0378b3;
+}
+.banner.col-sm-2 h5 {
+  font-size: 15px;
+  margin-top: 0;
+  max-width: 60%;
+}
+.banner.col-sm-2 p {
+  max-width: 60%;
+}
+.b1 a {
+  background: url('img/banners/1.png') right bottom no-repeat;
+  background: url('img/banners/1.png') right bottom no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/1.png') right bottom no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
+.b2 a {
+  background: url('img/banners/2.png') right bottom no-repeat;
+  background: url('img/banners/2.png') right bottom no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/2.png') right bottom no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
+.b3 a {
+  background: url('img/banners/3.png') right center no-repeat;
+  background: url('img/banners/3.png') right center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/3.png') right center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
+.b4 a {
+  background: url('img/banners/4.png') right center no-repeat;
+  background: url('img/banners/4.png') right center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/4.png') right center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
+.b5 a {
+  background: url('img/banners/5.png') right bottom no-repeat;
+  background: url('img/banners/5.png') right bottom no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/5.png') right bottom no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
+.b6 a {
+  background: url('img/banners/6.png') right center no-repeat;
+  background: url('img/banners/6.png') right center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/6.png') right center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
+.b7 a {
+  background: url('img/banners/7.png') right center no-repeat;
+  background: url('img/banners/7.png') right center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/7.png') right center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
+.b8 a {
+  background: url('img/banners/8-1.png') right center no-repeat, url('img/banners/8-2.png') top center no-repeat;
+  background: url('img/banners/8-1.png') right center no-repeat, url('img/banners/8-2.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/8-1.png') right center no-repeat, url('img/banners/8-2.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
 }
 /* best */
 .best-item {

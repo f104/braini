@@ -6680,21 +6680,21 @@ html {
 }
 body {
   height: 100%;
-  position: relative;
-}
-body::after {
-  content: "";
-  background: url('img/index.png') no-repeat fixed;
-  background-size: auto;
-  background-position-x: center;
-  background-position-y: 33px;
-  opacity: 0;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: fixed;
-  z-index: -1;
+  position: relative
+  /*  &::after {
+    content: "";
+    background: url('@{img-path}tmp/index.png') no-repeat fixed;
+    background-size: auto;
+    background-position-x: center;
+    background-position-y: 0;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    z-index: -1;   
+  }*/
 }
 /* fixed max width */
 .container-fluid {

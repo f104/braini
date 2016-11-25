@@ -7039,7 +7039,7 @@ header .user button::before {
   background: url('img/sprite.png') no-repeat 0px -90px;
 }
 header .user button:hover::before {
-  background-position-y: -110px;
+  background-position: 0 -110px;
 }
 .header-menu {
   padding-left: 0;
@@ -7083,7 +7083,7 @@ header .user button:hover::before {
   width: 16px;
   height: 15px;
   background: url('img/sprite.png') no-repeat;
-  background-position-y: -9px;
+  background-position: 0 -9px;
 }
 .catalog-menu > li:hover > a {
   color: black;
@@ -7092,7 +7092,7 @@ header .user button:hover::before {
   box-shadow: 0 -10px 10px -15px #000000, -5px -10px 10px -15px #000000, 5px -10px 10px -15px #000000;
 }
 .catalog-menu > li:hover > a::after {
-  background-position-y: 5px;
+  background-position: 0 5px;
 }
 .catalog-menu > li:first-child > a {
   padding-left: 15px;
@@ -7104,10 +7104,10 @@ header .user button:hover::before {
 .catalog-menu > li:last-child > a::after {
   left: 8px;
   top: 23px;
-  background-position-y: -30px;
+  background-position: 0 -30px;
 }
 .catalog-menu > li:last-child > a:hover::after {
-  background-position-y: -45px;
+  background-position: 0 -45px;
 }
 .catalog-menu > li .submenu {
   display: none;

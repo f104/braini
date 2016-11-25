@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Блог</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="import" href="components.html">
+    <script>
+      var components = document.querySelector('link[rel=import]');
+    </script>
+  </head>
+  <body>
+    <script>
+      var content = components.import.querySelector('header');
+      document.body.appendChild(content.cloneNode(true));
+      content = components.import.querySelector('#main_menu');
+      document.body.appendChild(content.cloneNode(true));
+    </script>
+    
+    <main>
+      
+      <div class="title">
+        
+        <ol class="breadcrumb">
+          <li><a href="#">Главная</a></li>
+          <li class="active">Блог</li>
+        </ol>
+        
+        <h1>Блог</h1>
+      
+        <form class="search-form">
+          <div class="form-group">
+            <input type="text" placeholder="Поиск по новостям" class="form-control">
+            <button type="submit"></button>
+          </div>
+        </form>
+        
+        <menu class="list-inline">
+          <li>Все</li>
+          <li><a href="#">Акции</a></li>
+          <li><a href="#">Новые поступления</a></li>
+          <li><a href="#">Новости производителей</a></li>
+        </menu>
+        
+      </div>
+      
+      <div class="full-width-bg">
+        <div class="container-fluid">
+          <div class="news-item-first">
+            <div class="row">
+              <div class="col-sm-3">
+            <a class="img" href="#"><img src="assets/images/news/0.jpg" alt="Kerio Connect 9.2 упрощает общение и повышает качество совместной работы."></a>
+              </div>
+              <div class="col-sm-9">
+                <p class="date">21.10.2016</p>
+                <h6><a href="#">Kerio Connect 9.2 упрощает общение и повышает качество совместной работы.</a></h6>
+                <p>Kerio Technologies выпустила Kerio Connect 9.2, дополнив свое популярное решение для обмена сообщениями и совместной работы для предприятий малого и среднего бизнеса отдельным приложением для рабочего стола, интеграцией со Spark, интеллектуальным почтовым клиентом для мобильных устройств и удаленным управлением при помощи MyKerio.</p>                    
+              </div>
+            </div>
+          </div>
+          <div class="row news-list">
+            <div class="col-sm-3">
+              <div class="news-item">
+                <a class="img" href="#"><img src="assets/images/news/1.jpg" alt="Mindjet анонсирует выход версии MindManager 2017"></a>
+                <p class="date">21.10.2016</p>
+                <h6><a href="#">Mindjet анонсирует выход версии MindManager 2017</a></h6>
+                <p>Компания Mindjet напоминает, что вскоре выйдет русская версия MindManager 2017 для Windows.</p>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="news-item">
+                <a class="img" href="#"><img src="assets/images/news/2.jpg" alt="Семинар «Медийное хранение 2016»"></a>
+                <p class="date">01.03.16</p>
+                <h6><a href="#">Семинар «Медийное хранение 2016»</a></h6>
+                <p>Приглашаются представители телеканалов и медиастудий, профессионалы постпроизводства.</p>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="news-item">
+                <a class="img" href="#"><img src="assets/images/news/3.jpg" alt="CorelCAD 2017: новые инструменты"></a>
+                <p class="date">01.03.16</p>
+                <h6><a href="#">CorelCAD 2017: новые инструменты</a></h6>
+                <p>Компания Corel представляет CorelCAD 2017 – новейшую версию мощной и экономически .</p>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="news-item">
+                <a class="img" href="#"><img src="assets/images/news/4.jpg" alt="Office для Windows по сниженной цене!"></a>
+                <p class="date">01.03.16</p>
+                <h6><a href="#">Office для Windows по сниженной цене!</a></h6>
+                <p>Вплоть до 10 ноября при покупке любой версии Office для Wndows, вы получаете 20% скидку!</p>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="news-item">
+                <a class="img" href="#"><img src="assets/images/news/5.jpg" alt="TeamViewer 12: удаленное управление становится"></a>
+                <p class="date">21.10.16</p>
+                <h6><a href="#">TeamViewer 12: удаленное управление становится</a></h6>
+                <p>Компания TeamViewer запустила бета-версию TeamViewer 12.</p>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="news-item">
+                <a class="img" href="#"><img src="assets/images/news/6.jpg" alt="ActiveCloud помогает ABI PRODUCT эффективно"></a>
+                <p class="date">01.03.16</p>
+                <h6><a href="#">ActiveCloud помогает ABI PRODUCT эффективно</a></h6>
+                <p>Торгово-производственный холдинг ABI PRODUCT использует IaaS ActiveCloud в частном.</p>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="news-item">
+                <a class="img" href="#"><img src="assets/images/news/7.jpg" alt="Новые курсы Oracle линейки Oracle Database 12c"></a>
+                <p class="date">01.03.16</p>
+                <h6><a href="#">Новые курсы Oracle линейки Oracle Database 12c</a></h6>
+                <p>Компания Corel представляет CorelCAD 2017 – новейшую версию мощной и экономически.</p>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="news-item">
+                <a class="img" href="#"><img src="assets/images/news/8.jpg" alt="Защита персональных данных абонентов"></a>
+                <p class="date">01.03.16</p>
+                <h6><a href="#">Защита персональных данных абонентов</a></h6>
+                <p>Вплоть до 10 ноября при покупке любой версии Office для Wndows, вы получаете 20% скидку!</p>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="news-item">
+                <a class="img" href="#"><img src="assets/images/news/9.jpg" alt="Вышел новый VEGAS Pro 14"></a>
+                <p class="date">01.03.16</p>
+                <h6><a href="#">Вышел новый VEGAS Pro 14</a></h6>
+                <p>Компания Mindjet напоминает, что вскоре выйдет русская версия MindManager 2017 для Windows.</p>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="news-item">
+                <a class="img" href="#"><img src="assets/images/news/10.jpg" alt="Российские микроэлектронщики собрались в Крыму"></a>
+                <p class="date">01.03.16</p>
+                <h6><a href="#">Российские микроэлектронщики собрались в Крыму</a></h6>
+                <p>Приглашаются представители телеканалов и медиастудий.</p>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="news-item">
+                <a class="img" href="#"><img src="assets/images/news/11.jpg" alt="Вышел новый PROMT 12"></a>
+                <p class="date">01.03.16</p>
+                <h6><a href="#">Вышел новый PROMT 12</a></h6>
+                <p>Обновленная версия PROMT 12 еще точнее переводит новостные и технические тексты, а также.</p>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="news-item">
+                <a class="img" href="#"><img src="assets/images/news/12.jpg" alt="Kerio Operator 2.5 улучшает аудио- и видеосвязь"></a>
+                <p class="date">01.03.16</p>
+                <h6><a href="#">Kerio Operator 2.5 улучшает аудио- и видеосвязь</a></h6>
+                <p>Вплоть до 10 ноября при покупке любой версии Office для Wndows, вы получаете 20% скидку!</p>
+              </div>
+            </div>
+          </div>
+          
+          <ul class="pagination">
+            <li class="active">1</li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+          </ul>
+          
+        </div>
+      </div>
+      
+      <script>
+        var content = components.import.querySelector('#subscribe');
+        document.querySelector('main').appendChild(content.cloneNode(true));
+      </script>
+    </main>
+    
+    <script>
+      content = components.import.querySelector('footer');
+      document.body.appendChild(content.cloneNode(true));
+    </script>
+  </body>
+</html>

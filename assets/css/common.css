@@ -6708,10 +6708,18 @@ menu {
   list-style: none;
   font-family: "MuseoSansCyrl500", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 14px
+  /*  &.list-inline > li {
+    padding-left: 12px;
+    padding-right: 12px;
+    &:first-child {
+      padding-left: 0;
+    }
+  }*/
 }
 menu li {
   margin-bottom: 7px;
+  margin-right: 10px;
 }
 menu li a {
   color: #0880bd;
@@ -6744,18 +6752,12 @@ menu li.see-all a:hover::before {
 menu.list-inline {
   margin-left: 0;
 }
-menu.list-inline > li {
-  padding-left: 12px;
-  padding-right: 12px;
-}
-menu.list-inline > li:first-child {
-  padding-left: 0;
-}
 menu.list-inline.pull-right {
   margin-top: 40px;
 }
 menu.list-inline.pull-right > li:last-child {
   padding-right: 0;
+  margin-right: 0;
 }
 /* developers list */
 .devs-list {
@@ -7092,10 +7094,6 @@ header .user button:hover::before {
 .catalog-menu > li:hover .submenu {
   display: block;
 }
-.search-form,
-.subscribe-form {
-  float: right !important;
-}
 @media (min-width: 768px) {
   .search-form .form-group,
   .subscribe-form .form-group {
@@ -7172,10 +7170,10 @@ header .user button:hover::before {
 }
 .search-form .form-group {
   position: relative;
+  max-width: 280px;
 }
 .search-form .form-group input {
   padding-right: 50px;
-  width: 280px;
   height: 30px;
   border: 1px solid #e9ebe8;
 }
@@ -7267,6 +7265,12 @@ fieldset[disabled] a.subscribe-form button {
   color: #00aeef;
   background-color: white;
 }
+@media (min-width: 768px) {
+  .search-form,
+  .subscribe-form {
+    float: right !important;
+  }
+}
 .title {
   margin-right: auto;
   margin-left: auto;
@@ -7290,7 +7294,15 @@ fieldset[disabled] a.subscribe-form button {
 }
 @media (min-width: 768px) {
   .title menu {
-    margin: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+    margin-left: -5px;
+  }
+  .title menu > li {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 }
 /* banners */
@@ -7577,87 +7589,73 @@ section.best .row .col-sm-6 .best-item .content {
 /* news */
 .news-list {
   padding-top: 20px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-}
-.news-list .col-sm-12 .news-item {
-  /*    .clearfix;
-    padding-bottom: 0;*/
-}
-.news-list .col-sm-12 .news-item img {
-  /*float: left;*/
-  margin-bottom: 0;
-}
-.news-list .col-sm-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
 }
 .news-list .col-sm-3:nth-child(4n+1) {
   clear: left;
 }
-/*
-
-<div class="col-sm-9" style="
-    padding-top: 20px;
-    padding-right: 20px;
-    
-">
-*/
-.news-item-first {
+.news-item-first,
+.news-item {
   background: white;
-  padding: 20px;
-  margin-bottom: 20px;
+  padding: 20px 20px 0 20px;
 }
-.news-item-first:hover {
+.news-item-first:hover,
+.news-item:hover {
   box-shadow: 0 0 30px -10px #c0c0c0;
 }
-.news-item-first a.img {
-  display: block
-  /*margin: 0 0 12px;*/
+.news-item-first a.img,
+.news-item a.img {
+  display: block;
 }
-.news-item-first img {
+.news-item-first img,
+.news-item img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+.news-item-first {
+  margin-top: 20px;
+}
+.news-item-first .col-sm-9 {
+  padding-top: 20px;
 }
 .news-item {
   -webkit-box-flex: 1;
   -webkit-flex: 1 0;
       -ms-flex: 1 0;
           flex: 1 0;
-  background: white;
-  padding: 20px;
+  padding-bottom: 20px;
   margin-bottom: 20px;
 }
-.news-item:hover {
-  box-shadow: 0 0 30px -10px #c0c0c0;
-}
 .news-item a.img {
-  display: block;
   margin: 0 0 12px;
 }
-.news-item img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
 @media (min-width: 768px) {
+  .news-list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+  .news-list .col-sm-3 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .news-item-first {
+    padding: 0;
+  }
+  .news-item-first .col-sm-9 {
+    padding: 20px 30px 0 10px;
+  }
   .news-item {
-    background: white;
     padding-top: 0;
   }
   .news-item a.img {
     margin: 0 -20px 12px;
-  }
-  .news-list .col-sm-12 .news-item a {
-    margin: 0;
   }
 }
 section.devs .devs-list {

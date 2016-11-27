@@ -6314,9 +6314,7 @@ button.close {
 .modal-header:before,
 .modal-header:after,
 .modal-footer:before,
-.modal-footer:after,
-.title:before,
-.title:after {
+.modal-footer:after {
   content: " ";
   display: table;
 }
@@ -6335,8 +6333,7 @@ button.close {
 .pager:after,
 .panel-body:after,
 .modal-header:after,
-.modal-footer:after,
-.title:after {
+.modal-footer:after {
   clear: both;
 }
 .center-block {
@@ -6582,6 +6579,258 @@ button.close {
     display: none !important;
   }
 }
+/* banners */
+.banner {
+  max-width: 400px;
+}
+.banner a {
+  display: block;
+  height: 190px;
+  padding: 20px;
+  background-color: #e7edf9;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-transition: none;
+          transition: none;
+}
+.banner a h5 {
+  font-family: "MuseoSansCyrl700", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0;
+      -ms-flex: 1 0;
+          flex: 1 0;
+  max-width: 50%;
+}
+.banner a p {
+  font-size: 12px;
+  line-height: 16px;
+  color: #959c9e;
+  margin-bottom: 0;
+  max-width: 50%;
+}
+.banner a:hover h5 {
+  color: #0378b3;
+}
+.banner a:hover h5::before {
+  background: #0378b3;
+}
+.banner a:hover p {
+  color: #333;
+}
+.banner.col-sm-4 h5 {
+  /*position: relative;*/
+}
+.banner.col-sm-4 h5::before {
+  content: '';
+  position: absolute;
+  background: #231f20;
+  width: 40px;
+  height: 2px;
+  top: 20px;
+}
+.banner.col-sm-4:hover h5::before {
+  background: #0378b3;
+}
+.banner.col-sm-2 h5 {
+  font-size: 15px;
+  margin-top: 0;
+  max-width: 60%;
+}
+.banner.col-sm-2 p {
+  max-width: 60%;
+}
+/** @TODO function */
+.b1 a {
+  background: url('img/banners/1.png') right bottom no-repeat;
+  background: url('img/banners/1.png') right bottom no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/1.png') right bottom no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
+.b1 a:hover {
+  background: url('img/banners/1.png') right bottom no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/1.png') right bottom no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
+.b2 a {
+  background: url('img/banners/2.png') right bottom no-repeat;
+  background: url('img/banners/2.png') right bottom no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/2.png') right bottom no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
+.b2 a:hover {
+  background: url('img/banners/2.png') right bottom no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/2.png') right bottom no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
+.b3 a {
+  background: url('img/banners/3.png') right center no-repeat;
+  background: url('img/banners/3.png') right center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/3.png') right center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
+.b3 a:hover {
+  background: url('img/banners/3.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/3.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
+.b4 a {
+  background: url('img/banners/4.png') right center no-repeat;
+  background: url('img/banners/4.png') right center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/4.png') right center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
+.b4 a:hover {
+  background: url('img/banners/4.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/4.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
+.b5 a {
+  background: url('img/banners/5.png') right bottom no-repeat;
+  background: url('img/banners/5.png') right bottom no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/5.png') right bottom no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
+.b5 a:hover {
+  background: url('img/banners/5.png') right bottom no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/5.png') right bottom no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
+.b6 a {
+  background: url('img/banners/6.png') right center no-repeat;
+  background: url('img/banners/6.png') right center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/6.png') right center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
+.b6 a:hover {
+  background: url('img/banners/6.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/6.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
+.b7 a {
+  background: url('img/banners/7.png') right center no-repeat;
+  background: url('img/banners/7.png') right center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/7.png') right center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
+.b7 a:hover {
+  background: url('img/banners/7.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/7.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
+.b8 a {
+  background: url('img/banners/8.png') right center no-repeat;
+  background: url('img/banners/8.png') right center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/8.png') right center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
+.b8 a:hover {
+  background: url('img/banners/8.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/8.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
+.b9 a {
+  background: url('img/banners/9.png') right center no-repeat;
+  background: url('img/banners/9.png') right center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/9.png') right center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
+.b9 a:hover {
+  background: url('img/banners/9.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/9.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
+.b10 a {
+  background: url('img/banners/10.png') right center no-repeat;
+  background: url('img/banners/10.png') right center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/10.png') right center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
+.b10 a:hover {
+  background: url('img/banners/10.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/10.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
+.b11 a {
+  background: url('img/banners/11.png') right center no-repeat;
+  background: url('img/banners/11.png') right center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/11.png') right center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
+.b11 a:hover {
+  background: url('img/banners/11.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/11.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
+.b12 a {
+  background: url('img/banners/12.png') right center no-repeat;
+  background: url('img/banners/12.png') right center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/12.png') right center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
+.b12 a:hover {
+  background: url('img/banners/12.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/12.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
+.b13 a {
+  background: url('img/banners/13.png') right bottom no-repeat;
+  background: url('img/banners/13.png') right bottom no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/13.png') right bottom no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
+.b13 a:hover {
+  background: url('img/banners/13.png') right bottom no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/13.png') right bottom no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
+.b14 a {
+  background: url('img/banners/14.png') right bottom no-repeat;
+  background: url('img/banners/14.png') right bottom no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/14.png') right bottom no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
+.b14 a:hover {
+  background: url('img/banners/14.png') right bottom no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/14.png') right bottom no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
+.b15 a {
+  background: url('img/banners/15.png') right bottom no-repeat;
+  background: url('img/banners/15.png') right bottom no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/15.png') right bottom no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
+.b15 a:hover {
+  background: url('img/banners/15.png') right bottom no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/15.png') right bottom no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
+.b16 a {
+  background: url('img/banners/16.png') right bottom no-repeat;
+  background: url('img/banners/16.png') right bottom no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/16.png') right bottom no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
+.b16 a:hover {
+  background: url('img/banners/16.png') right bottom no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/16.png') right bottom no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
+.b17 a {
+  background: url('img/banners/17.png') right bottom no-repeat;
+  background: url('img/banners/17.png') right bottom no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/17.png') right bottom no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
+.b17 a:hover {
+  background: url('img/banners/17.png') right bottom no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/17.png') right bottom no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
+.b18 a {
+  background: url('img/banners/18.png') center no-repeat;
+  background: url('img/banners/18.png') center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/18.png') center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
+.b18 a:hover {
+  background: url('img/banners/18.png') center no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/18.png') center no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
+.b19 a {
+  background: url('img/banners/19.png') center no-repeat;
+  background: url('img/banners/19.png') center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/19.png') center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
+.b19 a:hover {
+  background: url('img/banners/19.png') center no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/19.png') center no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
+.b20 a {
+  background: url('img/banners/20.png') center no-repeat;
+  background: url('img/banners/20.png') center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/20.png') center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
+.b20 a:hover {
+  background: url('img/banners/20.png') center no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
+  background: url('img/banners/20.png') center no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+}
 /* dev */
 html {
   height: 100%;
@@ -6613,19 +6862,21 @@ body {
           transition: all 0.2s ease-in-out 0s;
 }
 /* text with columns */
-.columns p,
-.columns li {
-  -moz-column-break-inside: avoid;
-  -webkit-column-break-inside: avoid;
-  column-break-inside: avoid;
-  -moz-column-gap: 20px;
-  -webkit-column-gap: 20px;
-  column-gap: 20px;
-}
-.columns.columns-count-2 {
-  -moz-columns: 2;
-  -webkit-columns: 2;
-  columns: 2;
+@media (min-width: 768px) {
+  .columns p,
+  .columns li {
+    -moz-column-break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    column-break-inside: avoid;
+    -moz-column-gap: 20px;
+    -webkit-column-gap: 20px;
+    column-gap: 20px;
+  }
+  .columns.columns-count-2 {
+    -moz-columns: 2;
+    -webkit-columns: 2;
+    columns: 2;
+  }
 }
 section {
   margin-bottom: 20px;
@@ -6649,7 +6900,8 @@ h1 {
 .colored:hover {
   color: #0c93d8;
 }
-button {
+button,
+a.btn {
   height: 42px;
   font-family: "MuseoSansCyrl700", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -6660,6 +6912,16 @@ button {
   color: #737373;
   border-color: #dcdcdc;
   outline: none;
+}
+.btn-primary {
+  background: -webkit-linear-gradient(#44c7f8, #00aeef);
+  background: linear-gradient(#44c7f8, #00aeef);
+  font-size: 15px;
+}
+.btn-primary:hover,
+.btn-primary:active {
+  background: -webkit-linear-gradient(#67d1f8, #13b8f5);
+  background: linear-gradient(#67d1f8, #13b8f5);
 }
 .breadcrumb {
   font-size: 12px;
@@ -7170,9 +7432,12 @@ header .user button:hover::before {
 }
 .search-form .form-group {
   position: relative;
-  max-width: 280px;
+  display: inline-block;
+  width: 280px;
+  max-width: 100%;
 }
 .search-form .form-group input {
+  width: 100%;
   padding-right: 50px;
   height: 30px;
   border: 1px solid #e9ebe8;
@@ -7193,9 +7458,6 @@ header .user button:hover::before {
 }
 .full-width-brace .search-form input {
   border: transparent;
-}
-.subscribe-form {
-  padding-left: 20px;
 }
 .subscribe-form input.form-control {
   width: 215px;
@@ -7270,27 +7532,29 @@ fieldset[disabled] a.subscribe-form button {
   .subscribe-form {
     float: right !important;
   }
+  .subscribe-form {
+    padding-left: 20px;
+  }
 }
 .title {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 10px;
-  padding-right: 10px;
-  max-width: 1160px;
+  /*.container-fluid;*/
   padding-bottom: 26px;
+}
+.title h1 {
+  margin-bottom: 10px;
+}
+.title p {
+  color: #231f20;
+  font-size: 14px;
+}
+.title p a {
+  color: #0880bd;
+}
+.title p a:hover {
+  color: #0c93d8;
+}
+.title.title-with-bg {
   background: url('img/title-bg.jpg') right top no-repeat;
-}
-.title > .navbar-header,
-.title > .navbar-collapse {
-  margin-right: -10px;
-  margin-left: -10px;
-}
-@media (min-width: 768px) {
-  .title > .navbar-header,
-  .title > .navbar-collapse {
-    margin-right: 0;
-    margin-left: 0;
-  }
 }
 @media (min-width: 768px) {
   .title menu {
@@ -7304,195 +7568,52 @@ fieldset[disabled] a.subscribe-form button {
     padding-left: 5px;
     padding-right: 5px;
   }
+  .title p {
+    max-width: 70%;
+  }
 }
-/* banners */
-.banner a {
-  display: block;
-  height: 190px;
-  padding: 20px;
-  background-color: #e7edf9;
-  margin-bottom: 20px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  -webkit-transition: none;
-          transition: none;
-}
-.banner a h5 {
-  font-family: "MuseoSansCyrl700", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 0;
-      -ms-flex: 1 0;
-          flex: 1 0;
-  max-width: 50%;
-}
-.banner a p {
-  font-size: 12px;
-  line-height: 16px;
-  color: #959c9e;
-  margin-bottom: 0;
-  max-width: 50%;
-}
-.banner a:hover h5 {
-  color: #0378b3;
-}
-.banner a:hover h5::before {
-  background: #0378b3;
-}
-.banner a:hover p {
-  color: #333;
-}
-.banner.col-sm-4 h5 {
-  /*position: relative;*/
-}
-.banner.col-sm-4 h5::before {
-  content: '';
-  position: absolute;
-  background: #231f20;
-  width: 40px;
-  height: 2px;
-  top: 20px;
-}
-.banner.col-sm-4:hover h5::before {
-  background: #0378b3;
-}
-.banner.col-sm-2 h5 {
-  font-size: 15px;
-  margin-top: 0;
-  max-width: 60%;
-}
-.banner.col-sm-2 p {
-  max-width: 60%;
-}
-/** @TODO function */
-.b1 a {
-  background: url('img/banners/1.png') right bottom no-repeat;
-  background: url('img/banners/1.png') right bottom no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/1.png') right bottom no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
-}
-.b1 a:hover {
-  background: url('img/banners/1.png') right bottom no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/1.png') right bottom no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
-}
-.b2 a {
-  background: url('img/banners/2.png') right bottom no-repeat;
-  background: url('img/banners/2.png') right bottom no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/2.png') right bottom no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
-}
-.b2 a:hover {
-  background: url('img/banners/2.png') right bottom no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/2.png') right bottom no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
-}
-.b3 a {
-  background: url('img/banners/3.png') right center no-repeat;
-  background: url('img/banners/3.png') right center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/3.png') right center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
-}
-.b3 a:hover {
-  background: url('img/banners/3.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/3.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
-}
-.b4 a {
-  background: url('img/banners/4.png') right center no-repeat;
-  background: url('img/banners/4.png') right center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/4.png') right center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
-}
-.b4 a:hover {
-  background: url('img/banners/4.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/4.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
-}
-.b5 a {
-  background: url('img/banners/5.png') right bottom no-repeat;
-  background: url('img/banners/5.png') right bottom no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/5.png') right bottom no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
-}
-.b5 a:hover {
-  background: url('img/banners/5.png') right bottom no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/5.png') right bottom no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
-}
-.b6 a {
-  background: url('img/banners/6.png') right center no-repeat;
-  background: url('img/banners/6.png') right center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/6.png') right center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
-}
-.b6 a:hover {
-  background: url('img/banners/6.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/6.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
-}
-.b7 a {
-  background: url('img/banners/7.png') right center no-repeat;
-  background: url('img/banners/7.png') right center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/7.png') right center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
-}
-.b7 a:hover {
-  background: url('img/banners/7.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/7.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
-}
-.b8 a {
-  background: url('img/banners/8.png') right center no-repeat;
-  background: url('img/banners/8.png') right center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/8.png') right center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
-}
-.b8 a:hover {
-  background: url('img/banners/8.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/8.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
-}
-/* best */
-.best-item {
-  border: 1px solid #e9ebe8;
-  border-radius: 4px;
+/* goods */
+.catalog-item {
   color: #231f20;
   margin-bottom: 20px;
 }
-.best-item .content {
-  padding: 30px;
-}
-.best-item .content .picture {
+.catalog-item .content .picture {
   width: 103px;
   float: left;
 }
-.best-item .content .picture img {
+.catalog-item .content .picture img {
   display: block;
   max-width: 100%;
   height: auto;
 }
-.best-item .content .text {
+.catalog-item .content .text {
   padding-left: 133px;
 }
-.best-item .content .article {
+.catalog-item .content .article {
   color: #a3a9ab;
   text-transform: uppercase;
   line-height: 1;
   margin-bottom: 7px;
 }
-.best-item .content h5 {
+.catalog-item .content h5 {
   margin: 0;
   line-height: 22px;
 }
-.best-item .content .description {
+.catalog-item .content .description {
   font-size: 92%;
   font-family: "MuseoSansCyrl500", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.best-item .content .features {
+.catalog-item .content .features {
   font-size: 14px;
   padding-left: 0;
   list-style: none;
 }
-.best-item .content .features li {
+.catalog-item .content .features li {
   padding-left: 12px;
   margin-bottom: 4px;
   position: relative;
 }
-.best-item .content .features li::before {
+.catalog-item .content .features li::before {
   content: '';
   width: 4px;
   height: 4px;
@@ -7501,42 +7622,211 @@ fieldset[disabled] a.subscribe-form button {
   left: 0;
   top: 7px;
 }
-.best-item .footer {
-  padding: 20px 20px 20px 30px;
+.catalog-item .footer {
   background: #fafafa;
-  border-top: 1px solid #e9ebe8;
 }
-.best-item .footer form .form-control-static {
-  font-family: "PF DinDisplay Pro Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 18px;
-}
-.best-item .footer form input.form-control {
+.catalog-item .footer form input.form-control {
   width: 55px;
   height: 30px;
   text-align: center;
 }
-.best-item .footer form .input-group {
-  padding: 0 6px;
-}
-.best-item .footer form .input-group-addon {
+.catalog-item .footer form .input-group-addon {
   padding-left: 10px;
   padding-right: 10px;
   color: #a3a9ab;
   cursor: pointer;
 }
-.best-item .footer form button {
+.catalog-item .footer form .form-inputs th {
+  font-weight: normal;
+  color: #a3a9ab;
+  white-space: nowrap;
+  padding: 0 20px 5px 0;
+}
+.catalog-item .footer form .form-inputs td {
+  white-space: nowrap;
+  font-family: "PF DinDisplay Pro Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  padding: 0 20px 0 0;
+}
+.catalog-item .footer form .form-inputs .form-group {
+  margin: 0;
+}
+.catalog-item .footer form .form-inputs .total-cost {
+  color: #72bf44;
+  padding: 0;
+}
+.catalog-item .footer form .form-buttons button {
   width: 110px;
-  float: right;
 }
-.btn-primary {
-  background: -webkit-linear-gradient(#44c7f8, #00aeef);
-  background: linear-gradient(#44c7f8, #00aeef);
+.catalog-item .footer form .form-buttons a.btn {
   font-size: 15px;
+  padding: 10px 15px;
+  margin-left: 8px;
 }
-.btn-primary:hover,
-.btn-primary:active {
-  background: -webkit-linear-gradient(#67d1f8, #13b8f5);
-  background: linear-gradient(#67d1f8, #13b8f5);
+.catalog-item .footer form .form-buttons a.view-price {
+  padding-left: 23px;
+  position: relative;
+}
+.catalog-item .footer form .form-buttons a.view-price::before {
+  content: '*';
+  font-size: 25px;
+  color: #666666;
+  position: absolute;
+  left: 0;
+  top: 7px;
+}
+.catalog-item.full,
+.catalog-item.best {
+  border: 1px solid #e9ebe8;
+  border-radius: 4px;
+}
+.catalog-item.best .content {
+  padding: 30px;
+  border-bottom: 1px solid #e9ebe8;
+}
+.catalog-item.best .footer form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.catalog-item.best .footer form .form-inputs {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 25px 0 10px 30px;
+}
+.catalog-item.best .footer form .form-inputs td {
+  padding-right: 5px;
+}
+.catalog-item.best .footer form .form-inputs .cost::after {
+  content: ' \2715';
+  font-size: 80%;
+}
+.catalog-item.best .footer form .form-inputs .total-cost {
+  color: inherit;
+}
+.catalog-item.best .footer form .form-inputs .total-cost::before {
+  content: '= ';
+}
+.catalog-item.best .footer form .form-buttons {
+  padding: 20px;
+  border-top: none;
+}
+.catalog-item.full .content {
+  padding: 30px;
+  border-bottom: 1px solid #e9ebe8;
+}
+.catalog-item.full .footer form .form-inputs {
+  padding: 20px 20px 20px 30px;
+}
+.catalog-item.full .footer form .form-buttons {
+  padding: 20px 20px 20px 30px;
+  border-top: 1px solid #e9ebe8;
+}
+.catalog-item.table {
+  border-bottom: 1px solid #e9ebe8;
+}
+.catalog-item.table .content .article {
+  margin: 0;
+}
+.catalog-item.table .content h5 {
+  margin-bottom: 10px;
+}
+.catalog-item.table .footer {
+  width: 100%;
+}
+.catalog-item.table .footer form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.catalog-item.table .footer form .form-inputs {
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+.catalog-item.table .footer form .form-buttons {
+  padding-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .catalog-item.full {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .catalog-item.full .content {
+    -webkit-box-flex: 6;
+    -webkit-flex: 6;
+        -ms-flex: 6;
+            flex: 6;
+  }
+  .catalog-item.full .footer {
+    -webkit-box-flex: 4;
+    -webkit-flex: 4;
+        -ms-flex: 4;
+            flex: 4;
+  }
+  .catalog-item.full .footer form .form-inputs {
+    padding: 30px 20px 30px 30px;
+  }
+  .catalog-item.full .footer form .form-buttons {
+    padding: 30px;
+  }
+  .catalog-item.full .footer form .form-buttons a.view-price {
+    margin-left: 0;
+  }
+  /*  .catalog-item.best {
+    .content {
+      border-bottom: 1px solid @gray-light;
+    }
+  }*/
+  .catalog-item.full .content {
+    border-bottom: none;
+    border-right: 1px solid #e9ebe8;
+  }
+  .catalog-item.table {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .catalog-item.table .content {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    padding-right: 20px;
+  }
+  .catalog-item.table .footer {
+    width: auto;
+  }
+  .catalog-item.table .footer form {
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+  }
+  .catalog-item.table .footer form th {
+    display: none;
+  }
 }
 /* flex для выравнимания по высоте */
 section.best .row {
@@ -7561,7 +7851,7 @@ section.best .row .col-sm-6 {
 section.best .row .col-sm-6:nth-child(odd) {
   clear: left;
 }
-section.best .row .col-sm-6 .best-item {
+section.best .row .col-sm-6 .catalog-item {
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 auto;
       -ms-flex: 1 1 auto;
@@ -7580,11 +7870,17 @@ section.best .row .col-sm-6 .best-item {
       -ms-flex-align: stretch;
           align-items: stretch;
 }
-section.best .row .col-sm-6 .best-item .content {
+section.best .row .col-sm-6 .catalog-item .content {
   -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+section.best .row .col-sm-6 .catalog-item .footer {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
 }
 /* news */
 .news-list {
@@ -7666,6 +7962,7 @@ section.devs .devs-list {
 }
 section.seo {
   border-top: 1px solid #e9ebe8;
+  margin-top: 46px;
 }
 section.subscribe {
   margin-bottom: 0;
@@ -7674,8 +7971,13 @@ section.subscribe .full-width-brace {
   padding: 30px 0;
 }
 section.subscribe .full-width-brace h6 {
-  color: white;
-  margin: 0;
+  color: white
+  /*margin: 0;*/
+}
+@media (min-width: 768px) {
+  section.subscribe .full-width-brace h6 {
+    margin: 0;
+  }
 }
 /* footer */
 footer {

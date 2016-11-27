@@ -4,7 +4,6 @@
     <title>Главная страница</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/common.css">
     <link rel="import" href="components.html">
     <script>
       var components = document.querySelector('link[rel=import]');
@@ -21,9 +20,10 @@
     
     <main>
 
-      <!-- banners -->
-      <section>
-        <div class="container-fluid">
+      <div class="container-fluid">
+      
+        <!-- banners -->
+        <section>
           <div class="row">
             <div class="banner b1 col-sm-4">
               <a href="#">
@@ -74,21 +74,19 @@
               </a>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- best -->
-      <section class="best">
-        <div class="container-fluid">
+        <!-- best -->
+        <section class="best">
           <h3>Предложения месяца</h3>
           <div class="row">
             <div class="col-sm-6">
-              <div class="best-item">
+              <div class="catalog-item best">
                 <div class="content">
                   <div class="picture"><a href="#"><img src="assets/images/products/1.jpg" alt="Microsoft Office для дома и учебы 2016"></a></div>
                   <div class="text">
                     <p class="article">kbv19tr67-a</p>
-                    <h5><a href="#">Microsoft Office для дома и учебы 2016</a></h5>
+                    <h5><a href="#">Microsoft Office для&nbsp;дома и&nbsp;учебы&nbsp;2016</a></h5>
                     <p class="description">Для 5 ПК или Mac или 5 планшетов</p>
                     <ul class="features">
                       <li>Для одного компьютера Mac</li>
@@ -98,27 +96,36 @@
                   </div>
                 </div>
                 <div class="footer">
-                  <form class="form-inline">
-                    <div class="form-group">
-                      <p class="form-control-static">5 199 РУБ&nbsp;&nbsp;×</p>
+                  <form>
+                    <div class="form-inputs">
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td class="cost">5 199 РУБ</td>
+                            <td>
+                              <div class="form-group">
+                                <div class="input-group">
+                                  <div class="input-group-addon js-counter" data-dir="down">-</div>
+                                  <input type="text" class="form-control" value="2">
+                                  <div class="input-group-addon js-counter" data-dir="up">+</div>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="total-cost">10 398 РУБ</td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
-                    <div class="form-group">
-                      <div class="input-group">
-                        <div class="input-group-addon">-</div>
-                        <input type="text" class="form-control" value="2">
-                        <div class="input-group-addon">+</div>
-                      </div>
+                    <div class="form-buttons">
+                      <button type="submit" class="btn btn-primary">Купить</button>
                     </div>
-                    <div class="form-group">
-                      <p class="form-control-static">= 10 398 РУБ</p>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Купить</button>
                   </form>
                 </div>
               </div>
             </div>
+            
             <div class="col-sm-6">
-              <div class="best-item">
+              <div class="catalog-item best">
                 <div class="content">
                   <div class="picture"><a href="#"><img src="assets/images/products/2.jpg" alt="Windows 10 Домашняя"></a></div>
                   <div class="text">
@@ -133,27 +140,36 @@
                   </div>
                 </div>
                 <div class="footer">
-                  <form class="form-inline">
-                    <div class="form-group">
-                      <p class="form-control-static">7 390 РУБ&nbsp;&nbsp;×</p>
+                  <form>
+                    <div class="form-inputs">
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td class="cost">7 390 РУБ</td>
+                            <td>
+                              <div class="form-group">
+                                <div class="input-group">
+                                  <div class="input-group-addon js-counter" data-dir="down">-</div>
+                                  <input type="text" class="form-control js-counter" value="1">
+                                  <div class="input-group-addon js-counter" data-dir="up">+</div>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="total-cost">7 390 РУБ</td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
-                    <div class="form-group">
-                      <div class="input-group">
-                        <div class="input-group-addon">-</div>
-                        <input type="text" class="form-control" value="1">
-                        <div class="input-group-addon">+</div>
-                      </div>
+                    <div class="form-buttons">
+                      <button type="submit" class="btn btn-primary">Купить</button>
                     </div>
-                    <div class="form-group">
-                      <p class="form-control-static">= 7 390 РУБ</p>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Купить</button>
                   </form>
                 </div>
               </div>
             </div>
+            
             <div class="col-sm-6">
-              <div class="best-item">
+              <div class="catalog-item best">
                 <div class="content">
                   <div class="picture"><a href="#"><img src="assets/images/products/3.jpg" alt="Kaspersky Anti-Virus Russian Edition"></a></div>
                   <div class="text">
@@ -168,27 +184,36 @@
                   </div>
                 </div>
                 <div class="footer">
-                  <form class="form-inline">
-                    <div class="form-group">
-                      <p class="form-control-static">2 190 РУБ&nbsp;&nbsp;×</p>
+                  <form>
+                    <div class="form-inputs">
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td class="cost">2 190 РУБ</td>
+                            <td>
+                              <div class="form-group">
+                                <div class="input-group">
+                                  <div class="input-group-addon js-counter" data-dir="down">-</div>
+                                  <input type="text" class="form-control js-counter" value="4">
+                                  <div class="input-group-addon js-counter" data-dir="up">+</div>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="total-cost">8 760 РУБ</td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
-                    <div class="form-group">
-                      <div class="input-group">
-                        <div class="input-group-addon">-</div>
-                        <input type="text" class="form-control" value="4">
-                        <div class="input-group-addon">+</div>
-                      </div>
+                    <div class="form-buttons">
+                      <button type="submit" class="btn btn-primary">Купить</button>
                     </div>
-                    <div class="form-group">
-                      <p class="form-control-static">= 8 760 РУБ</p>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Купить</button>
                   </form>
                 </div>
               </div>
             </div>
+            
             <div class="col-sm-6">
-              <div class="best-item">
+              <div class="catalog-item best">
                 <div class="content">
                   <div class="picture"><a href="#"><img src="assets/images/products/4.jpg" alt="Microsoft Office 365 для дома расширенный"></a></div>
                   <div class="text">
@@ -203,28 +228,38 @@
                   </div>
                 </div>
                 <div class="footer">
-                  <form class="form-inline">
-                    <div class="form-group">
-                      <p class="form-control-static">4 560 РУБ&nbsp;&nbsp;×</p>
+                  <form>
+                    <div class="form-inputs">
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td class="cost">4 560 РУБ</td>
+                            <td>
+                              <div class="form-group">
+                                <div class="input-group">
+                                  <div class="input-group-addon js-counter" data-dir="down">-</div>
+                                  <input type="text" class="form-control js-counter" value="3">
+                                  <div class="input-group-addon js-counter" data-dir="up">+</div>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="total-cost">13 680 РУБ</td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
-                    <div class="form-group">
-                      <div class="input-group">
-                        <div class="input-group-addon">-</div>
-                        <input type="text" class="form-control" value="3">
-                        <div class="input-group-addon">+</div>
-                      </div>
+                    <div class="form-buttons">
+                      <button type="submit" class="btn btn-primary">Купить</button>
                     </div>
-                    <div class="form-group">
-                      <p class="form-control-static">= 13 680 РУБ</p>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Купить</button>
                   </form>
                 </div>
               </div>
             </div>
+            
           </div>
-        </div>
-      </section>
+        </section>
+        
+      </div>
 
       <!-- news -->
       <section>
@@ -276,8 +311,9 @@
       </section>
 
       <!-- developers -->
-      <section class="devs">
-        <div class="container-fluid">
+      <div class="container-fluid devs-seo">
+        
+        <section class="devs">
           <div class="clearfix">
             <h3 class="pull-left">Производители</h3>
             <menu class="pull-right list-inline">
@@ -292,21 +328,14 @@
             <li><a href="#"><img src="assets/images/developers/5.png" alt="Terrasoft"></a></li>
             <li><a href="#"><img src="assets/images/developers/6.png" alt="ABBYY"></a></li>
           </ul>
-        </div>
-      </section>
-
-      <!-- about -->
-      <section class="seo">
-        <div class="container-fluid">
-          <h3>О проекте</h3>
-          <div class="columns columns-count-2">
-            <p>Поэтому совсем не случайно то, что геодезическая линия страхует фрактал. Просеивание, исключая очевидный случай, индоссирует многомерный гарант. Огибающая, в случае использования адаптивно-ландшафтных систем земледелия, дает взаимозачет. Чернозём экстремально стекает в коллинеарный дольник, что несомненно приведет нас к истине.</p>
-            <p>Наибольшее и наименьшее значения функции добросовестно использует договорный ил. Лизиметр, очевидно, неравномерен. Траншея, как следует из теоретических исследований, вертикально запрещает типичный закон, когда речь идет об ответственности юридического лица. Следствие: мульча транслирует предпринимательский риск. Поэт инстинктивно чувствовал преимущества реального устного исполнения тех стихов, в которых стяжение переворачивает стиль менеджмента.</p>    
-            <p>Скачок функции, чтобы уловить хореический ритм или аллитерацию на "л", интуитивно переносит строфоид. Стратегия позиционирования естественно отражает традиционный канал. Парафраз индуцирует комплексный product placement. Восприятие марки семантически просветляет реципиент. Абстрактное высказывание директивно определяет product placement. Правило альтернанса расточительно иллюстрирует виновный имидж предприятия.</p>
-            <p>Непрерывная функция объективно перемещает экспериментальный палимпсест. Очевидно, что дистанционное зондирование сжимает предпринимательский риск. Управление брендом непрерывно.</p>
-          </div>
-        </div>
-      </section>
+        </section>
+      
+        <script>
+          var content = components.import.querySelector('#seo');
+          document.querySelector('.devs-seo').appendChild(content.cloneNode(true));
+        </script>      
+      
+      </div>
 
       <script>
         var content = components.import.querySelector('#subscribe');

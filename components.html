@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/common.css">
     <script src="assets/js/libs/jquery-2.1.4.min.js"></script>
+    <script src="assets/js/libs/sticky-kit.min.js"></script>
     <script src="assets/js/common.js"></script>
   </head>
   <body>
@@ -30,7 +31,8 @@
                 <a href="#">12 560 РУБ</a>
               </div>
             </div>
-            <form class="user"><button type="submit">Войти</button></form>
+            <div class="user"><a href="#" class="btn btn-default btn-key">Войти</a></div>
+            <!--<form class="user"><button type="submit">Войти</button></form>-->
           </div>
         </div>
       </div>
@@ -178,6 +180,70 @@
       </section>
 
     </main>
+      
+    <form id="filters" class="filters sticky" data-sticky-parent=".row">
+      <fieldset>
+        <legend>Сортировать по</legend>
+        <menu class="list-inline">
+          <li><a href="#">цене</a></li>
+          <li><a href="#">алфавиту</a></li>
+        </menu>
+      </fieldset>
+      <fieldset>
+        <legend>Показывать по</legend>
+        <menu class="list-inline">
+          <li>10</li>
+          <li><a href="#">20</a></li>
+          <li><a href="#">40</a></li>
+        </menu>
+      </fieldset>
+      <fieldset>
+        <legend>Фильтры товаров</legend>
+        <div class="form-group">
+          <select class="form-control input-sm">
+            <option disabled selected>Производитель</option>
+            <option>Все</option>
+            <option>Eset</option>
+            <option>Kaspersky</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <select class="form-control input-sm">
+            <option disabled selected>Количество лицензий</option>
+            <option>Все</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <select class="form-control input-sm">
+            <option disabled selected>ОС</option>
+            <option>Все</option>
+            <option>Windows</option>
+            <option>Linux</option>
+          </select>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Цвет коробки</legend>
+        <div class="checkbox">
+          <label><input type="checkbox" value=""> Белый</label>
+          <label><input type="checkbox" value="" checked> Оранжевый</label>
+          <label><input type="checkbox" value=""> Синий</label>
+          <label><input type="checkbox" value=""> Черный</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Способ распространения</legend>
+        <div class="radio">
+          <label><input type="radio" name="type" value=""> Электронная версия</label>
+          <label><input type="radio" name="type" value="" checked> Диск</label>
+        </div>
+      </fieldset>
+      <button type="submit" class="btn btn-default">Показать</button>
+    </form>
 
     <footer>
       <div class="container-fluid">

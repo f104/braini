@@ -14,3 +14,12 @@ $(document).ready(function () {
   });
   
 });
+
+$(window).load(function(){
+  $(".sticky").each(function(i){
+    var parent = $(this).data('sticky-parent');
+    $(this).stick_in_parent({
+      parent: $(parent)
+    });
+  });
+});

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Контакты</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="import" href="components.html">
+    <script>
+      var components = document.querySelector('link[rel=import]');
+    </script>
+  </head>
+  <body>
+    <script>
+      var content = components.import.querySelector('header');
+      document.body.appendChild(content.cloneNode(true));
+      content = components.import.querySelector('#main_menu');
+      document.body.appendChild(content.cloneNode(true));
+    </script>
+    
+    <main>
+      
+      <div class="container-fluid">
+      
+        <ol class="breadcrumb">
+          <li><a href="#">Главная</a></li>
+          <li class="active">Контакты</li>
+        </ol>
+        
+        <section class="row">
+          <div class="col-sm-6">
+
+            <div class="page-header">
+              <h1>Контакты</h1>
+              <p>Объект права отражает понимающий автоматизм, даже с учетом публичного характера данных правоотношений. Представленный контент-анализ является психолингвистическим.</p>
+            </div>
+
+            <ul class="contacts">
+              <li class="address">603032, Нижний Новгород, ул. Правдинская, д.27</li>
+              <li class="phone"><a href="tel:+78312510841">+7 (831) 251-08-41</a></li>
+              <li class="email"><a href="mailto:info@braini.ru">info@braini.ru</a></li>
+              <li class="time">
+                пн-пт: с 9:00 до 19:00<br>
+                сб-вс: выходной</li>
+            </ul>
+            
+          </div>
+          
+          <div class="col-sm-5 col-sm-offset-1">
+            
+            <form class="feedback form-horizontal">
+              <fieldset>
+                <legend>Оставить сообщение</legend>
+                <div class="form-group">
+                  <label for="name" class="col-sm-3 control-label">Ваше имя</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control input-sm" id="name">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="phone" class="col-sm-3 control-label">Ваш телефон</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control input-sm" id="phone">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="text" class="col-sm-3 control-label">Сообщение</label>
+                  <div class="col-sm-9">
+                    <textarea class="form-control input-sm" id="text" rows="7"></textarea>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-sm-offset-3 col-sm-10">
+                    <button class="btn btn-default btn-sm">Прикрепить файл</button>
+                  </div>
+                </div>
+              </fieldset>
+              <div class="form-group">
+                <div class="col-sm-offset-3 col-sm-10">
+                  <button type="submit" class="btn btn-primary btn-lg">Отправить</button>
+                </div>
+              </div>
+            </form>            
+            
+          </div>
+          
+        </section>
+      
+      </div>
+      
+      <div id="map" class="map"></div>
+      <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+      <script>
+        ymaps.ready(function(){
+            map = new ymaps.Map("map", {
+                center: [56.282547, 43.943146],
+                zoom: 13,
+                controls: [],
+            });
+            map.behaviors.disable('scrollZoom');
+        });
+      </script>
+      
+    </main>
+    
+    <script>
+      content = components.import.querySelector('footer');
+      document.body.appendChild(content.cloneNode(true));
+    </script>
+  </body>
+</html>

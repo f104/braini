@@ -13,6 +13,11 @@ $(document).ready(function () {
     }
   });
   
+  // Applies to all select boxes that have no value for their first option
+  $("select").on('change', function() {
+      $(this).toggleClass("empty", $.inArray($(this).val(), ['', null]) >= 0);
+  }).trigger('change');
+  
 });
 
 $(window).load(function(){

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Корзина</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="import" href="components.html">
+    <script>
+      var components = document.querySelector('link[rel=import]');
+    </script>
+  </head>
+  <body>
+    <script>
+      var content = components.import.querySelector('header');
+      document.body.appendChild(content.cloneNode(true));
+      content = components.import.querySelector('#main_menu');
+      document.body.appendChild(content.cloneNode(true));
+    </script>
+    
+    <main>
+      
+      <div class="container-fluid">
+      
+        <ol class="breadcrumb">
+          <li><a href="#">Главная</a></li>
+          <li class="active">Корзина</li>
+        </ol>
+        
+        <section>
+          
+          <div class="page-header">
+            <h1>Корзина</h1>
+          </div>
+          
+          <div class="table-responsive">
+            <table class="vert-center">
+              <thead>
+                <th>Артикул</th>
+                <th>Название</th>
+                <th>Цена</th>
+                <th colspan="2">Количество</th>
+                <th colspan="2">Сумма</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>KBV19TR67-A</td>
+                  <td><a href="#" class="colored">Office для учебы и работы для MAC</a></td>
+                  <td><div class="cost">125 800 руб</div></td>
+                  <td>
+                    <div class="counter input-group">
+                      <div class="input-group-addon js-counter" data-dir="down">-</div>
+                      <input type="text" class="form-control input-sm" value="4">
+                      <div class="input-group-addon js-counter" data-dir="up">+</div>
+                    </div>
+                  </td>
+                  <td><a href="#" class="view-price">Посмотреть прайс-лист</a></td>
+                  <td><div class="cost">3 820 600 руб</div></td>
+                  <td><a href="#" class="remove-cross">&#10005;</a></td>
+                </tr>
+                <tr>
+                  <td>KBV19TR67-A</td>
+                  <td><a href="#" class="colored">Kaspersky Endpoint Security</a></td>
+                  <td><div class="cost">125 800 руб</div></td>
+                  <td>
+                    <div class="counter input-group">
+                      <div class="input-group-addon js-counter" data-dir="down">-</div>
+                      <input type="text" class="form-control input-sm" value="4">
+                      <div class="input-group-addon js-counter" data-dir="up">+</div>
+                    </div>
+                  </td>
+                  <td></td>
+                  <td><div class="cost">3 820 600 руб</div></td>
+                  <td><a href="#" class="remove-cross">&#10005;</a></td>
+                </tr>
+                <tr>
+                  <td>KBV19TR67-A</td>
+                  <td><a href="#" class="colored">Office для учебы и работы для MAC</a></td>
+                  <td><div class="cost">125 800 руб</div></td>
+                  <td>
+                    <div class="counter input-group">
+                      <div class="input-group-addon js-counter" data-dir="down">-</div>
+                      <input type="text" class="form-control input-sm" value="4">
+                      <div class="input-group-addon js-counter" data-dir="up">+</div>
+                    </div>
+                  </td>
+                  <td><a href="#" class="view-price">Посмотреть прайс-лист</a></td>
+                  <td><div class="cost">3 820 600 руб</div></td>
+                  <td><a href="#" class="remove-cross">&#10005;</a></td>
+                </tr>
+                <tr>
+                  <td>KBV19TR67-A</td>
+                  <td><a href="#" class="colored">Office для учебы и работы для MAC</a></td>
+                  <td><div class="cost">125 800 руб</div></td>
+                  <td>
+                    <div class="counter input-group">
+                      <div class="input-group-addon js-counter" data-dir="down">-</div>
+                      <input type="text" class="form-control input-sm" value="4">
+                      <div class="input-group-addon js-counter" data-dir="up">+</div>
+                    </div>
+                  </td>
+                  <td><a href="#" class="view-price">Посмотреть прайс-лист</a></td>
+                  <td><div class="cost">3 820 600 руб</div></td>
+                  <td><a href="#" class="remove-cross">&#10005;</a></td>
+                </tr>
+                <tr>
+                  <td>KBV19TR67-A</td>
+                  <td><a href="#" class="colored">Office для учебы и работы для MAC</a></td>
+                  <td><div class="cost">125 800 руб</div></td>
+                  <td>
+                    <div class="counter input-group">
+                      <div class="input-group-addon js-counter" data-dir="down">-</div>
+                      <input type="text" class="form-control input-sm" value="4">
+                      <div class="input-group-addon js-counter" data-dir="up">+</div>
+                    </div>
+                  </td>
+                  <td><a href="#" class="view-price">Посмотреть прайс-лист</a></td>
+                  <td><div class="cost">3 820 600 руб</div></td>
+                  <td><a href="#" class="remove-cross">&#10005;</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+          <div class="cart-total clearfix">
+            <div class="pull-left"><a class="btn btn-default btn-lg">Продолжить покупки</a></div>
+            <div class="pull-right"><span class="text-muted">Сумма покупки:</span> <div class="cost">6 321 000 РУБ</div></div>
+            
+          </div>
+            
+        </section>
+        
+        <section>
+        
+          <form class="order">
+            <fieldset>
+              <legend>Оформление заказа</legend>
+              <div class="form-group col-sm-7">
+                <dl>
+                  <dt>ФИО:</dt><dd>Иванов Петр Сергеевич</dd>
+                  <dt>E-mail:</dt><dd>ivanov@mail.ru</dd>
+                  <dt>Телефон:</dt><dd>+7 (909) 147-90-12</dd>
+                </dl>
+              </div>
+              <div class="form-group col-sm-7">
+                <select class="form-control input-sm">
+                  <option disabled selected>Выберите ИНН покупателя</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+              <div class="form-group col-sm-7">
+                <select class="form-control input-sm">
+                  <option disabled selected>Выберите ИНН пользователя</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+              <div class="form-group col-sm-3">
+                <div class="checkbox">
+                  <label><input type="checkbox" value=""> Совпадает с ИНН пользователя</label>
+                </div>
+              </div>
+              <div class="form-group col-sm-7">
+                <textarea class="form-control input-sm" rows="7" placeholder="Комментарий к заказу"></textarea>
+              </div>
+              <div class="form-group col-sm-7">
+                <div class="checkbox">
+                  <label><input type="checkbox" value=""> Я согласен с правилами размещения заказа</label>
+                </div>
+              </div>
+            </fieldset>
+            <div class="form-group col-sm-7">
+              <button type="submit" class="btn btn-primary btn-lg">Скачать счет в PDF</button>
+              <button type="submit" class="btn btn-default btn-lg">Отправить счет на e-mail</button>
+            </div>
+          </form>
+          
+        </section>
+      
+      </div>
+      
+      <script>
+        var content = components.import.querySelector('#subscribe');
+        document.querySelector('main').appendChild(content.cloneNode(true));
+      </script>
+      
+    </main>
+    
+    <script>
+      content = components.import.querySelector('footer');
+      document.body.appendChild(content.cloneNode(true));
+    </script>
+  </body>
+</html>

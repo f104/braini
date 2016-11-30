@@ -9,8 +9,8 @@
 
 @gray-base:              #000;
 @gray-darker:            lighten(@gray-base, 13.5%); // #222
-@gray-dark:              lighten(@gray-base, 20%);   // #333
-@gray:                   lighten(@gray-base, 33.5%); // #555
+@gray-dark:              #637280; //lighten(@gray-base, 20%);   // #333
+@gray:                   #666; //lighten(@gray-base, 33.5%); // #555
 @gray-light:             #e9ebe8; //lighten(@gray-base, 46.7%); // #777
 @gray-lighter:           #fafafa; //lighten(@gray-base, 93.5%); // #eee
 
@@ -20,7 +20,6 @@
 @brand-warning:         #f0ad4e;
 @brand-danger:          #d9534f;
 
-
 //== Scaffolding
 //
 //## Settings for some of the most global styles.
@@ -28,10 +27,10 @@
 //** Background color for `<body>`.
 @body-bg:               #fff;
 //** Global text color on `<body>`.
-@text-color:            #666;
+@text-color:            #231f20;
 
 //** Global textual link color.
-@link-color:            #231f20;
+@link-color:            @text-color;
 //** Link hover color set via `darken()` function.
 @link-hover-color:      #0880bd;
 //** Link hover decoration.
@@ -48,19 +47,19 @@
 @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
 @font-family-base:        @font-family-sans-serif;
 
-@font-size-base:          13px;
-@font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
-@font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
+@font-size-base:          14px;
+@font-size-large:         16px; //ceil((@font-size-base * 1.25)); // ~18px
+@font-size-small:         13px; //ceil((@font-size-base * 0.85)); // ~12px
 
-@font-size-h1:            28px;
-@font-size-h2:            floor((@font-size-base * 2.15)); // ~30px
-@font-size-h3:            24px;
+@font-size-h1:            24px;
+@font-size-h2:            22px;
+@font-size-h3:            18px;
 @font-size-h4:            ceil((@font-size-base * 1.25)); // ~18px
-@font-size-h5:            18px;
-@font-size-h6:            16px;
+@font-size-h5:            16px;
+@font-size-h6:            14px;
 
 //** Unit-less `line-height` for use in components like buttons.
-@line-height-base:        1.428571429; // 20/14
+@line-height-base:        21px; //1.428571429; // 20/14
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
 @line-height-computed:    28px; //floor((@font-size-base * @line-height-base)); // ~20px
 
@@ -68,7 +67,7 @@
 @headings-font-family:    "MuseoSansCyrl500", "Helvetica Neue", Helvetica, Arial, sans-serif;
 @headings-font-weight:    500;
 @headings-line-height:    @line-height-base;
-@headings-color:          #231f20;
+@headings-color:          @text-color;
 
 
 //== Iconography
@@ -91,7 +90,7 @@
 @padding-base-horizontal:   12px;
 
 @padding-large-vertical:    10px;
-@padding-large-horizontal:  16px;
+@padding-large-horizontal:  24px;
 
 @padding-small-vertical:    5px;
 @padding-small-horizontal:  10px;
@@ -103,7 +102,7 @@
 @line-height-small:         1.5;
 
 @border-radius-base:        4px;
-@border-radius-large:       6px;
+@border-radius-large:       4px;
 @border-radius-small:       3px;
 
 //** Global color for active items (e.g., navs or dropdowns).
@@ -122,7 +121,7 @@
 //## Customizes the `.table` component with basic values, each used across all table variations.
 
 //** Padding for `<th>`s and `<td>`s.
-@table-cell-padding:            8px;
+@table-cell-padding:            @line-height-computed / 2;
 //** Padding for cells in `.table-condensed`.
 @table-condensed-cell-padding:  5px;
 
@@ -135,7 +134,7 @@
 @table-bg-active:               @table-bg-hover;
 
 //** Border color for table and cell borders.
-@table-border-color:            #ddd;
+@table-border-color:            #f3f4f3;
 
 
 //== Buttons
@@ -145,7 +144,7 @@
 @btn-font-weight:                normal;
 
 @btn-default-color:              #737373;
-@btn-default-bg:                 transparent;
+@btn-default-bg:                 @body-bg;
 @btn-default-border:             #dcdcdc;
 
 @btn-primary-color:              #fff;
@@ -858,9 +857,9 @@
 //** Blockquote font size
 @blockquote-font-size:        (@font-size-base * 1.25);
 //** Blockquote border color
-@blockquote-border-color:     @gray-lighter;
+@blockquote-border-color:     transparent; //@gray-lighter;
 //** Page header border color
-@page-header-border-color:    @gray-lighter;
+@page-header-border-color:    transparent; //@gray-lighter;
 //** Width of horizontal description list titles
 @dl-horizontal-offset:        @component-offset-horizontal;
 //** Point at which .dl-horizontal becomes horizontal

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Мои заказы</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="import" href="components.html">
+    <script>
+      var components = document.querySelector('link[rel=import]');
+    </script>
+  </head>
+  <body>
+    <script>
+      var content = components.import.querySelector('header');
+      document.body.appendChild(content.cloneNode(true));
+      content = components.import.querySelector('#main_menu');
+      document.body.appendChild(content.cloneNode(true));
+    </script>
+    
+    <main>
+      
+      <div class="container-fluid">
+      
+        <ol class="breadcrumb">
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">Личный кабинет</a></li>
+          <li class="active">Мои заказы</li>
+        </ol>
+        
+        <section>
+          
+          <div class="page-header">
+            <h1>Мои заказы</h1>
+          </div>
+          
+        </section>
+        
+        <section class="row aside">
+          
+          <div class="col-sm-3">
+
+            <aside>
+              <ul>
+                <li><a href="#">Профиль</a></li>
+                <li><span>Мои заказы</span></li>
+              </ul>
+             </aside>
+
+          </div>
+
+          <div class="col-sm-9">
+        
+            <div class="table-responsive">
+              <table class="orders">
+                <thead>
+                  <th>Дата</th>
+                  <th>Название</th>
+                  <th>Организация</th>
+                  <th>Статус</th>
+                  <th>Оплачен</th>
+                  <th>Сумма</th>
+                  <th>PDF</th>
+                  <th>Ключи</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>02.11.16</td>
+                    <td><a href="#" class="colored">Office для учебы и работы для MAC</a></td>
+                    <td>ООО «Медиа Компани»</td>
+                    <td>Ожидание</td>
+                    <td><a class="a-icon icon-check" href="#">check</a></td>
+                    <td><div class="cost">125 800 руб</div></td>
+                    <td><a class="a-icon icon-download" href="#">download</a></td>
+                    <td><a class="a-icon icon-key" href="#">keys</a></td>
+                  </tr>
+                  <tr>
+                    <td>02.11.16</td>
+                    <td><a href="#" class="colored">Несколько программных продуктов</a></td>
+                    <td>ООО «Рога и Копыта»</td>
+                    <td>Ожидание</td>
+                    <td><a class="a-icon icon-cancel" href="#">cancel</a></td>
+                    <td><div class="cost" href="#">125 800 руб</div></td>
+                    <td><a class="a-icon icon-download">download</a></td>
+                    <td><a class="a-icon icon-key" href="#">keys</a></td>
+                  </tr>
+                  <tr>
+                    <td>02.11.16</td>
+                    <td><a href="#" class="colored">Adobe Photoshop Lightroom CC 2016</a></td>
+                    <td>ООО «Рога и Копыта»</td>
+                    <td>Ожидание</td>
+                    <td><a class="a-icon icon-cancel" href="#">cancel</a></td>
+                    <td><div class="cost">125 800 руб</div></td>
+                    <td><a class="a-icon icon-download" href="#">download</a></td>
+                    <td><a class="a-icon icon-key" href="#">keys</a></td>
+                  </tr>
+                  <tr>
+                    <td>02.11.16</td>
+                    <td><a href="#" class="colored">ESET Nod32 Smart Security</a></td>
+                    <td>ООО «Медиа Компани»</td>
+                    <td>Ожидание</td>
+                    <td><a class="a-icon icon-check" href="#">check</a></td>
+                    <td><div class="cost">125 800 руб</div></td>
+                    <td><a class="a-icon icon-download" href="#">download</a></td>
+                    <td><a class="a-icon icon-key" href="#">keys</a></td>
+                  </tr>
+                  <tr>
+                    <td>02.11.16</td>
+                    <td><a href="#" class="colored">Adobe Photoshop Lightroom CC 2016</a></td>
+                    <td>ООО «Рога и Копыта»</td>
+                    <td>Ожидание</td>
+                    <td><a class="a-icon icon-cancel" href="#">cancel</a></td>
+                    <td><div class="cost" href="#">125 800 руб</div></td>
+                    <td><a class="a-icon icon-download">download</a></td>
+                    <td><a class="a-icon icon-key" href="#">keys</a></td>
+                  </tr>
+                  <tr>
+                    <td>02.11.16</td>
+                    <td><a href="#" class="colored">ESET Nod32 Smart Security</a></td>
+                    <td>ООО «Медиа Компани»</td>
+                    <td>Ожидание</td>
+                    <td><a class="a-icon icon-check" href="#">check</a></td>
+                    <td><div class="cost">125 800 руб</div></td>
+                    <td><a class="a-icon icon-download" href="#">download</a></td>
+                    <td><a class="a-icon icon-key" href="#">keys</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            
+          </div>
+          
+        </section>
+      
+      </div>
+      
+      <script>
+        var content = components.import.querySelector('#subscribe');
+        document.querySelector('main').appendChild(content.cloneNode(true));
+      </script>
+      
+    </main>
+    
+    <script>
+      content = components.import.querySelector('footer');
+      document.body.appendChild(content.cloneNode(true));
+    </script>
+  </body>
+</html>

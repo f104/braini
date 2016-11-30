@@ -7456,15 +7456,16 @@ menu li.see-all a::before {
   content: '';
   position: absolute;
   left: 0px;
-  width: 10px;
+  top: 4px;
+  width: 6px;
   height: 15px;
-  background: url('img/sprite.png') no-repeat -15px 3px;
+  background: url('img/sprite.png') no-repeat -15px 0;
 }
 menu li.see-all a:hover {
   color: #0880bd;
 }
 menu li.see-all a:hover::before {
-  background: url('img/sprite.png') no-repeat -15px -12px;
+  background: url('img/sprite.png') no-repeat -15px -15px;
 }
 menu.list-inline.pull-right {
   margin-top: 28px;

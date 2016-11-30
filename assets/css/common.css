@@ -6322,7 +6322,11 @@ ul.gallery:after,
 .order .form-group:before,
 .order .form-group:after,
 .order dl dd:before,
-.order dl dd:after {
+.order dl dd:after,
+.login .form-group:before,
+.login .form-group:after,
+.register .form-group:before,
+.register .form-group:after {
   content: " ";
   display: table;
 }
@@ -6345,7 +6349,9 @@ ul.gallery:after,
 ul.gallery:after,
 .feedback .form-group:after,
 .order .form-group:after,
-.order dl dd:after {
+.order dl dd:after,
+.login .form-group:after,
+.register .form-group:after {
   clear: both;
 }
 .center-block {
@@ -7195,7 +7201,9 @@ a.btn {
 }
 .help-block {
   color: #a3a9ab;
-  font-size: 13px;
+  font-size: 12px;
+  line-height: 16px;
+  margin-bottom: 0;
 }
 .full-width-brace {
   background: #00aeef;
@@ -7375,6 +7383,137 @@ select.empty option[value] {
     margin-left: 180px;
   }
 }
+.login {
+  border: 1px solid #e9ebe8;
+  border-radius: 4px;
+  padding: 30px 30px 10px;
+  margin-bottom: 20px;
+}
+.login .radio,
+.login .checkbox,
+.login .radio-inline,
+.login .checkbox-inline {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 7px;
+}
+.login .radio,
+.login .checkbox {
+  min-height: 35px;
+}
+.login .form-group {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+@media (min-width: 768px) {
+  .login .control-label {
+    text-align: right;
+    margin-bottom: 0;
+    padding-top: 7px;
+  }
+}
+.login .has-feedback .form-control-feedback {
+  right: 10px;
+}
+@media (min-width: 768px) {
+  .login .form-group-lg .control-label {
+    padding-top: 11px;
+    font-size: 16px;
+  }
+}
+@media (min-width: 768px) {
+  .login .form-group-sm .control-label {
+    padding-top: 6px;
+    font-size: 13px;
+  }
+}
+.login:before,
+.login:after {
+  content: " ";
+  display: table;
+}
+.login:after {
+  clear: both;
+}
+.login:before,
+.login:after {
+  content: " ";
+  display: table;
+}
+.login:after {
+  clear: both;
+}
+.login button {
+  margin-bottom: 10px;
+}
+.login .separator {
+  background: #e9ebe8;
+  height: 1px;
+  margin: 0 -30px 20px;
+}
+.register {
+  border: 1px solid #e9ebe8;
+  border-radius: 4px;
+  padding: 30px 30px 10px;
+  background: #fafafa;
+}
+.register .radio,
+.register .checkbox,
+.register .radio-inline,
+.register .checkbox-inline {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 7px;
+}
+.register .radio,
+.register .checkbox {
+  min-height: 35px;
+}
+.register .form-group {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+@media (min-width: 768px) {
+  .register .control-label {
+    text-align: right;
+    margin-bottom: 0;
+    padding-top: 7px;
+  }
+}
+.register .has-feedback .form-control-feedback {
+  right: 10px;
+}
+@media (min-width: 768px) {
+  .register .form-group-lg .control-label {
+    padding-top: 11px;
+    font-size: 16px;
+  }
+}
+@media (min-width: 768px) {
+  .register .form-group-sm .control-label {
+    padding-top: 6px;
+    font-size: 13px;
+  }
+}
+.register:before,
+.register:after {
+  content: " ";
+  display: table;
+}
+.register:after {
+  clear: both;
+}
+.register:before,
+.register:after {
+  content: " ";
+  display: table;
+}
+.register:after {
+  clear: both;
+}
+.register button {
+  margin-bottom: 10px;
+}
 @media (min-width: 768px) {
   .order {
     background: url('img/form-bg.jpg') right bottom no-repeat;
@@ -7386,6 +7525,119 @@ select.empty option[value] {
   .order dl dd {
     margin-left: 80px;
   }
+  .login-wrapper,
+  .login-wrapper .col-sm-6 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .login-wrapper {
+    -webkit-align-content: stretch;
+        -ms-flex-line-pack: stretch;
+            align-content: stretch;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .login-wrapper .col-sm-6 {
+    padding: 0;
+  }
+  .login,
+  .register {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .login {
+    margin-bottom: 0;
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+  }
+  .register {
+    border-radius: 0 4px 4px 0;
+  }
+}
+fieldset.social-login legend {
+  margin-bottom: 0;
+}
+fieldset.social-login .help-block {
+  margin-bottom: inherit;
+}
+fieldset.social-login ul {
+  padding-left: 0;
+  list-style: none;
+  margin-left: -5px;
+  font-size: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin-bottom: 0;
+}
+fieldset.social-login ul > li {
+  display: inline-block;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+fieldset.social-login ul li {
+  padding: 6px 12px;
+  border: 1px solid #e9ebe8;
+  border-radius: 4px;
+  margin-right: 8px;
+  text-align: center;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+fieldset.social-login ul li::before {
+  content: none;
+}
+fieldset.social-login ul li a {
+  font-size: 13px;
+  display: inline-block;
+  padding-left: 23px;
+  white-space: nowrap;
+  margin: 0 auto;
+  position: relative;
+  vertical-align: bottom;
+}
+fieldset.social-login ul li a::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  background: url('img/sprite.png') no-repeat;
+}
+fieldset.social-login ul li a.vk::before {
+  background-position: -60px 0;
+}
+fieldset.social-login ul li a.yandex::before {
+  background-position: -60px -16px;
+}
+fieldset.social-login ul li a.google::before {
+  background-position: -60px -32px;
+}
+fieldset.social-login ul li a.twitter::before {
+  background-position: -60px -48px;
+}
+fieldset.social-login ul li a.facebook::before {
+  background-position: -60px -64px;
+}
+fieldset.social-login ul li a.mailru::before {
+  background-position: -60px -80px;
+}
+fieldset.social-login ul li a.linkedin::before {
+  background-position: -60px -96px;
+}
+fieldset.social-login ul li a.live::before {
+  background-position: -60px -112px;
 }
 .map {
   margin-top: 30px;

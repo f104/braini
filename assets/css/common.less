@@ -330,7 +330,9 @@ a.btn {
 }
 .help-block {
   .text-muted;
-  font-size: @font-size-small;
+  font-size: 12px;
+  line-height: 16px;
+  margin-bottom: 0;
 }
 
 .full-width-brace {
@@ -388,6 +390,19 @@ select.empty {
     margin-bottom: @line-height-computed / 2;
   }
 }
+.login {
+  .feedback;
+  margin-bottom: @grid-gutter-width;
+  .separator {
+    background: @gray-light;
+    height: 1px;
+    margin: 0 -30px 20px;
+  }
+}
+.register {
+  .feedback;
+  background: @gray-lighter;
+}
 @media (min-width: @screen-sm) {
   .order {
     background: url('@{img-path}form-bg.jpg') right bottom no-repeat;
@@ -401,7 +416,81 @@ select.empty {
       }
     }
   }
+  .login-wrapper, .login-wrapper .col-sm-6 {
+    display: flex;
+  }
+  .login-wrapper {
+    align-content: stretch;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .login-wrapper .col-sm-6 {
+    padding: 0;
+  }
+  .login, .register {
+    flex: 1;
+  }
+  .login {
+    margin-bottom: 0;
+    border-right: none;
+    border-radius: @border-radius-base 0 0 @border-radius-base;
+  }
+  .register {
+    border-radius: 0 @border-radius-base @border-radius-base 0;
+  }
 }
+
+fieldset.social-login {
+  legend {
+    margin-bottom: 0;
+  }
+  .help-block {
+    margin-bottom: inherit;
+  }
+  ul {
+    .list-unstyled; .list-inline;
+    font-size: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+    li {
+      &::before { content: none; }
+      padding: 6px 12px;
+      border: 1px solid @gray-light;
+      border-radius: @border-radius-base;
+      margin-right: 8px;
+      text-align: center;
+      flex: 1;
+      a {
+        font-size: @font-size-small;
+        display: inline-block;
+        padding-left: 23px;
+        white-space: nowrap;
+        margin: 0 auto;
+        position: relative;
+        vertical-align: bottom;
+        &::before {
+          content: '';
+          position: absolute;
+          top: 2px;
+          left: 0;
+          width: 16px;
+          height: 16px;
+          background: url('@{sprite}') no-repeat;
+        }
+        &.vk::before { background-position: -60px 0; }
+        &.yandex::before { background-position: -60px -16px; }
+        &.google::before { background-position: -60px -32px; }
+        &.twitter::before { background-position: -60px -48px; }
+        &.facebook::before { background-position: -60px -64px; }
+        &.mailru::before { background-position: -60px -80px; }
+        &.linkedin::before { background-position: -60px -96px; }
+        &.live::before { background-position: -60px -112px; }
+      }
+    }
+  }
+}
+
 .map {
   margin-top: 30px;
   height: 400px;

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Авторизация</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="import" href="components.html">
+    <script>
+      var components = document.querySelector('link[rel=import]');
+    </script>
+  </head>
+  <body>
+    <script>
+      var content = components.import.querySelector('header');
+      document.body.appendChild(content.cloneNode(true));
+      content = components.import.querySelector('#main_menu');
+      document.body.appendChild(content.cloneNode(true));
+    </script>
+    
+    <main>
+      
+      <div class="container-fluid">
+      
+        <ol class="breadcrumb">
+          <li><a href="#">Главная</a></li>
+          <li class="active">Авторизация</li>
+        </ol>
+        
+        <section>
+          
+          <div class="page-header">
+            <h1>Авторизация</h1>
+          </div>
+          
+        </section>
+        
+        <section class="row login-wrapper">
+        
+          <div class="col-sm-6">
+            <form class="login">
+              <fieldset>
+                <legend>Войти по логину</legend>
+                <div class="form-group">
+                  <label for="name" class="col-sm-2 control-label">Логин</label>
+                  <div class="col-sm-7">
+                    <input type="text" class="form-control input-sm" id="name" required>
+                    <p class="help-block">Укажите логин или e-mail, который вы использовали при регистрации</p>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="pass" class="col-sm-2 control-label">Пароль</label>
+                  <div class="col-sm-7">
+                    <input type="password" class="form-control input-sm" id="pass">
+                    <p class="help-block">Если вы не помните пароль, просто оставьте это поле пустым</p>
+                  </div>
+                </div>
+              </fieldset>
+              <div class="form-group">
+                <div class="col-sm-7 col-sm-offset-2">
+                  <button type="submit" class="btn btn-primary btn-lg">Вход</button>
+                </div>
+              </div>
+              
+              <div class="separator"></div>
+              
+              <fieldset class="social-login">
+                <legend>Войти через социальные сети</legend>
+                <p class="help-block">Вы можете использовать быстрый вход через социальные сети при условии, что вы уже зарегистрировались и привязали один из сервисов у своему аккаунту.</p>
+                <ul>
+                  <li><a href="#" class="vk">Вконтакте</a></li>
+                  <li><a href="#" class="yandex">Яндекс</a></li>
+                  <li><a href="#" class="google">Google Plus</a></li>
+                  <li><a href="#" class="twitter">Twitter</a></li>
+                  <li><a href="#" class="facebook">Facebook</a></li>
+                  <li><a href="#" class="mailru">Mail.ru</a></li>
+                  <li><a href="#" class="linkedin">LinkedIn</a></li>
+                  <li><a href="#" class="live">Live</a></li>
+                </ul>
+              </fieldset>
+              
+            </form>
+          </div>
+          
+          <div class="col-sm-6">
+            <form class="register">
+              <fieldset>
+                <legend>Войти по логину</legend>
+                <div class="form-group">
+                  <label for="r_email" class="col-sm-2 control-label">E-mail</label>
+                  <div class="col-sm-7">
+                    <input type="email" class="form-control input-sm" id="r_email" required>
+                    <p class="help-block">На указанный e-mail придет письмо с ссылкой для активации</p>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="r_pass" class="col-sm-2 control-label">Пароль</label>
+                  <div class="col-sm-7">
+                    <input type="password" class="form-control input-sm" id="r_pass">
+                    <p class="help-block">Вы можете указать свой пароль или оставить поле пустым и он будет сгенерирован автоматически</p>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="r_login" class="col-sm-2 control-label">Логин</label>
+                  <div class="col-sm-7">
+                    <input type="text" class="form-control input-sm" id="r_login">
+                    <p class="help-block">Вы можете указать отдельный логин для входа, чтобы не использовать e-mail</p>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="r_name" class="col-sm-2 control-label">Имя</label>
+                  <div class="col-sm-7">
+                    <input type="text" class="form-control input-sm" id="r_name">
+                    <p class="help-block">Ваше имя для отображения на сайте</p>
+                  </div>
+                </div>
+              </fieldset>
+              <div class="form-group">
+                <div class="col-sm-7 col-sm-offset-2">
+                  <button type="submit" class="btn btn-primary btn-lg">Регистрация</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          
+        </section>
+      
+      </div>
+      
+      <script>
+        var content = components.import.querySelector('#subscribe');
+        document.querySelector('main').appendChild(content.cloneNode(true));
+      </script>
+      
+    </main>
+    
+    <script>
+      content = components.import.querySelector('footer');
+      document.body.appendChild(content.cloneNode(true));
+    </script>
+  </body>
+</html>

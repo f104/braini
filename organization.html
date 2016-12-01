@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Данные организаций</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="import" href="components.html">
+    <script>
+      var components = document.querySelector('link[rel=import]');
+    </script>
+  </head>
+  <body>
+    <script>
+      var content = components.import.querySelector('header');
+      document.body.appendChild(content.cloneNode(true));
+      content = components.import.querySelector('#main_menu');
+      document.body.appendChild(content.cloneNode(true));
+    </script>
+    
+    <main>
+      
+      <div class="container-fluid">
+      
+        <ol class="breadcrumb">
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">Личный кабинет</a></li>
+          <li class="active">Данные организации</li>
+        </ol>
+        
+        <section>
+          
+          <div class="page-header">
+            <h1>Данные организаций <small><a href="#" class="btn btn-default btn-plus">Добавить организацию</a></small></h1>
+          </div>
+          
+        </section>
+        
+        <section class="row aside">
+          
+          <div class="col-sm-3">
+
+            <aside>
+              <ul>
+                <li><a href="#">Данные профиля</a></li>
+                <li><a href="#">Мои заказы</a></li>
+                <li><span>Данные организации</span></li>
+              </ul>
+             </aside>
+
+          </div>
+
+          <div class="col-sm-9">
+            
+            <div class="organisation-cart">
+              
+              <div class="organisation-number">01</div>
+              
+              <dl>
+                <dt>ИНН:</dt><dd>5460000016</dd>
+                <dt>КПП:</dt><dd>644901001</dd>
+                <dt>Название:</dt><dd>ООО &laquo;Рога и Копыта&raquo;</dd>
+                <dt>Юр. адрес:</dt><dd>Москва, ул. Зеленодольская, д.18</dd>
+                <dt>ОГРН:</dt><dd>1021600000256</dd>
+                <dt>Рассчетный счет:</dt><dd>40702810500000000001</dd>
+                <dt>БИК:</dt><dd>04580577</dd>
+                <dt>Наименование банка:</dt><dd>ОАО &laquo;Банк &laquo;Открытие&raquo;, г. Москва</dd>
+                <dt>Кор. счет:</dt><dd>3010100000000000001</dd>
+              </dl>
+              
+              <button class="btn btn-primary btn-lg">Редактировать</button>
+              
+            </div>
+
+
+
+          </div>
+
+        </section>
+      
+      </div>
+      
+<!--      <script>
+        var content = components.import.querySelector('#subscribe');
+        document.querySelector('main').appendChild(content.cloneNode(true));
+      </script>-->
+      
+    </main>
+    
+    <script>
+      content = components.import.querySelector('footer');
+      document.body.appendChild(content.cloneNode(true));
+    </script>
+  </body>
+</html>

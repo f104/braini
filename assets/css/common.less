@@ -89,6 +89,10 @@ em {
   h1 {
     font-family: "MuseoSansCyrl700"; 
     font-size: 28px;
+    small {
+      display: inline-block;
+      margin-top: @line-height-computed / 2;
+    }
   }
    p {
     a {
@@ -100,6 +104,16 @@ em {
     padding-bottom: @grid-gutter-width;
     margin-top: -@grid-gutter-width;
     padding-top: @grid-gutter-width;
+  }
+}
+@media (min-width: @screen-sm) {
+  .page-header {
+    h1 {
+      small {
+        display: inline;
+        margin-left: @line-height-computed / 2;
+      }
+    }
   }
 }
 .row .page-header h1 {
@@ -302,7 +316,7 @@ a.btn {
     background: linear-gradient(#67d1f8, #13b8f5);
   }
 }
-.btn-favorite, .btn-chart, .btn-key {
+.btn-favorite, .btn-chart, .btn-key, .btn-plus {
   position: relative;
   padding-left: 36px;
   &::before {
@@ -326,6 +340,10 @@ a.btn {
 .btn-chart {
   &::before { background-position: -32px -110px; }
   &:hover::before { background-position: -32px -90px; }
+}
+.btn-plus {
+  &::before { top: 8px; background-position: -100px -110px; }
+  &:hover::before { background-position: -100px -90px; }
 }
 .breadcrumb {
   font-size: 12px;
@@ -381,6 +399,7 @@ select.empty {
   border-radius: @border-radius-base;
   padding: @grid-gutter-width * 1.5 @grid-gutter-width * 1.5 @grid-gutter-width / 2;
   button {
+    margin-right: @grid-gutter-width / 4;
     margin-bottom: @grid-gutter-width / 2;
   }
 }
@@ -1445,16 +1464,15 @@ table.orders {
 .page-header {
   small.order-success {
     color: #72bf44;
-    padding-left: 35px;
+    padding-left: @line-height-computed;
     font-family: @font-family-base;
     font-size: @font-size-small;
-    vertical-align: middle;
     position: relative;
     &::before {
       content: '';
       position: absolute;
       top: -3px;
-      left: 10px;
+      left: 0;
       width: 20px;
       height: 20px;
       background: url('@{sprite}') -80px -80px no-repeat;
@@ -1561,4 +1579,49 @@ table.orders {
       &.next:hover { background-position: -41px -15px; }
     }
   }
+}
+
+/* organisations */
+.organisation-cart {
+  border: 1px solid @gray-light;
+  border-radius: @border-radius-base;
+  padding: 40px 40px 40px 120px;
+  position: relative;
+  .organisation-number {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    background: @gray-lighter;
+    border: 1px solid @gray-light;
+    border-radius: 100%;
+    font-family: @accent-font-family;
+    font-size: 21px;
+    padding: @line-height-computed / 2;
+  }
+  dl {
+    dt {
+      font-weight: normal;
+    }
+    dd {
+      margin-bottom: @line-height-computed / 2;
+    }
+  }
+}
+@media (min-width: @screen-sm) {
+  .organisation-cart {
+    dl {
+      .dl-horizontal;
+      dt {
+        width: 145px !important;
+      }
+      dd {
+        margin-left: 165px !important;
+      }
+    }
+  }
+}
+.organisation-add {
+  .feedback;
+  padding-top: @grid-gutter-width * 3;
+  margin-bottom: @grid-gutter-width;
 }

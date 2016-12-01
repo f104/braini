@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Данные организаций</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="import" href="components.html">
+    <script>
+      var components = document.querySelector('link[rel=import]');
+    </script>
+  </head>
+  <body>
+    <script>
+      var content = components.import.querySelector('header');
+      document.body.appendChild(content.cloneNode(true));
+      content = components.import.querySelector('#main_menu');
+      document.body.appendChild(content.cloneNode(true));
+    </script>
+    
+    <main>
+      
+      <div class="container-fluid">
+      
+        <ol class="breadcrumb">
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">Личный кабинет</a></li>
+          <li class="active">Данные организации</li>
+        </ol>
+        
+        <section>
+          
+          <div class="page-header">
+            <h1>Данные организаций <small><a href="#" class="btn btn-default btn-plus">Добавить организацию</a></small></h1>
+          </div>
+          
+        </section>
+        
+        <section class="row aside">
+          
+          <div class="col-sm-3">
+
+            <aside>
+              <ul>
+                <li><a href="#">Данные профиля</a></li>
+                <li><a href="#">Мои заказы</a></li>
+                <li><span>Данные организации</span></li>
+              </ul>
+             </aside>
+
+          </div>
+
+          <div class="col-sm-9">
+            
+            <form class="organisation-add">
+              <fieldset>
+                <legend>Добавить организацию</legend>
+                <div class="form-group">
+                  <label for="inn" class="col-sm-2 control-label">ИНН</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control input-sm" id="inn">
+                  </div>
+                  <label for="kpp" class="col-sm-1 control-label">КПП</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control input-sm" id="kpp">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="name" class="col-sm-2 control-label">Название</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control input-sm" id="name">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="ur_address" class="col-sm-2 control-label">Юр. адрес</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control input-sm" id="ur_address">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="ogrn" class="col-sm-2 control-label">ОГРН</label>
+                  <div class="col-sm-9">
+                    <input class="form-control input-sm" id="ogrn">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="r_schet" class="col-sm-2 control-label">Рассчетный счет</label>
+                  <div class="col-sm-9">
+                    <input class="form-control input-sm" id="r_schet">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="bik" class="col-sm-2 control-label">БИК</label>
+                  <div class="col-sm-9">
+                    <input class="form-control input-sm" id="bik">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="bank" class="col-sm-2 control-label">Название банка</label>
+                  <div class="col-sm-9">
+                    <input class="form-control input-sm" id="bank">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="k_schet" class="col-sm-2 control-label">Кор. счет</label>
+                  <div class="col-sm-9">
+                    <input class="form-control input-sm" id="k_schet">
+                  </div>
+                </div>
+              </fieldset>
+              <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-9">
+                  <button type="submit" class="btn btn-primary btn-lg">Добавить организацию</button> 
+                  <button type="reset" class="btn btn-default btn-lg">Отмена</button>
+                </div>
+              </div>
+            </form>
+            
+            <div class="organisation-cart">
+              
+              <div class="organisation-number">01</div>
+              
+              <dl>
+                <dt>ИНН:</dt><dd>5460000016</dd>
+                <dt>КПП:</dt><dd>644901001</dd>
+                <dt>Название:</dt><dd>ООО &laquo;Рога и Копыта&raquo;</dd>
+                <dt>Юр. адрес:</dt><dd>Москва, ул. Зеленодольская, д.18</dd>
+                <dt>ОГРН:</dt><dd>1021600000256</dd>
+                <dt>Рассчетный счет:</dt><dd>40702810500000000001</dd>
+                <dt>БИК:</dt><dd>04580577</dd>
+                <dt>Наименование банка:</dt><dd>ОАО &laquo;Банк &laquo;Открытие&raquo;, г. Москва</dd>
+                <dt>Кор. счет:</dt><dd>3010100000000000001</dd>
+              </dl>
+              
+              <button class="btn btn-primary btn-lg">Редактировать</button>
+              
+            </div>
+
+          </div>
+
+        </section>
+      
+      </div>
+      
+<!--      <script>
+        var content = components.import.querySelector('#subscribe');
+        document.querySelector('main').appendChild(content.cloneNode(true));
+      </script>-->
+      
+    </main>
+    
+    <script>
+      content = components.import.querySelector('footer');
+      document.body.appendChild(content.cloneNode(true));
+    </script>
+  </body>
+</html>

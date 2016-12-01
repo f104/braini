@@ -6329,7 +6329,9 @@ ul.gallery:after,
 .login .form-group:before,
 .login .form-group:after,
 .register .form-group:before,
-.register .form-group:after {
+.register .form-group:after,
+.organisation-add .form-group:before,
+.organisation-add .form-group:after {
   content: " ";
   display: table;
 }
@@ -6354,7 +6356,8 @@ ul.gallery:after,
 .order .form-group:after,
 .order dl dd:after,
 .login .form-group:after,
-.register .form-group:after {
+.register .form-group:after,
+.organisation-add .form-group:after {
   clear: both;
 }
 .center-block {
@@ -6927,6 +6930,10 @@ em {
   font-family: "MuseoSansCyrl700";
   font-size: 28px;
 }
+.page-header h1 small {
+  display: inline-block;
+  margin-top: 14px;
+}
 .page-header p a {
   color: #0880bd;
 }
@@ -6938,6 +6945,12 @@ em {
   padding-bottom: 20px;
   margin-top: -20px;
   padding-top: 20px;
+}
+@media (min-width: 768px) {
+  .page-header h1 small {
+    display: inline;
+    margin-left: 14px;
+  }
 }
 .row .page-header h1 {
   margin-top: 0;
@@ -7173,13 +7186,15 @@ a.btn {
 }
 .btn-favorite,
 .btn-chart,
-.btn-key {
+.btn-key,
+.btn-plus {
   position: relative;
   padding-left: 36px;
 }
 .btn-favorite::before,
 .btn-chart::before,
-.btn-key::before {
+.btn-key::before,
+.btn-plus::before {
   content: '';
   position: absolute;
   left: 12px;
@@ -7205,6 +7220,13 @@ a.btn {
 }
 .btn-chart:hover::before {
   background-position: -32px -90px;
+}
+.btn-plus::before {
+  top: 8px;
+  background-position: -100px -110px;
+}
+.btn-plus:hover::before {
+  background-position: -100px -90px;
 }
 .breadcrumb {
   font-size: 12px;
@@ -7311,6 +7333,7 @@ select.empty option[value] {
   clear: both;
 }
 .feedback button {
+  margin-right: 5px;
   margin-bottom: 10px;
 }
 .order {
@@ -7373,6 +7396,7 @@ select.empty option[value] {
   clear: both;
 }
 .order button {
+  margin-right: 5px;
   margin-bottom: 10px;
 }
 .order .form-group.col-sm-3 {
@@ -7460,6 +7484,7 @@ select.empty option[value] {
   clear: both;
 }
 .login button {
+  margin-right: 5px;
   margin-bottom: 10px;
 }
 .login .separator {
@@ -7528,6 +7553,7 @@ select.empty option[value] {
   clear: both;
 }
 .register button {
+  margin-right: 5px;
   margin-bottom: 10px;
 }
 @media (min-width: 768px) {
@@ -8839,17 +8865,16 @@ table.orders td .cost {
 }
 .page-header small.order-success {
   color: #72bf44;
-  padding-left: 35px;
+  padding-left: 28px;
   font-family: "Proxima Nova Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
-  vertical-align: middle;
   position: relative;
 }
 .page-header small.order-success::before {
   content: '';
   position: absolute;
   top: -3px;
-  left: 10px;
+  left: 0;
   width: 20px;
   height: 20px;
   background: url('img/sprite.png') -80px -80px no-repeat;
@@ -9003,4 +9028,115 @@ table.orders td .cost {
 }
 .prev-next li a.next:hover {
   background-position: -41px -15px;
+}
+/* organisations */
+.organisation-cart {
+  border: 1px solid #e9ebe8;
+  border-radius: 4px;
+  padding: 40px 40px 40px 120px;
+  position: relative;
+}
+.organisation-cart .organisation-number {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  background: #fafafa;
+  border: 1px solid #e9ebe8;
+  border-radius: 100%;
+  font-family: "PF DinDisplay Pro Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 21px;
+  padding: 14px;
+}
+.organisation-cart dl dt {
+  font-weight: normal;
+}
+.organisation-cart dl dd {
+  margin-bottom: 14px;
+}
+@media (min-width: 768px) {
+  .organisation-cart dl dt {
+    width: 145px !important;
+  }
+  .organisation-cart dl dd {
+    margin-left: 165px !important;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  .organisation-cart dl dt {
+    float: left;
+    width: 160px;
+    clear: left;
+    text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .organisation-cart dl dd {
+    margin-left: 180px;
+  }
+}
+.organisation-add {
+  border: 1px solid #e9ebe8;
+  border-radius: 4px;
+  padding: 30px 30px 10px;
+  padding-top: 60px;
+  margin-bottom: 20px;
+}
+.organisation-add .radio,
+.organisation-add .checkbox,
+.organisation-add .radio-inline,
+.organisation-add .checkbox-inline {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 7px;
+}
+.organisation-add .radio,
+.organisation-add .checkbox {
+  min-height: 35px;
+}
+.organisation-add .form-group {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+@media (min-width: 768px) {
+  .organisation-add .control-label {
+    text-align: right;
+    margin-bottom: 0;
+    padding-top: 7px;
+  }
+}
+.organisation-add .has-feedback .form-control-feedback {
+  right: 10px;
+}
+@media (min-width: 768px) {
+  .organisation-add .form-group-lg .control-label {
+    padding-top: 11px;
+    font-size: 16px;
+  }
+}
+@media (min-width: 768px) {
+  .organisation-add .form-group-sm .control-label {
+    padding-top: 6px;
+    font-size: 13px;
+  }
+}
+.organisation-add:before,
+.organisation-add:after {
+  content: " ";
+  display: table;
+}
+.organisation-add:after {
+  clear: both;
+}
+.organisation-add:before,
+.organisation-add:after {
+  content: " ";
+  display: table;
+}
+.organisation-add:after {
+  clear: both;
+}
+.organisation-add button {
+  margin-right: 5px;
+  margin-bottom: 10px;
 }

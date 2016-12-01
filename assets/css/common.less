@@ -37,9 +37,9 @@ body {
 .container-fluid {
   max-width: @fixed-max-width;
 }
-* {
+/** {
     transition: all 0.2s ease-in-out 0s;
-}
+}*/
 
 /* text with columns */
 @media (min-width: @screen-sm) {
@@ -847,6 +847,7 @@ header {
 header.fixed {
   position: fixed;
   width: 100%;
+  top: 0;
   z-index: 99999;
   .header-top, .user {
     display: none;

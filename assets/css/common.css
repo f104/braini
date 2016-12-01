@@ -6888,10 +6888,9 @@ body {
 .container-fluid {
   max-width: 1160px;
 }
-* {
-  -webkit-transition: all 0.2s ease-in-out 0s;
-          transition: all 0.2s ease-in-out 0s;
-}
+/** {
+    transition: all 0.2s ease-in-out 0s;
+}*/
 /* text with columns */
 @media (min-width: 768px) {
   .columns p,
@@ -8159,6 +8158,7 @@ header .user a.btn {
 header.fixed {
   position: fixed;
   width: 100%;
+  top: 0;
   z-index: 99999;
 }
 header.fixed .header-top,

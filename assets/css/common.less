@@ -37,9 +37,15 @@ body {
 .container-fluid {
   max-width: @fixed-max-width;
 }
-/** {
-    transition: all 0.2s ease-in-out 0s;
-}*/
+main *, .header-top * {
+  transition: all 0.2s ease-in-out 0s;
+}
+.catalog-menu * {
+  transition-property: color, background, background-color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+}
 
 /* text with columns */
 @media (min-width: @screen-sm) {

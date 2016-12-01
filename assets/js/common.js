@@ -25,7 +25,8 @@ $(window).load(function(){
   $(".sticky").each(function(i){
     var parent = $(this).data('sticky-parent');
     $(this).stick_in_parent({
-      parent: $(parent)
+      parent: $(parent),
+      offset_top: 50
     });
   });
   
@@ -37,24 +38,39 @@ $(window).load(function(){
           $header = $('header'),
           $main = $('main'),
           className = 'fixed',
-          height = $header.outerHeight();
+          shift = 100, 
+          height = $header.outerHeight(),
+          progress = false;
 
       fixHeader();
 
       $win.on('scroll', fixHeader);
 
       function fixHeader() {
+        if (progress) {
+          setTimeout(fixHeader, 400);
+          return;
+        }
         var scrollTop = $win.scrollTop();
-        if (scrollTop >= height) {
+        if (scrollTop >= height + shift) {
           if (!$header.hasClass(className)) {
+            progress = true;
             $header.addClass(className);
             $main.attr('style', 'margin-top: '+height+'px');
-//            $header.hide().attr('style', 'display: none; top: -60px').addClass(className).show();
-//            $header.animate({top: "0"});
+            $header.attr('style', 'top: -60px');
+            $header.animate({top: "0"}, 200, function(){
+              progress = false;
+            });
           }
         } else {
-          $header.removeClass(className)
-          $main.attr('style', 'margin-top: 0');
+          if ($header.hasClass(className)) {
+            progress = true;
+            $header.animate({top: "-60px"}, 200, function(){
+              $header.removeClass(className);
+              $main.attr('style', 'margin-top: 0');
+              progress = false;
+            });
+          }
         }
       }
 

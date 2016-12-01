@@ -21,10 +21,46 @@ $(document).ready(function () {
 });
 
 $(window).load(function(){
+  
   $(".sticky").each(function(i){
     var parent = $(this).data('sticky-parent');
     $(this).stick_in_parent({
       parent: $(parent)
     });
   });
+  
+  (function ($) {
+
+    $(function(){
+
+      var $win = $(window),
+          $header = $('header'),
+          $main = $('main'),
+          className = 'fixed',
+          height = $header.outerHeight();
+
+      fixHeader();
+
+      $win.on('scroll', fixHeader);
+
+      function fixHeader() {
+        var scrollTop = $win.scrollTop();
+        if (scrollTop >= height) {
+          if (!$header.hasClass(className)) {
+            $header.addClass(className);
+            $main.attr('style', 'margin-top: '+height+'px');
+//            $header.hide().attr('style', 'display: none; top: -60px').addClass(className).show();
+//            $header.animate({top: "0"});
+          }
+        } else {
+          $header.removeClass(className)
+          $main.attr('style', 'margin-top: 0');
+        }
+      }
+
+    });
+
+  })(window.jQuery);
+
 });
+

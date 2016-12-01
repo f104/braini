@@ -6330,6 +6330,10 @@ ul.gallery:after,
 .login .form-group:after,
 .register .form-group:before,
 .register .form-group:after,
+header .header-top:before,
+header .header-top:after,
+header .header-bottom:before,
+header .header-bottom:after,
 .organisation-add .form-group:before,
 .organisation-add .form-group:after {
   content: " ";
@@ -6357,6 +6361,8 @@ ul.gallery:after,
 .order dl dd:after,
 .login .form-group:after,
 .register .form-group:after,
+header .header-top:after,
+header .header-bottom:after,
 .organisation-add .form-group:after {
   clear: both;
 }
@@ -7839,9 +7845,47 @@ menu.list-inline.pull-right > li:last-child {
   color: #0c93d8;
 }
 /* hreader */
-header {
-  padding: 20px 0;
+header .header-top {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  max-width: 1160px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   background: url('img/header-bg.jpg') no-repeat top center;
+}
+header .header-top > .navbar-header,
+header .header-top > .navbar-collapse {
+  margin-right: -10px;
+  margin-left: -10px;
+}
+@media (min-width: 768px) {
+  header .header-top > .navbar-header,
+  header .header-top > .navbar-collapse {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+header .header-bottom {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  max-width: 1160px;
+  position: relative;
+}
+header .header-bottom > .navbar-header,
+header .header-bottom > .navbar-collapse {
+  margin-right: -10px;
+  margin-left: -10px;
+}
+@media (min-width: 768px) {
+  header .header-bottom > .navbar-header,
+  header .header-bottom > .navbar-collapse {
+    margin-right: 0;
+    margin-left: 0;
+  }
 }
 header .logo img {
   display: block;
@@ -7851,9 +7895,14 @@ header .logo img {
 header nav.col-sm-6 {
   padding: 10px 0 0 35px;
 }
+header .minicart-user-wrapper {
+  position: absolute;
+  right: 10px;
+  top: -85px;
+}
 header .minicart {
   display: inline-block;
-  margin-top: 13px;
+  margin-top: 10px;
 }
 header .minicart .minicart-basket {
   position: relative;
@@ -8106,6 +8155,58 @@ header .user a.btn {
 }
 .full-width-brace .search-form input {
   border: transparent;
+}
+header.fixed {
+  position: fixed;
+  width: 100%;
+  z-index: 99999;
+}
+header.fixed .header-top,
+header.fixed .user {
+  display: none;
+}
+header.fixed .catalog-menu > li > a {
+  font-size: 13px;
+  padding: 18px 22px 17px 7px;
+}
+header.fixed .catalog-menu > li > a::after {
+  right: 0;
+}
+header.fixed .catalog-menu > li:last-child > a {
+  padding-left: 25px;
+  padding-right: 7px;
+}
+header.fixed .catalog-menu > li:last-child > a::after {
+  left: 6px;
+  top: 19px;
+}
+header.fixed .full-width-brace .search-form {
+  padding: 13px 15px;
+}
+header.fixed .full-width-brace .search-form .form-group {
+  width: 180px;
+}
+header.fixed .minicart-user-wrapper {
+  position: initial;
+}
+header.fixed .minicart {
+  margin-top: 0;
+  background: #0073ae;
+  padding: 4px 10px 4px 0;
+  float: right;
+}
+header.fixed .minicart .minicart-basket:hover {
+  background-color: inherit;
+}
+header.fixed .minicart .minicart-cost {
+  color: white;
+  margin-left: 6px;
+  display: inline-block;
+  vertical-align: text-bottom;
+}
+header.fixed .minicart .minicart-cost a {
+  color: inherit;
+  font-size: 15px;
 }
 .subscribe-form input.form-control {
   width: 215px;

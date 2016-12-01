@@ -632,8 +632,16 @@ menu {
 
 /* hreader */
 header {
-  padding: @grid-gutter-width 0;
-  background: url('@{img-path}header-bg.jpg') no-repeat top center;
+  .header-top {
+    .container-fluid;
+    padding-top: @grid-gutter-width;
+    padding-bottom: @grid-gutter-width;
+    background: url('@{img-path}header-bg.jpg') no-repeat top center;    
+  }
+  .header-bottom {
+    .container-fluid;
+    position: relative;
+  }
   .logo {
     img {
       .img-responsive;
@@ -642,9 +650,14 @@ header {
   nav.col-sm-6 {
     padding: 10px 0 0 35px;
   }
+  .minicart-user-wrapper {
+    position: absolute;
+    right: @grid-gutter-width / 2;
+    top: -85px;
+  }
   .minicart {
     display: inline-block;
-    margin-top: 13px;
+    margin-top: 10px;
     .minicart-basket {
       position: relative;
       display: inline-block;
@@ -828,6 +841,65 @@ header {
     padding: 15px 0;
     input {
       border: transparent;
+    }
+  }
+}
+header.fixed {
+  position: fixed;
+  width: 100%;
+  z-index: 99999;
+  .header-top, .user {
+    display: none;
+  }
+  .catalog-menu {
+    > li {
+      > a {
+        font-size: 13px;
+        padding: 18px 22px 17px 7px;
+        &::after {
+          right: 0;
+        }
+      }
+      &:last-child > a {
+        padding-left: 25px;
+        padding-right: 7px;
+        &::after{
+          left: 6px;
+          top: 19px;
+        }
+      }
+    }
+  }
+  .full-width-brace {
+    .search-form {
+      padding: 13px 15px;
+      .form-group {
+        width: 180px;
+      }
+    }
+  }
+  .minicart-user-wrapper {
+    position: initial;
+  }
+  .minicart {
+    margin-top: 0;
+    background: #0073ae;
+    padding: 4px 10px 4px 0;
+    float: right;
+    .minicart-basket {
+      &:hover {
+        background-color: inherit;
+      }
+    }
+    .minicart-cost {
+      color: white;
+      margin-left: 6px;
+      display: inline-block;
+      vertical-align: text-bottom;
+      a {
+        color: inherit;
+        font-size: 15px;
+      }
     }
   }
 }

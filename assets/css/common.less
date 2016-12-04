@@ -19,17 +19,18 @@ body {
   position: relative;
 /*  &::after {
     content: "";
-    background: url('@{img-path}tmp/index.png') no-repeat fixed;
+    background: url('@{img-path}tmp/cart.png') no-repeat; // fixed;
     background-size: auto;
     background-position-x: center;
     background-position-y: 0;
-    opacity: 0;
+    opacity: 0.8;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-    position: fixed;
-    z-index: -1;   
+    position: absolute;
+    z-index: -1;
+    height: 5000px;
   }*/
 }
 
@@ -88,6 +89,7 @@ em {
 }
 .breadcrumb {
   margin-bottom: @line-height-computed / 2;
+  line-height: 30px;
 }
 .page-header {
   margin: 0;
@@ -95,6 +97,7 @@ em {
   h1 {
     font-family: "MuseoSansCyrl700"; 
     font-size: 28px;
+    margin-top: 0;
     small {
       display: inline-block;
       margin-top: @line-height-computed / 2;
@@ -129,13 +132,21 @@ em {
   font-family: @headings-font-family;
   color: @gray-dark;
   font-size: @blockquote-font-size;
+  padding-top: 16px;
+  margin-bottom: 36px;
+  &:first-of-type {
+    padding-top: 7px;
+  }
 }
 blockquote {
   color: @gray-dark;
   border-top: 1px solid @gray-light;
   border-bottom: 1px solid @gray-light;
   padding: @line-height-computed;
-  margin: @line-height-computed 0;
+  margin: 33px 0;
+  text-align: center;
+  font-size: 19px;
+  border-left: none;
 }
 ul {
   .list-unstyled;
@@ -364,6 +375,7 @@ a.btn {
   .text-muted;
   font-size: 12px;
   line-height: 16px;
+  margin-top: 10px;
   margin-bottom: 0;
 }
 
@@ -409,7 +421,7 @@ select.empty {
     margin-bottom: @grid-gutter-width / 2;
   }
 }
-.order {
+.order, .profile {
   .feedback;
   .form-group.col-sm-3 {
     margin-bottom: 0;
@@ -421,6 +433,37 @@ select.empty {
   dl {
     .dl-horizontal;
     margin-bottom: @line-height-computed / 2;
+  }
+}
+.profile {
+  .col-sm-2 {
+    width: 100px;
+  }
+  .col-sm-offset-2 {
+    margin-left: 100px;
+  }
+  .col-sm-5 {
+    width: 280px;
+  }
+}
+.order {
+  .col-sm-2 {
+    width: 80px;
+    &.email-label {
+      width: 135px;
+    }
+  }
+  .col-sm-3 {
+    width: 280px;
+  }
+  .col-sm-offset-2 {
+    margin-left: 80px;
+  }
+  h6 { 
+    margin: 10px 0 0;
+  }
+  fieldset {
+    margin-bottom: 10px;
   }
 }
 .login {
@@ -437,7 +480,7 @@ select.empty {
   background: @gray-lighter;
 }
 @media (min-width: @screen-sm) {
-  .order {
+  .order, .profile {
     background: url('@{img-path}form-bg.jpg') right bottom no-repeat;
     padding: @grid-gutter-width * 3 @grid-gutter-width * 3 @grid-gutter-width * 1.5;
     dl {
@@ -676,14 +719,17 @@ header {
       }
       span {
         position: absolute;
-        right: -3px;
+        right: -6px;
         bottom: 0;
         color: white;
         background: #72bf44;
         font-family: @accent-font-family;
         font-size: 12px;
         border-radius: 12px;
-        padding: 1px 6px 0;
+        width: 22px;
+        height: 22px;
+        line-height: 24px;
+        text-align: center;
       }
     }
     .minicart-cost {
@@ -691,6 +737,8 @@ header {
       vertical-align: top;
       margin-left: 12px;
       .text-muted;
+      font-size: 13px;
+      line-height: 20px;
       a {
         display: block;
         font-family: @accent-font-family;
@@ -700,12 +748,14 @@ header {
   }
   .user {
     float: right;
-    margin: 13px 0 0 30px;
+    margin: 10px 0 0 30px;
     a.btn {
-      /*.btn; .btn-default;*/
       width: 103px;
-/*      padding-left: 35px;
-      font-size: 14px;*/
+      height: 41px;
+      padding-top: 9px;
+      &::before {
+        left: 16px;
+      }
     }
   }
 }
@@ -724,7 +774,7 @@ header {
       text-transform: uppercase;
       color: white;
       display: block;
-      padding: 22px 25px 20px 10px;
+      padding: 20px 25px 17px 10px;
       position: relative;
       &::after {
         content: '';
@@ -826,7 +876,7 @@ header {
     input {
       width: 100%;
       padding-right: 50px;
-      height: 30px;
+      height: 31px;
       border: 1px solid @gray-light;
     }
   }
@@ -844,7 +894,7 @@ header {
 }
 .full-width-brace {
   .search-form {
-    padding: 15px 0;
+    padding: 13px 0;
     input {
       border: transparent;
     }
@@ -862,7 +912,7 @@ header.fixed {
     > li {
       > a {
         font-size: 13px;
-        padding: 18px 22px 17px 7px;
+        padding: 18px 22px 18px 7px;
         &::after {
           right: 0;
         }
@@ -1703,4 +1753,14 @@ table.orders {
   .feedback;
   padding-top: @grid-gutter-width * 3;
   margin-bottom: @grid-gutter-width;
+}
+
+article {
+  h1 {
+    margin-top: 42px;
+    margin-bottom: 22px;
+  }
+  p {
+    margin-bottom: 19px;
+  }
 }

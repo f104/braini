@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/common.css?v1">
+    <link rel="stylesheet" href="assets/css/jquery.formstyler.css">
     <script src="assets/js/libs/jquery-2.1.4.min.js"></script>
     <script src="assets/js/libs/sticky-kit.min.js"></script>
     <script src="assets/js/libs/bootstrap/tab.js"></script>
+    <script src="assets/js/libs/jquery.formstyler.min.js"></script>
     <script src="assets/js/common.js?v1"></script>
   </head>
   <body>
@@ -119,7 +121,7 @@
           </nav>
           <div class="minicart-user-wrapper">
             <div class="minicart">
-              <a class="minicart-basket" href="#"><span>5</span></a>
+              <a class="minicart-basket" href="#"><span>99</span></a>
               <div class="minicart-cost">
                 Заказ на сумму
                 <a href="#">12 560 РУБ</a>
@@ -321,16 +323,16 @@
       <fieldset>
         <legend>Фильтры товаров</legend>
         <div class="form-group">
-          <select class="form-control input-sm">
-            <option disabled selected>Производитель</option>
+          <select class="form-control input-sm" data-placeholder="Производитель">
+            <option></option>
             <option value="1">Все</option>
             <option value="2">Eset</option>
             <option value="3">Kaspersky</option>
           </select>
         </div>
         <div class="form-group">
-          <select class="form-control input-sm">
-            <option disabled selected>Количество лицензий</option>
+          <select class="form-control input-sm" data-placeholder="Количество лицензий">
+            <option></option>
             <option value="0">Все</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -339,8 +341,8 @@
           </select>
         </div>
         <div class="form-group">
-          <select class="form-control input-sm">
-            <option disabled selected>ОС</option>
+          <select class="form-control input-sm" data-placeholder="ОС">
+            <option></option>
             <option value="0">Все</option>
             <option value="1">Windows</option>
             <option value="2">Linux</option>

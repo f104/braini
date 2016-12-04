@@ -68,7 +68,7 @@
                 </div>
                 <div class="form-group">
                   <div class="col-sm-offset-3 col-sm-10">
-                    <button class="btn btn-default btn-sm">Прикрепить файл</button>
+                    <input type="file" data-browse="Прикрепить файл">
                   </div>
                 </div>
               </fieldset>
@@ -86,7 +86,7 @@
       </div>
       
       <div id="map" class="map"></div>
-      <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+<!--      <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
       <script>
         ymaps.ready(function(){
             map = new ymaps.Map("map", {
@@ -96,6 +96,11 @@
             });
             map.behaviors.disable('scrollZoom');
         });
+      </script>-->
+      
+      <script>
+        var content = components.import.querySelector('#subscribe');
+        document.querySelector('main').appendChild(content.cloneNode(true));
       </script>
       
     </main>

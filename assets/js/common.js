@@ -22,13 +22,18 @@ $(document).ready(function () {
 
 $(window).load(function(){
   
-  $(".sticky").each(function(i){
-    var parent = $(this).data('sticky-parent');
-    $(this).stick_in_parent({
-      parent: $(parent),
-      offset_top: 50
-    });
-  });
+//  $(".sticky").each(function(i){
+//    var parent = $(this).data('sticky-parent');
+//    $(this).stick_in_parent({
+//      parent: $(parent),
+//      offset_top: 50
+//    });
+//  });
+  
+  $(".sticky").pin({
+    containerSelector: ".row",
+    padding: {top: 50, bottom: 55}
+  })
   
   $('input[type=file], input[type=radio], input[type=checkbox], select').styler();
   

@@ -6885,7 +6885,7 @@ body {
   position: relative
   /*  &::after {
     content: "";
-    background: url('@{img-path}tmp/cart.png') no-repeat; // fixed;
+    background: url('@{img-path}tmp/index.png') no-repeat; // fixed;
     background-size: auto;
     background-position-x: center;
     background-position-y: 0;
@@ -7179,21 +7179,25 @@ ul.gallery li img {
 .remove-cross {
   font-size: 150%;
 }
+.remove-cross:hover {
+  color: #909090;
+}
 a.view-price {
   color: #0880bd;
-  padding-left: 23px;
+  padding-left: 21px;
   position: relative;
 }
 a.view-price:hover {
   color: #0c93d8;
 }
 a.view-price::before {
-  content: '*';
-  font-size: 25px;
-  color: #637280;
+  content: '';
   position: absolute;
   left: 0;
   top: 3px;
+  width: 10px;
+  height: 11px;
+  background: url('img/sprite.png') no-repeat -22px -127px;
 }
 button,
 a.btn {
@@ -7511,11 +7515,17 @@ select.empty option[value] {
 .order .col-sm-offset-2 {
   margin-left: 80px;
 }
+.order .col-sm-7 {
+  max-width: 535px;
+}
 .order h6 {
   margin: 10px 0 0;
 }
 .order fieldset {
   margin-bottom: 10px;
+}
+.order dd {
+  margin-bottom: 16px;
 }
 .login {
   border: 1px solid #e9ebe8;
@@ -7849,9 +7859,10 @@ menu li a:hover {
 }
 menu li.see-all {
   margin-top: 28px;
+  padding-bottom: 0;
 }
 menu li.see-all a {
-  color: #231f20;
+  color: #637280;
   padding-left: 15px;
   position: relative;
 }
@@ -7859,10 +7870,10 @@ menu li.see-all a::before {
   content: '';
   position: absolute;
   left: 0px;
-  top: 4px;
-  width: 6px;
-  height: 15px;
-  background: url('img/sprite.png') no-repeat -15px 0;
+  top: 3px;
+  width: 7px;
+  height: 13px;
+  background: url('img/sprite.png') no-repeat -15px -29px;
 }
 menu li.see-all a:hover {
   color: #0880bd;
@@ -8119,12 +8130,15 @@ header .user a.btn::before {
   z-index: 1000;
 }
 .catalog-menu > li .submenu .content {
-  font-size: initial;
+  font-size: 14px;
   box-shadow: 0 0 40px -15px #000000;
   background: #ffffff;
 }
 .catalog-menu > li .submenu.v1 .content {
   padding: 30px;
+}
+.catalog-menu > li .submenu.v1 .content .devs-list a {
+  min-width: 240px;
 }
 .catalog-menu > li .submenu.v1 .content .devs-list p {
   font-size: 14px;
@@ -8134,6 +8148,15 @@ header .user a.btn::before {
 }
 .catalog-menu > li .submenu.v1 .content .devs-list p a:hover {
   color: #0c93d8;
+}
+.catalog-menu > li .submenu.v2 h3 {
+  margin-top: 0;
+}
+.catalog-menu > li .submenu.v2 li {
+  margin: 0;
+}
+.catalog-menu > li .submenu.v2 li.see-all {
+  margin-top: 28px;
 }
 .catalog-menu > li .submenu.v2 .col-sm-4 {
   padding: 30px;
@@ -8575,15 +8598,23 @@ fieldset[disabled] a.subscribe-form button {
           flex: 1;
   padding: 20px 0 10px 30px;
 }
+.catalog-item.best .footer form .form-inputs td {
+  padding-right: 10px;
+}
 .catalog-item.best .footer form .form-inputs .cost::after {
   content: ' \2715';
-  font-size: 80%;
+  font-size: 14px;
+  font-family: "PF DinDisplay Pro Regular";
+  padding-left: 4px;
 }
 .catalog-item.best .footer form .form-inputs .total-cost {
   color: inherit;
 }
 .catalog-item.best .footer form .form-inputs .total-cost::before {
   content: '= ';
+  /*font-size: 14px;*/
+  font-family: "PF DinDisplay Pro Regular"
+  /*padding-left: 4px;*/
 }
 .catalog-item.best .footer form .form-buttons {
   padding: 20px;
@@ -8786,6 +8817,8 @@ section.best .row .col-sm-6 .catalog-item .footer {
 }
 /* goods filters */
 .filters {
+  -webkit-transition: none;
+          transition: none;
   padding: 30px;
   background: #fafafa;
 }
@@ -9061,7 +9094,15 @@ table.orders td {
   font-size: 13px;
 }
 table.orders td .cost {
-  font-size: initial;
+  font-size: 14px;
+}
+table.cart .cost,
+table.cart .total-cost {
+  font-size: 16px;
+}
+table.cart td:last-of-type {
+  width: 20px;
+  padding-right: 0;
 }
 .page-header small.order-success {
   color: #72bf44;

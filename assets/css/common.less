@@ -19,7 +19,7 @@ body {
   position: relative;
 /*  &::after {
     content: "";
-    background: url('@{img-path}tmp/cart.png') no-repeat; // fixed;
+    background: url('@{img-path}tmp/index.png') no-repeat; // fixed;
     background-size: auto;
     background-position-x: center;
     background-position-y: 0;
@@ -294,18 +294,22 @@ ul.gallery {
 }
 .remove-cross {
   font-size: 150%;
+  &:hover {
+    color: #909090;
+  }
 }
 a.view-price {
   .colored;
-  padding-left: 23px;
+  padding-left: 21px;
   position: relative;
   &::before {
-    content: '*';
-    font-size: 25px;
-    color: @gray-dark;
+    content: '';
     position: absolute;
     left: 0;
     top: 3px;
+    width: 10px;
+    height: 11px;
+    background: url('@{sprite}') no-repeat -22px -127px;
   }
 }
 button, a.btn {
@@ -459,11 +463,17 @@ select.empty {
   .col-sm-offset-2 {
     margin-left: 80px;
   }
+  .col-sm-7 {
+    max-width: 535px;
+  }
   h6 { 
     margin: 10px 0 0;
   }
   fieldset {
     margin-bottom: 10px;
+  }
+  dd {
+    margin-bottom: 16px;
   }
 }
 .login {
@@ -602,18 +612,19 @@ menu {
     }
     &.see-all {
       margin-top: @line-height-computed;
+      padding-bottom: 0;
       a {
-        color: @link-color;
+        color: #637280;
         padding-left: 15px;
         position: relative;
         &::before {
           content: '';
           position: absolute;
           left: 0px;
-          top: 4px;
-          width: 6px;
-          height: 15px;
-          background: url('@{img-path}sprite.png') no-repeat -15px 0;
+          top: 3px;
+          width: 7px;
+          height: 13px;
+          background: url('@{img-path}sprite.png') no-repeat -15px -29px;
         }
         &:hover {
           color: @link-hover-color;
@@ -821,22 +832,36 @@ header {
       left: 0;
       z-index: 1000;
       .content {
-        font-size: initial;
+        font-size: 14px;
         box-shadow: 0 0 40px -15px #000;
         background: @body-bg;
       }
       &.v1 {
         .content {
           padding: 30px;
-          .devs-list p {
-            font-size: 14px;
+          .devs-list {
             a {
-              .colored;
+              min-width: 240px;
+            }
+            p {
+              font-size: 14px;
+              a {
+                .colored;
+              }
             }
           }
         }
       }
       &.v2 {
+        h3 {
+          margin-top: 0;
+        }
+        li {
+          margin: 0;
+          &.see-all {
+            margin-top: 28px;
+          }
+        }
         .col-sm-4 {
           padding: 30px;
           border-right: 1px solid @gray-light;
@@ -1165,16 +1190,24 @@ header.fixed {
       .form-inputs {
         flex: 1;
         padding: @grid-gutter-width 0 @grid-gutter-width / 2 @grid-gutter-width * 1.5;
+        td {
+          padding-right: 10px;
+        }
         .cost { 
           &::after{
             content: ' \2715';
-            font-size: 80%;
+            font-size: 14px;
+            font-family: "PF DinDisplay Pro Regular";
+            padding-left: 4px;
           }
         }
         .total-cost { 
           color: inherit; 
           &::before {
             content: '= ';
+            /*font-size: 14px;*/
+    font-family: "PF DinDisplay Pro Regular";
+    /*padding-left: 4px;*/
           }
         }
       }
@@ -1343,6 +1376,7 @@ section.best {
 }
 /* goods filters */
 .filters {
+  transition: none;
   padding: 30px;
   background: @gray-lighter;
   menu {
@@ -1586,8 +1620,17 @@ table.orders {
   td {
     font-size: @font-size-small;
     .cost {
-      font-size: initial;
+      font-size: 14px;
     }
+  }
+}
+table.cart {
+  .cost, .total-cost {
+    font-size: 16px;
+  }
+  td:last-of-type {
+    width: 20px;
+    padding-right: 0;
   }
 }
 .page-header {

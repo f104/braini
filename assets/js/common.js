@@ -30,10 +30,10 @@ $(window).load(function(){
 //    });
 //  });
   
-  $(".sticky").pin({
-    containerSelector: ".row",
-    padding: {top: 50, bottom: 55}
-  })
+//  $(".sticky").pin({
+//    containerSelector: ".row",
+//    padding: {top: 50, bottom: 55}
+//  })
   
   $('input[type=file], input[type=radio], input[type=checkbox], select').styler();
   
@@ -84,6 +84,72 @@ $(window).load(function(){
     });
 
   })(window.jQuery);
-
+  
 });
 
+(function ($) {
+  
+  $(function(){
+    
+    moveFilters = {
+
+      init: function() {
+        $filters = $('.filters');
+        $wrapper = $filters.parents($filters.data('sticky-parent'));
+        fHeight = $filters.outerHeight(true);
+        fOffset = $filters.offset().top;
+        wrHeight = $wrapper.outerHeight(true);
+        wrOffset = $wrapper.offset().top;
+        wHeight = $(window).height();
+        fixedMenuHeight = 60;
+        useAnimate = true;
+
+        $('.filters').css({position: 'absolute', top: 0});
+        this.move();
+      },
+
+      animate: function(top) {
+        if (useAnimate) {
+          $filters.stop().animate({'top': top}, 300);
+        } else {
+          $filters.css({'top': top});
+        }
+      },
+
+      move: function() {
+        var scrollTop = $(window).scrollTop();
+        var curTop = parseInt($filters.css('top'));
+
+        if (scrollTop + wHeight > fOffset + fHeight) {
+          var top = scrollTop - fOffset - (fHeight - wHeight);
+          if (top > curTop && scrollTop + wHeight < wrOffset +wrHeight) {
+            this.animate(top);
+          } else if (curTop > scrollTop - wrOffset + fixedMenuHeight) {
+            this.animate(scrollTop - wrOffset + fixedMenuHeight);
+          }
+        } else { 
+          if (scrollTop >= fOffset + fixedMenuHeight ) {
+            var top = scrollTop - fOffset + fixedMenuHeight;
+            if (top < curTop) {
+              this.animate(top);
+            }
+          } else {
+            this.animate(0);
+          }
+        }
+      }
+
+    };
+
+    $(window).load(function(){
+      moveFilters.init();
+    });
+
+    $(window).on('scroll', function(){
+      clearInterval(filtersCounter);
+      var filtersCounter = setTimeout(moveFilters.move(), 100);
+    });
+    
+  });
+
+})(window.jQuery);

@@ -6875,6 +6875,83 @@ header .header-bottom:after,
   background: url('img/banners/20.png') center no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
   background: url('img/banners/20.png') center no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
 }
+.b21 a {
+  background: #e5ebf9 url('img/banners/21.png') center no-repeat;
+  background: url('img/banners/21.png') center no-repeat, url('img/banners/hover.png') center -100px no-repeat, #e5ebf9;
+}
+.b21 a:hover {
+  background: url('img/banners/21.png') center no-repeat, url('img/banners/hover.png') top center no-repeat, #e5ebf9;
+}
+.b22 a {
+  background: #e5ebf9 url('img/banners/22.png') center no-repeat;
+  background: url('img/banners/22.png') center no-repeat, url('img/banners/hover.png') center -100px no-repeat, #e5ebf9;
+}
+.b22 a:hover {
+  background: url('img/banners/22.png') center no-repeat, url('img/banners/hover.png') top center no-repeat, #e5ebf9;
+}
+.b23 a {
+  background: #e5ebf9 url('img/banners/23.png') center no-repeat;
+  background: url('img/banners/23.png') center no-repeat, url('img/banners/hover.png') center -100px no-repeat, #e5ebf9;
+}
+.b23 a:hover {
+  background: url('img/banners/23.png') center no-repeat, url('img/banners/hover.png') top center no-repeat, #e5ebf9;
+}
+.b24 a {
+  background: #e5ebf9 url('img/banners/24.png') center no-repeat;
+  background: url('img/banners/24.png') center no-repeat, url('img/banners/hover.png') center -100px no-repeat, #e5ebf9;
+}
+.b24 a:hover {
+  background: url('img/banners/24.png') center no-repeat, url('img/banners/hover.png') top center no-repeat, #e5ebf9;
+}
+.b27 a {
+  background: #e5ebf9 url('img/banners/27.png') center no-repeat;
+  background: url('img/banners/27.png') center no-repeat, url('img/banners/hover.png') center -100px no-repeat, #e5ebf9;
+}
+.b27 a:hover {
+  background: url('img/banners/27.png') center no-repeat, url('img/banners/hover.png') top center no-repeat, #e5ebf9;
+}
+.b28 a {
+  background: #e5ebf9 url('img/banners/28.png') center no-repeat;
+  background: url('img/banners/28.png') center no-repeat, url('img/banners/hover.png') center -100px no-repeat, #e5ebf9;
+}
+.b28 a:hover {
+  background: url('img/banners/28.png') center no-repeat, url('img/banners/hover.png') top center no-repeat, #e5ebf9;
+}
+.b29 a {
+  background: #e5ebf9 url('img/banners/29.png') center no-repeat;
+  background: url('img/banners/29.png') center 80px no-repeat, url('img/banners/hover.png') center -100px no-repeat, #e5ebf9;
+}
+.b29 a:hover {
+  background: url('img/banners/29.png') center 80px no-repeat, url('img/banners/hover.png') top center no-repeat, #e5ebf9;
+}
+.b25 a,
+.b26 a {
+  height: 400px;
+}
+.b25 a {
+  background: #e5ebf9 url('img/banners/25.png') center no-repeat;
+  background: url('img/banners/25.png') center 130px no-repeat, url('img/banners/hover.png') center -100px no-repeat, -webkit-radial-gradient(60% 55%, circle, #ffffff, #e5ebf9, #e5ebf9);
+  background: url('img/banners/25.png') center 130px no-repeat, url('img/banners/hover.png') center -100px no-repeat, radial-gradient(circle at 60% 55%, #ffffff, #e5ebf9, #e5ebf9);
+}
+.b25 a h5 {
+  max-width: 65%;
+}
+.b25 a:hover {
+  background: url('img/banners/25.png') center 130px no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(60% 55%, circle, #ffffff, #e5ebf9, #e5ebf9);
+  background: url('img/banners/25.png') center 130px no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 60% 55%, #ffffff, #e5ebf9, #e5ebf9);
+}
+.b26 a {
+  background: #e5ebf9 url('img/banners/26.png') center no-repeat;
+  background: url('img/banners/26.png') center 150px no-repeat, url('img/banners/hover.png') center -100px no-repeat, -webkit-radial-gradient(60% 55%, circle, #ffffff, #e5ebf9, #e5ebf9);
+  background: url('img/banners/26.png') center 150px no-repeat, url('img/banners/hover.png') center -100px no-repeat, radial-gradient(circle at 60% 55%, #ffffff, #e5ebf9, #e5ebf9);
+}
+.b26 a h5 {
+  max-width: 55%;
+}
+.b26 a:hover {
+  background: url('img/banners/26.png') center 150px no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(60% 55%, circle, #ffffff, #e5ebf9, #e5ebf9);
+  background: url('img/banners/26.png') center 150px no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 60% 55%, #ffffff, #e5ebf9, #e5ebf9);
+}
 /* dev */
 html {
   height: 100%;

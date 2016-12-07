@@ -95,6 +95,7 @@ $(window).load(function(){
 
       init: function() {
         $filters = $('.filters');
+        if ($filters.length == 0) return false;
         $wrapper = $filters.parents($filters.data('sticky-parent'));
         fHeight = $filters.outerHeight(true);
         fOffset = $filters.offset().top;
@@ -106,6 +107,12 @@ $(window).load(function(){
 
         $('.filters').css({position: 'absolute', top: 0});
         this.move();
+        
+        $(window).on('scroll', function(){
+          clearInterval(filtersCounter);
+          var filtersCounter = setTimeout(moveFilters.move(), 100);
+        });
+
       },
 
       animate: function(top) {
@@ -140,16 +147,11 @@ $(window).load(function(){
       }
 
     };
-
+    
     $(window).load(function(){
       moveFilters.init();
     });
 
-    $(window).on('scroll', function(){
-      clearInterval(filtersCounter);
-      var filtersCounter = setTimeout(moveFilters.move(), 100);
-    });
-    
   });
 
 })(window.jQuery);

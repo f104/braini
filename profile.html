@@ -71,7 +71,18 @@
                 </div>
                 <div class="form-group">
                   <div class="col-sm-offset-2 col-sm-5">
-                    <button class="btn btn-default btn-lg">Изменить пароль</button>
+                    <button class="btn btn-default btn-lg js-profile-password-toggler">Изменить пароль</button>
+                  </div>
+                </div>
+                <div class="form-group js-profile-password-wrapper hidden">
+                  <label for="profile_password" class="col-sm-2 control-label">{'office_profile_password'|lexicon}</label>
+                  <div class="col-sm-5">
+                          <input type="password" name="specifiedpassword" value="" class="form-control input-sm" id="profile_password">
+                          <p class="help-block message">{$error_specifiedpassword}</p>
+                          <p class="help-block desc">{'office_profile_specifiedpassword_desc'|lexicon}</p>
+                          <input type="password" name="confirmpassword" value="" class="form-control input-sm">
+                          <p class="help-block message">{$error_confirmpassword}</p>
+                          <p class="help-block desc">{'office_profile_confirmpassword_desc'|lexicon}</p>
                   </div>
                 </div>
               </fieldset>

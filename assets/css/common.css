@@ -7455,7 +7455,8 @@ select.empty option[value] {
 .feedback:after {
   clear: both;
 }
-.feedback button {
+.feedback button,
+.feedback a.btn {
   margin-right: 5px;
   margin-bottom: 10px;
 }
@@ -7537,7 +7538,9 @@ select.empty option[value] {
   clear: both;
 }
 .order button,
-.profile button {
+.profile button,
+.order a.btn,
+.profile a.btn {
   margin-right: 5px;
   margin-bottom: 10px;
 }
@@ -7663,7 +7666,8 @@ select.empty option[value] {
 .login:after {
   clear: both;
 }
-.login button {
+.login button,
+.login a.btn {
   margin-right: 5px;
   margin-bottom: 10px;
 }
@@ -7732,7 +7736,8 @@ select.empty option[value] {
 .register:after {
   clear: both;
 }
-.register button {
+.register button,
+.register a.btn {
   margin-right: 5px;
   margin-bottom: 10px;
 }
@@ -7794,13 +7799,6 @@ fieldset.social-login ul {
   list-style: none;
   margin-left: -5px;
   font-size: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
   margin-bottom: 0;
 }
 fieldset.social-login ul li::before {
@@ -7818,17 +7816,16 @@ fieldset.social-login ul li {
   padding: 6px 12px;
   border: 1px solid #e9ebe8;
   border-radius: 4px;
+  background: white;
   margin-right: 8px;
   text-align: center;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  width: 120px;
 }
 fieldset.social-login ul li::before {
   content: none;
 }
-fieldset.social-login ul li a {
+fieldset.social-login ul li a,
+fieldset.social-login ul li span {
   font-size: 13px;
   display: inline-block;
   padding-left: 23px;
@@ -7837,7 +7834,8 @@ fieldset.social-login ul li a {
   position: relative;
   vertical-align: bottom;
 }
-fieldset.social-login ul li a::before {
+fieldset.social-login ul li a::before,
+fieldset.social-login ul li span::before {
   content: '';
   position: absolute;
   top: 2px;
@@ -7846,29 +7844,40 @@ fieldset.social-login ul li a::before {
   height: 16px;
   background: url('img/sprite.png') no-repeat;
 }
-fieldset.social-login ul li a.vk::before {
+fieldset.social-login ul li a.vkontakte::before,
+fieldset.social-login ul li span.vkontakte::before {
   background-position: -60px 0;
 }
-fieldset.social-login ul li a.yandex::before {
+fieldset.social-login ul li a.yandex::before,
+fieldset.social-login ul li span.yandex::before {
   background-position: -60px -16px;
 }
-fieldset.social-login ul li a.google::before {
+fieldset.social-login ul li a.google::before,
+fieldset.social-login ul li span.google::before {
   background-position: -60px -32px;
 }
-fieldset.social-login ul li a.twitter::before {
+fieldset.social-login ul li a.twitter::before,
+fieldset.social-login ul li span.twitter::before {
   background-position: -60px -48px;
 }
-fieldset.social-login ul li a.facebook::before {
+fieldset.social-login ul li a.facebook::before,
+fieldset.social-login ul li span.facebook::before {
   background-position: -60px -64px;
 }
-fieldset.social-login ul li a.mailru::before {
+fieldset.social-login ul li a.mailru::before,
+fieldset.social-login ul li span.mailru::before {
   background-position: -60px -80px;
 }
-fieldset.social-login ul li a.linkedin::before {
+fieldset.social-login ul li a.linkedin::before,
+fieldset.social-login ul li span.linkedin::before {
   background-position: -60px -96px;
 }
-fieldset.social-login ul li a.live::before {
+fieldset.social-login ul li a.live::before,
+fieldset.social-login ul li span.live::before {
   background-position: -60px -112px;
+}
+fieldset.social-login ul li span {
+  opacity: 0.7;
 }
 .map {
   margin-top: 30px;
@@ -9426,6 +9435,7 @@ table.cart td:last-of-type {
   border-radius: 4px;
   padding: 40px 40px 40px 120px;
   position: relative;
+  margin-bottom: 20px;
 }
 .organisation-cart .organisation-number {
   position: absolute;
@@ -9436,7 +9446,10 @@ table.cart td:last-of-type {
   border-radius: 100%;
   font-family: "PF DinDisplay Pro Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 21px;
-  padding: 14px;
+  width: 52px;
+  height: 52px;
+  text-align: center;
+  line-height: 53px;
 }
 .organisation-cart dl dt {
   font-weight: normal;
@@ -9527,7 +9540,8 @@ table.cart td:last-of-type {
 .organisation-add:after {
   clear: both;
 }
-.organisation-add button {
+.organisation-add button,
+.organisation-add a.btn {
   margin-right: 5px;
   margin-bottom: 10px;
 }
@@ -9538,6 +9552,9 @@ table.cart td:last-of-type {
 .organisation-add .col-sm-1 {
   /*width: 50px;*/
   padding-right: 5px;
+}
+.organisation-add .col-sm-offset-2 {
+  margin-left: 145px;
 }
 article h1 {
   margin-top: 42px;

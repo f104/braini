@@ -420,7 +420,7 @@ select.empty {
   border: 1px solid @gray-light;
   border-radius: @border-radius-base;
   padding: @grid-gutter-width * 1.5 @grid-gutter-width * 1.5 @grid-gutter-width / 2;
-  button {
+  button, a.btn {
     margin-right: @grid-gutter-width / 4;
     margin-bottom: @grid-gutter-width / 2;
   }
@@ -536,18 +536,17 @@ fieldset.social-login {
   ul {
     .list-unstyled; .list-inline;
     font-size: 0;
-    display: flex;
-    flex-wrap: wrap;
     margin-bottom: 0;
     li {
       &::before { content: none; }
       padding: 6px 12px;
       border: 1px solid @gray-light;
       border-radius: @border-radius-base;
+      background: white;
       margin-right: 8px;
       text-align: center;
-      flex: 1;
-      a {
+      width: 120px;
+      a, span {
         font-size: @font-size-small;
         display: inline-block;
         padding-left: 23px;
@@ -564,7 +563,7 @@ fieldset.social-login {
           height: 16px;
           background: url('@{sprite}') no-repeat;
         }
-        &.vk::before { background-position: -60px 0; }
+        &.vkontakte::before { background-position: -60px 0; }
         &.yandex::before { background-position: -60px -16px; }
         &.google::before { background-position: -60px -32px; }
         &.twitter::before { background-position: -60px -48px; }
@@ -572,6 +571,9 @@ fieldset.social-login {
         &.mailru::before { background-position: -60px -80px; }
         &.linkedin::before { background-position: -60px -96px; }
         &.live::before { background-position: -60px -112px; }
+      }
+      span {
+        opacity: .7
       }
     }
   }
@@ -1835,6 +1837,7 @@ table.cart {
   border-radius: @border-radius-base;
   padding: 40px 40px 40px 120px;
   position: relative;
+  margin-bottom: @grid-gutter-width;
   .organisation-number {
     position: absolute;
     left: 30px;
@@ -1844,7 +1847,10 @@ table.cart {
     border-radius: 100%;
     font-family: @accent-font-family;
     font-size: 21px;
-    padding: @line-height-computed / 2;
+    width: 52px;
+    height: 52px;
+    text-align: center;
+    line-height: 53px;
   }
   dl {
     dt {
@@ -1879,6 +1885,9 @@ table.cart {
   .col-sm-1 {
     /*width: 50px;*/
     padding-right: 5px;
+  }
+  .col-sm-offset-2 {
+    margin-left: 145px;
   }
 }
 

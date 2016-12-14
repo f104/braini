@@ -13,27 +13,32 @@ $(document).ready(function () {
     }
   });
   
-  // Applies to all select boxes that have no value for their first option
-//  $("select").on('change', function() {
-//      $(this).toggleClass("empty", $.inArray($(this).val(), ['', null]) >= 0);
-//  }).trigger('change');
+  $('.js-profile-password-toggler').click(function (e) {
+    e.preventDefault();
+    $(this).parents('.form-group').addClass('hidden');
+    $('.js-profile-password-wrapper').removeClass('hidden');
+  });
+  
+  /* user company */
+  $('.js-company-add-button').click(function (e) {
+    e.preventDefault();
+    $(this).addClass('hidden');
+    $('.js-company-add-form').removeClass('hidden');
+  });
+  $('.js-company-add-form button[type=reset]').click(function (e) {
+    $(this).parents('form').addClass('hidden');
+    $('.js-company-add-button').removeClass('hidden');
+  });
+  $(document).on('af_complete', function(event, response) {
+    var form = response.form;
+    if (form.hasClass('js-company-add-form') && response.success) {
+        window.location.reload();
+    }
+  });
   
 });
 
 $(window).load(function(){
-  
-//  $(".sticky").each(function(i){
-//    var parent = $(this).data('sticky-parent');
-//    $(this).stick_in_parent({
-//      parent: $(parent),
-//      offset_top: 50
-//    });
-//  });
-  
-//  $(".sticky").pin({
-//    containerSelector: ".row",
-//    padding: {top: 50, bottom: 55}
-//  })
   
   $('input[type=file], input[type=radio], input[type=checkbox], select').styler();
   

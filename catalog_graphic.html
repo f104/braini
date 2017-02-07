@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Графика</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="import" href="components.html">
+    <script>
+      var components = document.querySelector('link[rel=import]');
+    </script>
+  </head>
+  <body>
+    <script>
+      var content = components.import.querySelector('header');
+      document.body.appendChild(content.cloneNode(true));
+    </script>
+    
+    <main>
+      
+      <div class="container-fluid">
+      
+        <ol class="breadcrumb">
+          <li><a href="#">Главная</a></li>
+          <li class="active">Графика</li>
+        </ol>
+      
+        <!-- banners -->
+        <section>
+          <div class="row">
+            <div class="promo b30 col-sm-4">
+              <a href="#">
+                <h5>Графический дизайн и&nbsp;цифровой рисунок</h5>
+                <p>Используйте самую современную систему</p>
+              </a>
+            </div>
+            <div class="promo b31 col-sm-4">
+              <a href="#">
+                <h5>Редактирование и&nbsp;обработка видео</h5>
+                <p>Лучший выбор для системы серверов</p>
+              </a>
+            </div>
+            <div class="promo b32 col-sm-2">
+              <a href="#">
+                <h5>Для верстки и редактирования текста</h5>
+              </a>
+            </div>
+            <div class="promo b33 col-sm-2">
+              <a href="#">
+                <h5>Работа с Flash</h5>
+              </a>
+            </div>
+            <div class="promo b34 col-sm-4">
+              <a href="#">
+                <h5>Технический дизайн</h5>
+                <p>Система баз данных для&nbsp;бизнеса и не только</p>
+              </a>
+            </div>
+            <div class="promo b35 col-sm-2">
+              <a href="#">
+                <h5>Работа с&nbsp;документами PDF</h5>
+              </a>
+            </div>
+            <div class="promo b36 col-sm-2">
+              <a href="#">
+                <h5>Профессиональный HTML-редактор</h5>
+              </a>
+            </div>
+            <div class="promo b37 col-sm-2">
+              <a href="#"></a>
+            </div>
+            <div class="promo b38 col-sm-2">
+              <a href="#"></a>
+            </div>
+          </div>
+        </section>
+        
+        
+        
+        <script>
+          var content = components.import.querySelector('#seo');
+          document.querySelector('main .container-fluid').appendChild(content.cloneNode(true));
+        </script>
+      
+      </div>
+
+      <script>
+        var content = components.import.querySelector('#subscribe');
+        document.querySelector('main').appendChild(content.cloneNode(true));
+      </script>
+    
+    </main>
+    
+    <script>
+      content = components.import.querySelector('footer');
+      document.body.appendChild(content.cloneNode(true));
+    </script>
+  </body>
+</html>

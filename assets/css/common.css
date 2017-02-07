@@ -2624,7 +2624,7 @@ input[type="search"] {
 .radio label,
 .checkbox label {
   min-height: 28px;
-  padding-left: 20px;
+  padding-left: 23px;
   margin-bottom: 0;
   font-weight: normal;
   cursor: pointer;
@@ -2634,7 +2634,7 @@ input[type="search"] {
 .checkbox input[type="checkbox"],
 .checkbox-inline input[type="checkbox"] {
   position: absolute;
-  margin-left: -20px;
+  margin-left: -23px;
   margin-top: 4px \9;
 }
 .radio + .radio,
@@ -6616,18 +6616,19 @@ header .header-bottom:after,
   }
 }
 /* banners */
-.banners {
+.promos {
   display: none;
 }
 @media (min-width: 768px) {
-  .banners {
+  .promos {
     display: block;
   }
 }
-.banner {
+.promo {
   max-width: 400px;
 }
-.banner a {
+.promo a {
+  position: relative;
   display: block;
   height: 190px;
   padding: 20px;
@@ -6647,7 +6648,7 @@ header .header-bottom:after,
           flex-wrap: wrap
   /*transition: none;*/
 }
-.banner a h5 {
+.promo a h5 {
   font-family: "MuseoSansCyrl700", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
   -webkit-box-flex: 1;
@@ -6656,26 +6657,36 @@ header .header-bottom:after,
           flex: 1 0;
   max-width: 50%;
 }
-.banner a p {
+.promo a p {
   font-size: 12px;
   line-height: 16px;
   color: #959c9e;
   margin-bottom: 0;
   max-width: 50%;
 }
-.banner a:hover h5 {
+.promo a:hover h5 {
   color: #0378b3;
 }
-.banner a:hover h5::before {
+.promo a:hover h5::before {
   background: #0378b3;
 }
-.banner a:hover p {
+.promo a:hover p {
   color: #333;
 }
-.banner.col-sm-4 h5 {
+.promo a::after {
+  content: '';
+  position: absolute;
+  background: url('img/banners/hover.jpg') top center no-repeat;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.promo.col-sm-4 h5 {
   /*position: relative;*/
 }
-.banner.col-sm-4 h5::before {
+.promo.col-sm-4 h5::before {
   content: '';
   position: absolute;
   background: #231f20;
@@ -6683,246 +6694,206 @@ header .header-bottom:after,
   height: 2px;
   top: 20px;
 }
-.banner.col-sm-4:hover h5::before {
+.promo.col-sm-4:hover h5::before {
   background: #0378b3;
 }
-.banner.col-sm-2 h5 {
+.promo.col-sm-2 h5 {
   font-size: 15px;
   margin-top: 0;
   max-width: 60%;
 }
-.banner.col-sm-2 p {
+.promo.col-sm-2 p {
   max-width: 60%;
 }
 /** @TODO function */
 .b1 a {
   background: url('img/banners/1.png') right bottom no-repeat;
-  background: url('img/banners/1.png') right bottom no-repeat, url('img/banners/hover.png') center -100px no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/1.png') right bottom no-repeat, url('img/banners/hover.png') center -100px no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+  background: url('img/banners/1.png') right bottom no-repeat, #e7edf9;
 }
 .b1 a:hover {
-  background: url('img/banners/1.png') right bottom no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/1.png') right bottom no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+  background: url('img/banners/1.png') right bottom no-repeat, rgba(231, 237, 249, 0);
 }
 .b2 a {
   background: url('img/banners/2.png') right bottom no-repeat;
-  background: url('img/banners/2.png') right bottom no-repeat, url('img/banners/hover.png') center -100px no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/2.png') right bottom no-repeat, url('img/banners/hover.png') center -100px no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+  background: url('img/banners/2.png') right bottom no-repeat, #e7edf9;
 }
 .b2 a:hover {
-  background: url('img/banners/2.png') right bottom no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/2.png') right bottom no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+  background: url('img/banners/2.png') right bottom no-repeat, rgba(231, 237, 249, 0);
 }
 .b3 a {
   background: url('img/banners/3.png') right center no-repeat;
-  background: url('img/banners/3.png') right center no-repeat, url('img/banners/hover.png') center -100px no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/3.png') right center no-repeat, url('img/banners/hover.png') center -100px no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+  background: url('img/banners/3.png') right center no-repeat, #e7edf9;
 }
 .b3 a:hover {
-  background: url('img/banners/3.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/3.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+  background: url('img/banners/3.png') right center no-repeat, rgba(231, 237, 249, 0);
 }
 .b4 a {
   background: url('img/banners/4.png') right center no-repeat;
-  background: url('img/banners/4.png') right center no-repeat, url('img/banners/hover.png') center -100px no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/4.png') right center no-repeat, url('img/banners/hover.png') center -100px no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+  background: url('img/banners/4.png') right center no-repeat, #e7edf9;
 }
 .b4 a:hover {
-  background: url('img/banners/4.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/4.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+  background: url('img/banners/4.png') right center no-repeat, rgba(231, 237, 249, 0);
 }
 .b5 a {
   background: url('img/banners/5.png') right bottom no-repeat;
-  background: url('img/banners/5.png') right bottom no-repeat, url('img/banners/hover.png') center -100px no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/5.png') right bottom no-repeat, url('img/banners/hover.png') center -100px no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+  background: url('img/banners/5.png') right bottom no-repeat, #e7edf9;
 }
 .b5 a:hover {
-  background: url('img/banners/5.png') right bottom no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/5.png') right bottom no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+  background: url('img/banners/5.png') right bottom no-repeat, rgba(231, 237, 249, 0);
 }
 .b6 a {
   background: url('img/banners/6.png') right center no-repeat;
-  background: url('img/banners/6.png') right center no-repeat, url('img/banners/hover.png') center -100px no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/6.png') right center no-repeat, url('img/banners/hover.png') center -100px no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+  background: url('img/banners/6.png') right center no-repeat, #e7edf9;
 }
 .b6 a:hover {
-  background: url('img/banners/6.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/6.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+  background: url('img/banners/6.png') right center no-repeat, rgba(231, 237, 249, 0);
 }
 .b7 a {
   background: url('img/banners/7.png') right center no-repeat;
-  background: url('img/banners/7.png') right center no-repeat, url('img/banners/hover.png') center -100px no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/7.png') right center no-repeat, url('img/banners/hover.png') center -100px no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+  background: url('img/banners/7.png') right center no-repeat, #e7edf9;
 }
 .b7 a:hover {
-  background: url('img/banners/7.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/7.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+  background: url('img/banners/7.png') right center no-repeat, rgba(231, 237, 249, 0);
 }
 .b8 a {
   background: url('img/banners/8.png') right center no-repeat;
-  background: url('img/banners/8.png') right center no-repeat, url('img/banners/hover.png') center -100px no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/8.png') right center no-repeat, url('img/banners/hover.png') center -100px no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+  background: url('img/banners/8.png') right center no-repeat, #e7edf9;
 }
 .b8 a:hover {
-  background: url('img/banners/8.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/8.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+  background: url('img/banners/8.png') right center no-repeat, rgba(231, 237, 249, 0);
 }
 .b9 a {
   background: url('img/banners/9.png') right center no-repeat;
-  background: url('img/banners/9.png') right center no-repeat, url('img/banners/hover.png') center -100px no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/9.png') right center no-repeat, url('img/banners/hover.png') center -100px no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+  background: url('img/banners/9.png') right center no-repeat, #e7edf9;
 }
 .b9 a:hover {
-  background: url('img/banners/9.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/9.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+  background: url('img/banners/9.png') right center no-repeat, rgba(231, 237, 249, 0);
 }
 .b10 a {
   background: url('img/banners/10.png') right center no-repeat;
-  background: url('img/banners/10.png') right center no-repeat, url('img/banners/hover.png') center -100px no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/10.png') right center no-repeat, url('img/banners/hover.png') center -100px no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+  background: url('img/banners/10.png') right center no-repeat, #e7edf9;
 }
 .b10 a:hover {
-  background: url('img/banners/10.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/10.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+  background: url('img/banners/10.png') right center no-repeat, rgba(231, 237, 249, 0);
 }
 .b11 a {
   background: url('img/banners/11.png') right center no-repeat;
-  background: url('img/banners/11.png') right center no-repeat, url('img/banners/hover.png') center -100px no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/11.png') right center no-repeat, url('img/banners/hover.png') center -100px no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+  background: url('img/banners/11.png') right center no-repeat, #e7edf9;
 }
 .b11 a:hover {
-  background: url('img/banners/11.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/11.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+  background: url('img/banners/11.png') right center no-repeat, rgba(231, 237, 249, 0);
 }
 .b12 a {
   background: url('img/banners/12.png') right center no-repeat;
-  background: url('img/banners/12.png') right center no-repeat, url('img/banners/hover.png') center -100px no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/12.png') right center no-repeat, url('img/banners/hover.png') center -100px no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+  background: url('img/banners/12.png') right center no-repeat, #e7edf9;
 }
 .b12 a:hover {
-  background: url('img/banners/12.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/12.png') right center no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+  background: url('img/banners/12.png') right center no-repeat, rgba(231, 237, 249, 0);
 }
 .b13 a {
   background: url('img/banners/13.png') right bottom no-repeat;
-  background: url('img/banners/13.png') right bottom no-repeat, url('img/banners/hover.png') center -100px no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/13.png') right bottom no-repeat, url('img/banners/hover.png') center -100px no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+  background: url('img/banners/13.png') right bottom no-repeat, #e7edf9;
 }
 .b13 a:hover {
-  background: url('img/banners/13.png') right bottom no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/13.png') right bottom no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+  background: url('img/banners/13.png') right bottom no-repeat, rgba(231, 237, 249, 0);
 }
 .b14 a {
   background: url('img/banners/14.png') right bottom no-repeat;
-  background: url('img/banners/14.png') right bottom no-repeat, url('img/banners/hover.png') center -100px no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/14.png') right bottom no-repeat, url('img/banners/hover.png') center -100px no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+  background: url('img/banners/14.png') right bottom no-repeat, #e7edf9;
 }
 .b14 a:hover {
-  background: url('img/banners/14.png') right bottom no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/14.png') right bottom no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+  background: url('img/banners/14.png') right bottom no-repeat, rgba(231, 237, 249, 0);
 }
 .b15 a {
   background: url('img/banners/15.png') right bottom no-repeat;
-  background: url('img/banners/15.png') right bottom no-repeat, url('img/banners/hover.png') center -100px no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/15.png') right bottom no-repeat, url('img/banners/hover.png') center -100px no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+  background: url('img/banners/15.png') right bottom no-repeat, #e7edf9;
 }
 .b15 a:hover {
-  background: url('img/banners/15.png') right bottom no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/15.png') right bottom no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+  background: url('img/banners/15.png') right bottom no-repeat, rgba(231, 237, 249, 0);
 }
 .b16 a {
   background: url('img/banners/16.png') right bottom no-repeat;
-  background: url('img/banners/16.png') right bottom no-repeat, url('img/banners/hover.png') center -100px no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/16.png') right bottom no-repeat, url('img/banners/hover.png') center -100px no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+  background: url('img/banners/16.png') right bottom no-repeat, #e7edf9;
 }
 .b16 a:hover {
-  background: url('img/banners/16.png') right bottom no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/16.png') right bottom no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+  background: url('img/banners/16.png') right bottom no-repeat, rgba(231, 237, 249, 0);
 }
 .b17 a {
   background: url('img/banners/17.png') right bottom no-repeat;
-  background: url('img/banners/17.png') right bottom no-repeat, url('img/banners/hover.png') center -100px no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/17.png') right bottom no-repeat, url('img/banners/hover.png') center -100px no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+  background: url('img/banners/17.png') right bottom no-repeat, #e7edf9;
 }
 .b17 a:hover {
-  background: url('img/banners/17.png') right bottom no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/17.png') right bottom no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+  background: url('img/banners/17.png') right bottom no-repeat, rgba(231, 237, 249, 0);
 }
 .b18 a {
   background: url('img/banners/18.png') center no-repeat;
-  background: url('img/banners/18.png') center no-repeat, url('img/banners/hover.png') center -100px no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/18.png') center no-repeat, url('img/banners/hover.png') center -100px no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+  background: url('img/banners/18.png') center no-repeat, #e7edf9;
 }
 .b18 a:hover {
-  background: url('img/banners/18.png') center no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/18.png') center no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+  background: url('img/banners/18.png') center no-repeat, rgba(231, 237, 249, 0);
 }
 .b19 a {
   background: url('img/banners/19.png') center no-repeat;
-  background: url('img/banners/19.png') center no-repeat, url('img/banners/hover.png') center -100px no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/19.png') center no-repeat, url('img/banners/hover.png') center -100px no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+  background: url('img/banners/19.png') center no-repeat, #e7edf9;
 }
 .b19 a:hover {
-  background: url('img/banners/19.png') center no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/19.png') center no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+  background: url('img/banners/19.png') center no-repeat, rgba(231, 237, 249, 0);
 }
 .b20 a {
   background: url('img/banners/20.png') center no-repeat;
-  background: url('img/banners/20.png') center no-repeat, url('img/banners/hover.png') center -100px no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/20.png') center no-repeat, url('img/banners/hover.png') center -100px no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+  background: url('img/banners/20.png') center no-repeat, #e7edf9;
 }
 .b20 a:hover {
-  background: url('img/banners/20.png') center no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(75% 60%, circle, #ffffff, #e7edf9);
-  background: url('img/banners/20.png') center no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 75% 60%, #ffffff, #e7edf9);
+  background: url('img/banners/20.png') center no-repeat, rgba(231, 237, 249, 0);
 }
 .b21 a {
   background: #e5ebf9 url('img/banners/21.png') center no-repeat;
-  background: url('img/banners/21.png') center no-repeat, url('img/banners/hover.png') center -100px no-repeat, #e5ebf9;
+  background: url('img/banners/21.png') center no-repeat, #e7edf9;
 }
 .b21 a:hover {
-  background: url('img/banners/21.png') center no-repeat, url('img/banners/hover.png') top center no-repeat, #e5ebf9;
+  background: url('img/banners/21.png') center no-repeat, rgba(231, 237, 249, 0);
 }
 .b22 a {
   background: #e5ebf9 url('img/banners/22.png') center no-repeat;
-  background: url('img/banners/22.png') center no-repeat, url('img/banners/hover.png') center -100px no-repeat, #e5ebf9;
+  background: url('img/banners/22.png') center no-repeat, #e7edf9;
 }
 .b22 a:hover {
-  background: url('img/banners/22.png') center no-repeat, url('img/banners/hover.png') top center no-repeat, #e5ebf9;
+  background: url('img/banners/22.png') center no-repeat, rgba(231, 237, 249, 0);
 }
 .b23 a {
   background: #e5ebf9 url('img/banners/23.png') center no-repeat;
-  background: url('img/banners/23.png') center no-repeat, url('img/banners/hover.png') center -100px no-repeat, #e5ebf9;
+  background: url('img/banners/23.png') center no-repeat, #e7edf9;
 }
 .b23 a:hover {
-  background: url('img/banners/23.png') center no-repeat, url('img/banners/hover.png') top center no-repeat, #e5ebf9;
+  background: url('img/banners/23.png') center no-repeat, rgba(231, 237, 249, 0);
 }
 .b24 a {
   background: #e5ebf9 url('img/banners/24.png') center no-repeat;
-  background: url('img/banners/24.png') center no-repeat, url('img/banners/hover.png') center -100px no-repeat, #e5ebf9;
+  background: url('img/banners/24.png') center no-repeat, #e7edf9;
 }
 .b24 a:hover {
-  background: url('img/banners/24.png') center no-repeat, url('img/banners/hover.png') top center no-repeat, #e5ebf9;
+  background: url('img/banners/24.png') center no-repeat, rgba(231, 237, 249, 0);
 }
 .b27 a {
   background: #e5ebf9 url('img/banners/27.png') center no-repeat;
-  background: url('img/banners/27.png') center no-repeat, url('img/banners/hover.png') center -100px no-repeat, #e5ebf9;
+  background: url('img/banners/27.png') center no-repeat, #e7edf9;
 }
 .b27 a:hover {
-  background: url('img/banners/27.png') center no-repeat, url('img/banners/hover.png') top center no-repeat, #e5ebf9;
+  background: url('img/banners/27.png') center no-repeat, rgba(231, 237, 249, 0);
 }
 .b28 a {
   background: #e5ebf9 url('img/banners/28.png') center no-repeat;
-  background: url('img/banners/28.png') center no-repeat, url('img/banners/hover.png') center -100px no-repeat, #e5ebf9;
+  background: url('img/banners/28.png') center no-repeat, #e7edf9;
 }
 .b28 a:hover {
-  background: url('img/banners/28.png') center no-repeat, url('img/banners/hover.png') top center no-repeat, #e5ebf9;
+  background: url('img/banners/28.png') center no-repeat, rgba(231, 237, 249, 0);
 }
 .b29 a {
   background: #e5ebf9 url('img/banners/29.png') center no-repeat;
-  background: url('img/banners/29.png') center 80px no-repeat, url('img/banners/hover.png') center -100px no-repeat, #e5ebf9;
+  background: url('img/banners/29.png') center 80px no-repeat, #e7edf9;
 }
 .b29 a:hover {
-  background: url('img/banners/29.png') center 80px no-repeat, url('img/banners/hover.png') top center no-repeat, #e5ebf9;
+  background: url('img/banners/29.png') center 80px no-repeat, rgba(231, 237, 249, 0);
 }
 .b25 a,
 .b26 a {
@@ -6930,34 +6901,116 @@ header .header-bottom:after,
 }
 .b25 a {
   background: #e5ebf9 url('img/banners/25.png') center no-repeat;
-  background: url('img/banners/25.png') center 130px no-repeat, url('img/banners/hover.png') center -100px no-repeat, -webkit-radial-gradient(60% 55%, circle, #ffffff, #e5ebf9, #e5ebf9);
-  background: url('img/banners/25.png') center 130px no-repeat, url('img/banners/hover.png') center -100px no-repeat, radial-gradient(circle at 60% 55%, #ffffff, #e5ebf9, #e5ebf9);
+  background: url('img/banners/25.png') center 130px no-repeat, #e7edf9;
 }
 .b25 a h5 {
   max-width: 65%;
 }
 .b25 a:hover {
-  background: url('img/banners/25.png') center 130px no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(60% 55%, circle, #ffffff, #e5ebf9, #e5ebf9);
-  background: url('img/banners/25.png') center 130px no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 60% 55%, #ffffff, #e5ebf9, #e5ebf9);
+  background: url('img/banners/25.png') center 130px no-repeat, rgba(231, 237, 249, 0);
 }
 .b26 a {
   background: #e5ebf9 url('img/banners/26.png') center no-repeat;
-  background: url('img/banners/26.png') center 150px no-repeat, url('img/banners/hover.png') center -100px no-repeat, -webkit-radial-gradient(60% 55%, circle, #ffffff, #e5ebf9, #e5ebf9);
-  background: url('img/banners/26.png') center 150px no-repeat, url('img/banners/hover.png') center -100px no-repeat, radial-gradient(circle at 60% 55%, #ffffff, #e5ebf9, #e5ebf9);
+  background: url('img/banners/26.png') center 150px no-repeat, #e7edf9;
 }
 .b26 a h5 {
   max-width: 55%;
 }
 .b26 a:hover {
-  background: url('img/banners/26.png') center 150px no-repeat, url('img/banners/hover.png') top center no-repeat, -webkit-radial-gradient(60% 55%, circle, #ffffff, #e5ebf9, #e5ebf9);
-  background: url('img/banners/26.png') center 150px no-repeat, url('img/banners/hover.png') top center no-repeat, radial-gradient(circle at 60% 55%, #ffffff, #e5ebf9, #e5ebf9);
+  background: url('img/banners/26.png') center 150px no-repeat, rgba(231, 237, 249, 0);
+}
+.b30 a {
+  background: #e5ebf9 url('img/banners/30.png') 208px 30px no-repeat;
+  background: url('img/banners/30.png') 208px 30px no-repeat, #e7edf9;
+}
+.b30 a h5 {
+  max-width: 55%;
+}
+.b30 a:hover {
+  background: url('img/banners/30.png') 208px 30px no-repeat, rgba(231, 237, 249, 0);
+}
+.b31 a {
+  background: #e5ebf9 url('img/banners/31.png') 228px 20px no-repeat;
+  background: url('img/banners/31.png') 228px 20px no-repeat, #e7edf9;
+}
+.b31 a h5 {
+  max-width: 55%;
+}
+.b31 a:hover {
+  background: url('img/banners/31.png') 228px 20px no-repeat, rgba(231, 237, 249, 0);
+}
+.b32 a {
+  background: #e5ebf9 url('img/banners/32.png') 22px 124px no-repeat;
+  background: url('img/banners/32.png') 22px 124px no-repeat, #e7edf9;
+}
+.b32 a h5 {
+  max-width: 100% !important;
+}
+.b32 a:hover {
+  background: url('img/banners/32.png') 22px 124px no-repeat, rgba(231, 237, 249, 0);
+}
+.b33 a {
+  background: #e5ebf9 url('img/banners/33.png') 45px 101px no-repeat;
+  background: url('img/banners/33.png') 45px 101px no-repeat, #e7edf9;
+}
+.b33 a h5 {
+  max-width: 100% !important;
+}
+.b33 a:hover {
+  background: url('img/banners/33.png') 45px 101px no-repeat, rgba(231, 237, 249, 0);
+}
+.b34 a {
+  background: #e5ebf9 url('img/banners/34.png') 219px 13px no-repeat;
+  background: url('img/banners/34.png') 219px 13px no-repeat, #e7edf9;
+}
+.b34 a:hover {
+  background: url('img/banners/34.png') 219px 13px no-repeat, rgba(231, 237, 249, 0);
+}
+.b35 a {
+  background: #e5ebf9 url('img/banners/35.png') center 101px no-repeat;
+  background: url('img/banners/35.png') center 101px no-repeat, #e7edf9;
+}
+.b35 a h5 {
+  max-width: 100% !important;
+}
+.b35 a:hover {
+  background: url('img/banners/35.png') center 101px no-repeat, rgba(231, 237, 249, 0);
+}
+.b36 a {
+  background: #e5ebf9 url('img/banners/36.png') center 101px no-repeat;
+  background: url('img/banners/36.png') center 101px no-repeat, #e7edf9;
+}
+.b36 a h5 {
+  max-width: 100% !important;
+}
+.b36 a:hover {
+  background: url('img/banners/36.png') center 101px no-repeat, rgba(231, 237, 249, 0);
+}
+.b37 a {
+  background: #e5ebf9 url('img/banners/37.png') center center no-repeat;
+  background: url('img/banners/37.png') center center no-repeat, #e7edf9;
+}
+.b37 a h5 {
+  max-width: 100% !important;
+}
+.b37 a:hover {
+  background: url('img/banners/37.png') center center no-repeat, rgba(231, 237, 249, 0);
+}
+.b38 a {
+  background: #e5ebf9 url('img/banners/38.png') center center no-repeat;
+  background: url('img/banners/38.png') center center no-repeat, #e7edf9;
+}
+.b38 a h5 {
+  max-width: 100% !important;
+}
+.b38 a:hover {
+  background: url('img/banners/38.png') center center no-repeat, rgba(231, 237, 249, 0);
 }
 /* dev */
 html {
   height: 100%;
 }
 body {
-  height: 100%;
   position: relative
   /*  &::after {
     content: "";
@@ -7130,7 +7183,7 @@ ul.big li {
 ul.big li::before {
   width: 16px;
   height: 16px;
-  background: transparent url('img/sprite.png') no-repeat 0 -200px;
+  background: transparent url('img/sprite.png?1') no-repeat 0 -200px;
   left: 0;
   top: 2px;
 }
@@ -7254,6 +7307,9 @@ ul.gallery li img {
 }
 .remove-cross {
   font-size: 150%;
+  padding: 0;
+  background: transparent;
+  line-height: 30px;
 }
 .remove-cross:hover {
   color: #909090;
@@ -7273,7 +7329,7 @@ a.view-price::before {
   top: 3px;
   width: 10px;
   height: 11px;
-  background: url('img/sprite.png') no-repeat -22px -127px;
+  background: url('img/sprite.png?1') no-repeat -22px -127px;
 }
 button,
 a.btn {
@@ -7842,7 +7898,7 @@ fieldset.social-login ul li span::before {
   left: 0;
   width: 16px;
   height: 16px;
-  background: url('img/sprite.png') no-repeat;
+  background: url('img/sprite.png?1') no-repeat;
 }
 fieldset.social-login ul li a.vkontakte::before,
 fieldset.social-login ul li span.vkontakte::before {
@@ -7883,6 +7939,10 @@ fieldset.social-login ul li span {
   margin-top: 30px;
   height: 400px;
 }
+.map * {
+  -webkit-transition: none;
+          transition: none;
+}
 .pagination {
   padding-left: 0;
   list-style: none;
@@ -7914,9 +7974,6 @@ menu {
   font-family: "MuseoSansCyrl500", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 500;
   margin-bottom: 7px
-  /*&.list-inline {*/
-  /*margin-left: 0;*/
-  /*}*/
   /*  &.list-inline > li {
     padding-left: 12px;
     padding-right: 12px;
@@ -7931,7 +7988,6 @@ menu li::before {
 menu li {
   padding-left: 0;
   padding-bottom: 7px;
-  padding-right: 14px !important;
 }
 menu li::before {
   content: none;
@@ -7965,6 +8021,9 @@ menu li.see-all a:hover {
 }
 menu li.see-all a:hover::before {
   background: url('img/sprite.png') no-repeat -15px -15px;
+}
+menu.list-inline li {
+  padding-right: 14px !important;
 }
 menu.list-inline.pull-right {
   margin-top: 28px;
@@ -8019,6 +8078,7 @@ menu.list-inline.pull-right > li:last-child {
 .devs-list h6 {
   margin-top: 7px;
   margin-bottom: 0;
+  text-align: center;
 }
 .devs-list p {
   font-size: 12px;
@@ -8030,6 +8090,11 @@ menu.list-inline.pull-right > li:last-child {
 }
 .devs-list a:hover {
   color: #0c93d8;
+}
+.devs-list.devs-list_index {
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
 }
 /* hreader */
 header .header-top {
@@ -8096,7 +8161,7 @@ header .minicart .minicart-basket {
   display: inline-block;
   width: 42px;
   height: 42px;
-  background: #0073ae url('img/sprite.png') no-repeat -16px -30px;
+  background: #0073ae url('img/sprite.png') no-repeat -16px -39px;
   border-radius: 100%;
 }
 header .minicart .minicart-basket:hover {
@@ -8137,6 +8202,8 @@ header .user a.btn {
   width: 103px;
   height: 41px;
   padding-top: 9px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 header .user a.btn::before {
   left: 16px;
@@ -9230,10 +9297,10 @@ aside ul li a:hover {
   color: #0c93d8;
 }
 aside ul li a::before {
-  background: url('img/sprite.png') no-repeat -22px -15px;
+  background: url('img/sprite.png?1') no-repeat -22px -15px;
 }
 aside ul li span::before {
-  background: url('img/sprite.png') no-repeat -22px 0;
+  background: url('img/sprite.png?1') no-repeat -22px 0;
 }
 @media (min-width: 768px) {
   .aside {
@@ -9277,7 +9344,7 @@ table.cart td:last-of-type {
   left: 0;
   width: 20px;
   height: 20px;
-  background: url('img/sprite.png') -80px -80px no-repeat;
+  background: url('img/sprite.png?1') -80px -80px no-repeat;
 }
 .a-icon {
   font: 0/0 a;
@@ -9289,7 +9356,7 @@ table.cart td:last-of-type {
   vertical-align: top;
   width: 20px;
   height: 20px;
-  background: url('img/sprite.png') no-repeat;
+  background: url('img/sprite.png?1') no-repeat;
 }
 .a-icon.icon-check {
   background-position: -80px 0;
@@ -9323,7 +9390,7 @@ table.cart td:last-of-type {
   left: 0;
   width: 21px;
   height: 24px;
-  background: url('img/sprite.png') no-repeat;
+  background: url('img/sprite.png?1') no-repeat;
 }
 .a-icon-big.pdf::before {
   background-position: -100px 0;
@@ -9413,7 +9480,7 @@ table.cart td:last-of-type {
   display: block;
   width: 9px;
   height: 15px;
-  background: url('img/sprite.png') no-repeat;
+  background: url('img/sprite.png?1') no-repeat;
   -webkit-transition: initial;
           transition: initial;
 }
@@ -9562,4 +9629,7 @@ article h1 {
 }
 article p {
   margin-bottom: 19px;
+}
+.jGrowl {
+  z-index: 99999 !important;
 }

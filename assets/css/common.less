@@ -5,7 +5,7 @@
 
 @fixed-max-width: 1140 + @grid-gutter-width;
 @img-path: 'img/';
-@sprite: 'img/sprite.png';
+@sprite: 'img/sprite.png?1';
 @accent-font-family: "PF DinDisplay Pro Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 @import "./banners.less";
@@ -15,7 +15,7 @@ html {
   height: 100%;
 }
 body {
-  height: 100%;
+  //height: 100%;
   position: relative;
 /*  &::after {
     content: "";
@@ -294,6 +294,9 @@ ul.gallery {
 }
 .remove-cross {
   font-size: 150%;
+  padding: 0;
+  background: transparent;
+  line-height: 30px;
   &:hover {
     color: #909090;
   }
@@ -582,6 +585,9 @@ fieldset.social-login {
 .map {
   margin-top: 30px;
   height: 400px;
+  * {
+    transition: none;
+  }
 }
 
 .pagination {
@@ -608,7 +614,6 @@ menu {
     &::before { content: none; }
     padding-left: 0;
     padding-bottom: @line-height-computed / 4;
-    padding-right: @line-height-computed / 2 !important;
     a {
       .colored;
     }
@@ -637,9 +642,9 @@ menu {
       }
     }
   }
-  /*&.list-inline {*/
-    /*margin-left: 0;*/
-  /*}*/
+  &.list-inline li {
+    padding-right: @line-height-computed / 2 !important;
+  }
 /*  &.list-inline > li {
     padding-left: 12px;
     padding-right: 12px;
@@ -681,6 +686,7 @@ menu {
   h6 {
     margin-top: @line-height-computed / 4;
     margin-bottom: 0;
+    text-align: center;
   }
   p {
     font-size: 12px;
@@ -690,6 +696,9 @@ menu {
   a {
     .colored;
   }
+}
+.devs-list.devs-list_index {
+  flex-wrap: nowrap;
 }
 
 /* hreader */
@@ -725,7 +734,7 @@ header {
       display: inline-block;
       width: 42px;
       height: 42px;
-      background: #0073ae url('@{img-path}sprite.png') no-repeat -16px -30px;
+      background: #0073ae url('@{img-path}sprite.png') no-repeat -16px -39px;
       border-radius: 100%;
       &:hover {
         background-color: #00aeef;
@@ -766,6 +775,8 @@ header {
       width: 103px;
       height: 41px;
       padding-top: 9px;
+      overflow: hidden;
+      text-overflow: ellipsis;
       &::before {
         left: 16px;
       }
@@ -1900,3 +1911,5 @@ article {
     margin-bottom: 19px;
   }
 }
+
+.jGrowl { z-index:99999 !important }

@@ -9346,6 +9346,12 @@ table.cart td:last-of-type {
   height: 20px;
   background: url('img/sprite.png?1') -80px -80px no-repeat;
 }
+.cancel-order {
+  display: inline;
+}
+.cancel-order button[type=submit] {
+  font-size: 14px;
+}
 .a-icon {
   font: 0/0 a;
   color: transparent;

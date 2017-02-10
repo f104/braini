@@ -6645,8 +6645,9 @@ header .header-bottom:after,
           flex-direction: column;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
-          flex-wrap: wrap
-  /*transition: none;*/
+          flex-wrap: wrap;
+  -webkit-transition: all 0.7s ease-in-out 0s;
+          transition: all 0.7s ease-in-out 0s;
 }
 .promo a h5 {
   font-family: "MuseoSansCyrl700", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -8503,7 +8504,7 @@ header.fixed {
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 99999;
+  z-index: 8000;
 }
 header.fixed .header-top,
 header.fixed .user {
@@ -9126,11 +9127,21 @@ section.best .row .col-sm-6 .catalog-item .footer {
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
   }
-  .news-list .col-sm-3 {
+  .news-list .col-sm-3,
+  .news-list .col-sm-6 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+  }
+  .news-list.slick-initialized .slick-slide {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
   }
   .news-item-first {
     padding: 0;
@@ -9494,6 +9505,16 @@ table.cart td:last-of-type {
   background-position: -32px 0;
 }
 .prev-next li a.next {
+  background-position: -41px 0;
+}
+.prev-next li a.slick-disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+.prev-next li a.slick-disabled.prev:hover {
+  background-position: -32px 0;
+}
+.prev-next li a.slick-disabled.next:hover {
   background-position: -41px 0;
 }
 .prev-next li a.prev:hover {

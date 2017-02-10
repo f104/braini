@@ -1014,7 +1014,7 @@ header.fixed {
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 99999;
+  z-index: 8000;
   .header-top, .user {
     display: none;
   }
@@ -1533,8 +1533,12 @@ section.best {
   .news-list {
     display: flex;
     flex-wrap: wrap;
-    .col-sm-3 {
+    .col-sm-3, .col-sm-6 {
       display: flex;
+    }
+    &.slick-initialized .slick-slide {
+      display: flex;
+      flex-wrap: wrap;
     }
   }
   .news-item-first {
@@ -1842,6 +1846,13 @@ table.cart {
       transition: initial;
       &.prev { background-position: -32px 0; }
       &.next { background-position: -41px 0; }
+      
+      &.slick-disabled {
+        opacity: .5;
+        cursor: not-allowed;
+        &.prev:hover { background-position: -32px 0; }
+        &.next:hover { background-position: -41px 0; }
+      }
       &.prev:hover { background-position: -32px -15px; }
       &.next:hover { background-position: -41px -15px; }
     }

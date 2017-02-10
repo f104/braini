@@ -87,6 +87,15 @@ $(window).load(function(){
       }
 
     });
+    
+    $('.js-news-slider').slick({
+      draggable: false,
+      infinite: false,
+      swipe: false,
+      touchMove: false,
+      prevArrow: $('.js-news-slider-arrow-prev'),
+      nextArrow: $('.js-news-slider-arrow-next')
+    });
 
   })(window.jQuery);
   

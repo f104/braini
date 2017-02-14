@@ -1936,3 +1936,20 @@ article {
 }
 
 .jGrowl { z-index:99999 !important }
+
+.notfound {
+  background: url('@{img-path}404-bg.jpg') right -10px no-repeat;
+  min-height: 575px;
+  display: flex;
+  align-items: center;
+  .page-header {
+    margin-bottom: 30px;
+    h1 {
+      font-size: 45px;
+    }
+    p {
+      .small;
+      color: @gray;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Страница не найдена</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="import" href="components.html">
+    <script>
+      var components = document.querySelector('link[rel=import]');
+    </script>
+  </head>
+  <body>
+    <script>
+      var content = components.import.querySelector('header');
+      document.body.appendChild(content.cloneNode(true));
+    </script>
+    
+    <main>
+      
+      <div class="container-fluid">
+        
+        <section class="notfound">
+          <div>
+            <div class="page-header">
+              <h1>Страница не найдена</h1>
+              <p>Неправильно набран адрес или такой страницы на сайте больше не существует</p>
+            </div>
+            <menu>
+              <li><a href="#">Главная</a></li>
+              <li><a href="#">О компании</a></li>
+              <li><a href="#">Подбор решения</a></li>
+            </menu>
+          </div>            
+        </section>
+      
+      </div>
+      
+      <script>
+        var content = components.import.querySelector('#subscribe');
+        document.querySelector('main').appendChild(content.cloneNode(true));
+      </script>
+      
+    </main>
+    
+    <script>
+      content = components.import.querySelector('footer');
+      document.body.appendChild(content.cloneNode(true));
+    </script>
+  </body>
+</html>
